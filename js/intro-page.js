@@ -21,7 +21,7 @@ H5P.BasicArithmeticQuiz.IntroPage = (function ($, UI) {
     this.$introPage.append($('<div>', {
       'class': 'h5p-baq-intro-page-title'
     }).append($('<span>', {
-      text: text
+      html: text
     })));
 
     // Create and add the start button:
