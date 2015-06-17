@@ -267,8 +267,7 @@ H5P.BasicArithmeticQuiz.GamePage = (function ($, UI) {
       alternatives.push(new Alternative(k, k===question.correct));
     }
     alternatives = H5P.shuffleArray(alternatives);
-    for (var i=0, length = alternatives.length; i < length; i++) {
-      var alternative = alternatives[i];
+    alternatives.forEach(function (alternative) {
       alternative.appendTo($alternatives);
       alternative.on('answered', function () {
         alternatives.forEach(function (alt) {
@@ -282,7 +281,7 @@ H5P.BasicArithmeticQuiz.GamePage = (function ($, UI) {
           self.slider.next();
         }, 800);
       });
-    }
+    });
 
     $alternatives.appendTo($slide);
     return $slide;
