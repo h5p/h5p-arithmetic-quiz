@@ -47,6 +47,10 @@
         "default": "Ferdig!"
       },
       {
+        "label": "Kjør etikett",
+        "default": "KJØR!"
+      },
+      {
         "label": "Etikett på start-knapp",
         "default": "Start"
       },

@@ -13,7 +13,7 @@ H5P.BasicArithmeticQuiz.CountdownWidget = (function ($) {
    *
    * @param  {type} seconds Number of seconds to count down
    */
-  function CountdownWidget(seconds) {
+  function CountdownWidget(seconds, t) {
     H5P.EventDispatcher.call(this);
     var originalSeconds = seconds;
 
@@ -82,12 +82,12 @@ H5P.BasicArithmeticQuiz.CountdownWidget = (function ($) {
      */
     this.decrement = function () {
       seconds--;
-      this.$countdownWidget.find('.h5p-baq-countdown-text').text(seconds === 0 ? 'GO!' : seconds);
+      this.$countdownWidget.find('.h5p-baq-countdown-text').text(seconds === 0 ? t.go : seconds);
     };
   }
   CountdownWidget.prototype = Object.create(H5P.EventDispatcher.prototype);
   CountdownWidget.prototype.constructor = CountdownWidget;
 
   return CountdownWidget;
-  
+
 })(H5P.jQuery);

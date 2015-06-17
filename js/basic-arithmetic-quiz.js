@@ -30,7 +30,8 @@ H5P.BasicArithmeticQuiz = (function ($, UI) {
         time: 'Time: @time',
         resultPageHeader: 'Finished!',
         retryButton: 'Retry',
-        startButton: 'Start'
+        startButton: 'Start',
+        go: 'GO!'
       }
     }, options);
     self.currentWidth = 0;

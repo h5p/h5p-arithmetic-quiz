@@ -132,7 +132,7 @@ H5P.BasicArithmeticQuiz.GamePage = (function ($, UI) {
 
     self.slider = UI.createSlider();
 
-    self.countdownWidget = new H5P.BasicArithmeticQuiz.CountdownWidget(4);
+    self.countdownWidget = new H5P.BasicArithmeticQuiz.CountdownWidget(4, t);
     self.slider.addSlide(self.countdownWidget.create());
     self.countdownWidget.on('ignition', function () {
       self.slider.next();

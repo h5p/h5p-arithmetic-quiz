@@ -73,6 +73,12 @@
         "default": "Finished!"
       },
       {
+        "name": "go",
+        "type": "text",
+        "label": "Go label",
+        "default": "GO!"
+      },
+      {
         "name": "startButton",
         "type": "text",
         "label": "Start button label",
