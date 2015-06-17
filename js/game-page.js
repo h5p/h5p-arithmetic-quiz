@@ -194,7 +194,7 @@ H5P.BasicArithmeticQuiz.GamePage = (function ($, UI) {
    * Handles resizing
    */
   GamePage.prototype.resize = function() {
-    this.$gamepage.find('.alternatives:visible').each(function () {
+    this.$gamepage.find('.h5p-baq-alternatives:visible').each(function () {
       var $alternatives = $(this);
 
       var scaleDown = $alternatives.position().top + $alternatives.height() > $alternatives.parent().height();
@@ -257,17 +257,18 @@ H5P.BasicArithmeticQuiz.GamePage = (function ($, UI) {
     }).appendTo($slide);
 
     var $alternatives = $('<div>', {
-      'class': 'alternatives'
+      'class': 'h5p-baq-alternatives'
     });
 
     var start = question.correct-3;
     start = start >= 0 ? start : 0;
     var alternatives = [];
     for (var k = start; k < start+6; k++) {
-      alternatives[alternatives.length] = new Alternative(k, k===question.correct);
+      alternatives.push(new Alternative(k, k===question.correct));
     }
     alternatives = H5P.shuffleArray(alternatives);
-    alternatives.forEach(function (alternative) {
+    for (var i=0, length = alternatives.length; i < length; i++) {
+      var alternative = alternatives[i];
       alternative.appendTo($alternatives);
       alternative.on('answered', function () {
         alternatives.forEach(function (alt) {
@@ -281,7 +282,7 @@ H5P.BasicArithmeticQuiz.GamePage = (function ($, UI) {
           self.slider.next();
         }, 800);
       });
-    });
+    }
 
     $alternatives.appendTo($slide);
     return $slide;

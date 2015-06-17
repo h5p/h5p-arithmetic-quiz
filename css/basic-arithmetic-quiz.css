@@ -1,8 +1,8 @@
 .h5p-baq {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   overflow: hidden;
   background: #1394c7;
-  color: white;
+  color: #fff;
   font-size: 3em;
   text-align: center;
 
@@ -45,7 +45,7 @@
 }
 .h5p-joubelui-button.mq-control-button {
   padding: 0.2em 2em;
-  background: #0072BB;
+  background: #0072bb;
   border: none; /* Reset borders */
   border-bottom: 0.2em solid #014876;
   margin-top: 1em;
@@ -66,10 +66,10 @@
   z-index: 100;
   font-size: 1.5em;
   display: inline-block;
-  background: #0072BB;
+  background: #0072bb;
   min-width: 4em;
   padding: .5em;
-  border: 0.2em solid white;
+  border: 0.2em solid #fff;
 }
 .h5p-baq-countdown-bg {
   position: absolute;
@@ -89,7 +89,7 @@
 /* Hide statusbar on resultpage */
 .h5p-baq-game.result-page > .timer,
 .h5p-baq-game.result-page > .h5p-baq-score-widget {
-  display:none;
+  display: none;
 }
 .h5p-baq-game > .timer,
 .h5p-baq-game > .h5p-baq-score-widget {
@@ -112,7 +112,7 @@
   font-size: 1.5em;
   text-align: center;
 }
-.h5p-baq .alternatives {
+.h5p-baq-alternatives {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -133,7 +133,7 @@
 
   padding: .5em;
 }
-.h5p-baq .alternatives > .h5p-joubelui-button {
+.h5p-baq-alternatives > .h5p-joubelui-button {
   display: inline-block;
   box-sizing: border-box;
   width: 30%;
@@ -142,7 +142,7 @@
 
   background: transparent;
   border-width: 0.1em;
-  border-color: white;
+  border-color: #fff;
   border-style: solid;
 
   text-align: center;
@@ -153,11 +153,11 @@
   -ms-transition: -ms-transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
 }
-.h5p-baq .alternatives > .h5p-joubelui-button:active,
-.h5p-baq .alternatives > .h5p-joubelui-button:hover {
-  background: rgba(255,255,255,0.4);
+.h5p-baq-alternatives > .h5p-joubelui-button:active,
+.h5p-baq-alternatives > .h5p-joubelui-button:hover {
+  background: rgba(255, 255, 255, 0.4);
 }
-.h5p-baq .alternatives > .h5p-joubelui-button.reveal-correct {
+.h5p-baq-alternatives > .h5p-joubelui-button.reveal-correct {
   background: rgba(204, 232, 204, 0.7);
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
@@ -166,7 +166,7 @@
   position: relative;
   font-weight: bold;
 }
-.h5p-baq .alternatives > .h5p-joubelui-button.reveal-wrong {
+.h5p-baq-alternatives > .h5p-joubelui-button.reveal-wrong {
   -webkit-transform: scale(.8);
   -moz-transformtransform: scale(.8);
   -ms-transform: scale(.8);
