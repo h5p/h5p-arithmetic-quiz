@@ -1,0 +1,59 @@
+[
+  {
+    "label": "Introduksjonstekst",
+    "description": "Tekst vises på forsiden"
+  },
+  {
+    "label": "Aritmetisk type",
+    "options": [
+      {
+        "label": "Addisjon (pluss)"
+      },
+      {
+        "label": "Subtraksjon (minus)"
+      },
+      {
+        "label": "Multiplikasjon (gange)"
+      },
+      {
+        "label": "Divisjon (dele)"
+      }
+    ]
+  },
+  {
+    "label": "Maksimalt antall spørsmål"
+  },
+  {
+    "label": "Oversettelser for brukergrensesnittet",
+    "fields": [
+      {
+        "label": "Poengtilbakemelding under quizen",
+        "default": "Poeng: @score"
+      },
+      {
+        "label": "Poengtilbakemelding på resultatsiden",
+        "default": "Poeng: @score / @maxScore"
+      },
+      {
+        "label": "Poeng i prosent (på resultatsiden)",
+        "default": "(@percent% rett)"
+      },
+      {
+        "label": "Tid",
+        "default": "Tid: @time"
+      },
+      {
+        "label": "Overskrift på resultatsiden",
+        "default": "Ferdig!"
+      },
+      {
+        "label": "Etikett på start-knapp",
+        "default": "Start"
+      },
+      {
+        "label": "Etikett på prøv igjen-knapp",
+        "default": "Prøv igjen"
+      }
+    ]
+  }
+]

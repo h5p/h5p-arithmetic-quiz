@@ -1,0 +1,38 @@
+{
+  "title": "Basic Arithmetic Quiz",
+  "description": "Basic arithmetic quiz containing addition, division, multiplication and subtraction of numbers between 0 and 10.",
+  "majorVersion": 1,
+  "minorVersion": 0,
+  "patchVersion": 0,
+  "runnable": 1,
+  "author": "Joubel AS (fnoks)",
+  "license": "MIT",
+  "machineName": "H5P.BasicArithmeticQuiz",
+  "fullscreen": 0,
+  "embedTypes": [
+    "div"
+  ],
+  "preloadedJs": [
+    {"path": "js/basic-arithmetic-quiz.js"},
+    {"path": "js/countdown-widget.js"},
+    {"path": "js/timer-widget.js"},
+    {"path": "js/intro-page.js"},
+    {"path": "js/game-page.js"},
+    {"path": "js/result-page.js"}
+  ],
+  "preloadedCss": [
+    {"path": "css/basic-arithmetic-quiz.css"}
+  ],
+  "preloadedDependencies": [
+    {
+      "machineName": "FontAwesome",
+      "majorVersion": 4,
+      "minorVersion": 1
+    },
+    {
+      "machineName": "H5P.JoubelUI",
+      "majorVersion": 1,
+      "minorVersion": 2
+    }
+  ]
+}

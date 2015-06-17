@@ -1,0 +1,89 @@
+[
+  {
+    "name": "intro",
+    "type": "text",
+    "label": "Intro",
+    "description": "The intro text",
+    "optional": true
+  },
+  {
+    "name": "arithmeticType",
+    "type": "select",
+    "label": "Arithmetic type",
+    "options": [
+      {
+        "value": "addition",
+        "label": "Addition"
+      },
+      {
+        "value": "subtraction",
+        "label": "Subtraction"
+      },
+      {
+        "value": "multiplication",
+        "label": "Multiplication"
+      },
+      {
+        "value": "division",
+        "label": "Division"
+      }
+    ],
+    "default": "addition"
+  },
+  {
+    "name": "maxQuestions",
+    "type": "text",
+    "label": "Max number of questions",
+    "optional": true
+  },
+  {
+    "name": "UI",
+    "type": "group",
+    "label": "User interface translations",
+    "common": true,
+    "fields": [
+      {
+        "name": "score",
+        "type": "text",
+        "label": "Scoring during quiz",
+        "default": "Score: @score"
+      },
+      {
+        "name": "scoreOnResultPage",
+        "type": "text",
+        "label": "Scoring on result page",
+        "default": "Score: @score / @maxScore"
+      },
+      {
+        "name": "scoreInPercent",
+        "type": "text",
+        "label": "Scoring in percent (on result page)",
+        "default": "(@percent% correct)"
+      },
+      {
+        "name": "time",
+        "type": "text",
+        "label": "Time",
+        "default": "Time: @time"
+      },
+      {
+        "name": "resultPageHeader",
+        "type": "text",
+        "label": "Result page header",
+        "default": "Finished!"
+      },
+      {
+        "name": "startButton",
+        "type": "text",
+        "label": "Start button label",
+        "default": "Start"
+      },
+      {
+        "name": "retryButton",
+        "type": "text",
+        "label": "Retry button label",
+        "default": "Retry"
+      }
+    ]
+  }
+]
