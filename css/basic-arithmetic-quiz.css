@@ -24,6 +24,7 @@
 }
 .h5p-baq-game {
   height: 100%;
+  display: table-cell;
 }
 /* Intro page */
 .h5p-baq-intro-page {

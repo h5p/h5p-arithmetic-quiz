@@ -203,14 +203,14 @@ H5P.BasicArithmeticQuiz.GamePage = (function ($, UI) {
 
 
       if (scaleDown) {
-        while ($alternatives.position().top + $alternatives.outerHeight() > parentHeight) {
+        while (fontSize > 10 && $alternatives.position().top + $alternatives.outerHeight() > parentHeight) {
           fontSize -= fontSize * 0.05;
           $alternatives.css({'font-size': fontSize + 'px'});
         }
       }
       else {
         var lastStep;
-        while ($alternatives.position().top + $alternatives.outerHeight() < parentHeight) {
+        while (fontSize < 100 && $alternatives.position().top + $alternatives.outerHeight() < parentHeight) {
           lastStep = fontSize * 0.05;
           fontSize += lastStep;
           $alternatives.css({'font-size': fontSize + 'px'});
@@ -356,7 +356,7 @@ H5P.BasicArithmeticQuiz.GamePage = (function ($, UI) {
   Alternative.prototype.constructor = Alternative;
 
   return GamePage;
-  
+
 })(H5P.jQuery, H5P.JoubelUI);
 
 /*function GridResultsView(rows, cols) {
