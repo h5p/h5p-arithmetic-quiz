@@ -34,26 +34,28 @@ H5P.BasicArithmeticQuiz.GamePage = (function ($, UI) {
      */
     this.createQuiz = function (maxQuestions) {
       var questions = [];
+      var i,j;
+
       switch (type) {
         case ArithmeticType.ADDITION:
         case ArithmeticType.MULTIPLICATION:
-          for (var i=0; i<10; i++) {
-            for (var j=0; j<10; j++) {
+          for (i=0; i<10; i++) {
+            for (j=0; j<10; j++) {
               questions.push(this.createQuestion(i,j));
             }
           }
           break;
         case ArithmeticType.SUBTRACTION:
-          for (var i=10; i>=0; i--) {
-            for (var j=i; j>=0; j--) {
+          for (i=10; i>=0; i--) {
+            for (j=i; j>=0; j--) {
               questions.push(this.createQuestion(i,j));
             }
           }
           break;
 
         case ArithmeticType.DIVISION:
-          for (var i=10; i>=0; i--) {
-            for (var j=i; j>=0; j--) {
+          for (i=10; i>=0; i--) {
+            for (j=i; j>=0; j--) {
               if (i % j === 0) {
                 questions.push(this.createQuestion(i,j));
               }
@@ -92,8 +94,7 @@ H5P.BasicArithmeticQuiz.GamePage = (function ($, UI) {
           return {};
       }
     };
-
-  };
+  }
 
 
   /**
@@ -315,7 +316,7 @@ H5P.BasicArithmeticQuiz.GamePage = (function ($, UI) {
 
     this.update = function (score) {
       this.$scoreWidget.html(H5P.BasicArithmeticQuiz.tReplace(t.score, {score: score}));
-    }
+    };
   }
 
 

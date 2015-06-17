@@ -43,7 +43,7 @@ H5P.BasicArithmeticQuiz = (function ($, UI) {
       self.introPage.remove();
       self.gamePage.appendTo(self.$container);
       self.gamePage.startCountdown();
-    })
+    });
 
     self.on('resize', function() {
       var width = self.$container.width();
@@ -85,7 +85,7 @@ H5P.BasicArithmeticQuiz = (function ($, UI) {
       var s = document.getElementsByTagName('script')[0];
       s.parentNode.insertBefore(wf, s);
     };
-  };
+  }
   // Extends the event dispatcher
   BasicArithmeticQuiz.prototype = Object.create(H5P.EventDispatcher.prototype);
   BasicArithmeticQuiz.prototype.constructor = BasicArithmeticQuiz;

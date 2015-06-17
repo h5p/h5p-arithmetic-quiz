@@ -13,7 +13,7 @@ H5P.BasicArithmeticQuiz.TimerWidget = (function ($) {
 
     var totalTime = 0;
     var isRunning = false;
-    var timer = undefined;
+    var timer;
     var startTime = 0;
 
     var $timer = $('<div>', {
