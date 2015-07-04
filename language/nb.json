@@ -28,7 +28,7 @@
     "fields": [
       {
         "label": "Poengtilbakemelding under quizen",
-        "default": "Poeng: @score"
+        "default": "Poeng:"
       },
       {
         "label": "Poengtilbakemelding på resultatsiden",

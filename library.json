@@ -39,6 +39,11 @@
       "machineName": "H5P.SoundJS",
       "majorVersion": 1,
       "minorVersion": 0
+    },
+    {
+      "machineName": "Odometer",
+      "majorVersion": 1,
+      "minorVersion": 0
     }
   ]
 }

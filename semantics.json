@@ -46,7 +46,7 @@
         "name": "score",
         "type": "text",
         "label": "Scoring during quiz",
-        "default": "Score: @score"
+        "default": "Score:"
       },
       {
         "name": "scoreOnResultPage",

@@ -28,6 +28,8 @@ H5P.BasicArithmeticQuiz.CountdownWidget = (function ($) {
       'class': 'h5p-baq-countdown-bg'
     })));
 
+    this.$countdownText = this.$countdownWidget.find('.h5p-baq-countdown-text');
+
     /**
      * Returns reference to DOM object
      *
@@ -82,7 +84,7 @@ H5P.BasicArithmeticQuiz.CountdownWidget = (function ($) {
      */
     this.decrement = function () {
       seconds--;
-      this.$countdownWidget.find('.h5p-baq-countdown-text').text(seconds === 0 ? t.go : seconds);
+      this.$countdownText.html(seconds === 0 ? t.go : seconds);
     };
   }
   CountdownWidget.prototype = Object.create(H5P.EventDispatcher.prototype);

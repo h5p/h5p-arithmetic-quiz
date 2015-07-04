@@ -310,17 +310,28 @@ H5P.BasicArithmeticQuiz.GamePage = (function ($, UI) {
    * @param  {Object} t Translation object
    */
   function ScoreWidget(t) {
+
+    var $score = $('<span>', {
+      'html': 0
+    });
+
     this.$scoreWidget = $('<div>', {
       'class': 'h5p-baq-score-widget',
-      html: H5P.BasicArithmeticQuiz.tReplace(t.score, {score: 0})
-    });
+      html: t.score + ' '
+    }).append($score);
+
+    this.scoreElement = $score.get(0);
 
     this.appendTo = function ($container) {
       this.$scoreWidget.appendTo($container);
+
+      new Odometer({
+        el: this.scoreElement
+      });
     };
 
     this.update = function (score) {
-      this.$scoreWidget.html(H5P.BasicArithmeticQuiz.tReplace(t.score, {score: score}));
+      this.scoreElement.innerHTML = score;
     };
   }
 
