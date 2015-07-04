@@ -50,6 +50,11 @@
   border: none; /* Reset borders */
   border-bottom: 0.2em solid #014876;
   margin-top: 1em;
+
+  transition: background-color 1s;
+}
+.h5p-joubelui-button.mq-control-button:hover {
+  background-color: #005f9b;
 }
 .h5p-baq-countdown.current {
   display: table;
@@ -158,6 +163,9 @@
 .h5p-baq-alternatives > .h5p-joubelui-button:active,
 .h5p-baq-alternatives > .h5p-joubelui-button:hover {
   background: rgba(255, 255, 255, 0.4);
+}
+.h5p-baq-alternatives > .h5p-joubelui-button:focus {
+  border-color: #ddd;
 }
 .h5p-baq-alternatives > .h5p-joubelui-button.reveal-correct {
   background: rgba(204, 232, 204, 0.7);
