@@ -67,6 +67,10 @@ H5P.BasicArithmeticQuiz = (function ($, UI) {
         this.addFont();
         this.$container.addClass('h5p-baq');
         this.introPage.appendTo($container);
+
+        setTimeout(function () {
+          H5P.BasicArithmeticQuiz.SoundEffects.setup();
+        },1);
       }
     };
 

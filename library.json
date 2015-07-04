@@ -14,6 +14,7 @@
   ],
   "preloadedJs": [
     {"path": "js/basic-arithmetic-quiz.js"},
+    {"path": "js/sound-effects.js"},
     {"path": "js/countdown-widget.js"},
     {"path": "js/timer-widget.js"},
     {"path": "js/intro-page.js"},
@@ -33,6 +34,11 @@
       "machineName": "H5P.JoubelUI",
       "majorVersion": 1,
       "minorVersion": 2
+    },
+    {
+      "machineName": "H5P.SoundJS",
+      "majorVersion": 1,
+      "minorVersion": 0
     }
   ]
 }

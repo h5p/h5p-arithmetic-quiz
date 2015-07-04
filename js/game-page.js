@@ -270,6 +270,11 @@ H5P.BasicArithmeticQuiz.GamePage = (function ($, UI) {
     alternatives.forEach(function (alternative) {
       alternative.appendTo($alternatives);
       alternative.on('answered', function () {
+
+        // Can't play it after the transition end is received, since this is not
+        // accepted on iPad. Therefore we are playing it here with a delay instead
+        H5P.BasicArithmeticQuiz.SoundEffects.play(alternative.correct ? 'positive-short' : 'negative-short', 300);
+
         alternatives.forEach(function (alt) {
           alt.reveal();
         });
