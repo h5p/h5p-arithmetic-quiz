@@ -275,14 +275,15 @@ H5P.BasicArithmeticQuiz.GamePage = (function ($, UI) {
         // accepted on iPad. Therefore we are playing it here with a delay instead
         H5P.BasicArithmeticQuiz.SoundEffects.play(alternative.correct ? 'positive-short' : 'negative-short', 300);
 
+        if (alternative.correct === true) {
+          self.score++;
+          self.scoreWidget.update(self.score);
+        }
+
         alternatives.forEach(function (alt) {
           alt.reveal();
         });
         setTimeout(function(){
-          if (alternative.correct === true) {
-            self.score++;
-            self.scoreWidget.update(self.score);
-          }
           self.slider.next();
         }, 800);
       });
