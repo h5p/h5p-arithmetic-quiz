@@ -62,8 +62,7 @@ H5P.BasicArithmeticQuiz.ResultPage = (function ($, UI) {
      */
     this.update = function (score, time) {
       var percent = Math.ceil((score / maxScore) * 100);
-      this.$score.html(H5P.BasicArithmeticQuiz.tReplace(t.scoreOnResultPage, {score: score, maxScore: maxScore}) +
-                      ' <span>' + H5P.BasicArithmeticQuiz.tReplace(t.scoreInPercent, {percent: percent}) + '</span>');
+      this.$score.html(H5P.BasicArithmeticQuiz.tReplace(t.scoreOnResultPage, {score: score, maxScore: maxScore}));
       this.$time.html(H5P.BasicArithmeticQuiz.tReplace(t.time, {time: time}));
     };
   }
@@ -71,5 +70,5 @@ H5P.BasicArithmeticQuiz.ResultPage = (function ($, UI) {
   ResultPage.prototype.constructor = ResultPage;
 
   return ResultPage;
-  
+
 })(H5P.jQuery, H5P.JoubelUI);

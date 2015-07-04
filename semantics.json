@@ -55,12 +55,6 @@
         "default": "Score: @score / @maxScore"
       },
       {
-        "name": "scoreInPercent",
-        "type": "text",
-        "label": "Scoring in percent (on result page)",
-        "default": "(@percent% correct)"
-      },
-      {
         "name": "time",
         "type": "text",
         "label": "Time",

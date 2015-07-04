@@ -14,6 +14,7 @@
 .h5p-baq * {
   box-sizing: border-box;
   line-height: 1.25;
+  text-shadow: 5px 2px 2px rgba(1, 72, 118, 0.5);
 }
 .h5p-baq .h5p-joubelui-button {
   margin: 0;
@@ -35,7 +36,6 @@
   text-align: center;
 }
 .h5p-baq-intro-page > .h5p-baq-intro-page-title {
-  text-shadow: 5px 2px 2px rgba(1, 72, 118, 0.5);
   font-weight: bold;
   line-height: 1.1;
   margin-bottom: 0.8em;
@@ -200,12 +200,6 @@
 .h5p-baq-result-page-score,
 .h5p-baq-result-page-time {
   font-size: 0.8em;
-}
-.h5p-baq-result-page-score > span {
-  font-size: 50%;
-  display: block;
-  line-height: 1;
-  margin-bottom: .5em;
 }
 .h5p-baq-result-page-feedback {
   height: 100%;

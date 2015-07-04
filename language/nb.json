@@ -35,10 +35,6 @@
         "default": "Poeng: @score / @maxScore"
       },
       {
-        "label": "Poeng i prosent (på resultatsiden)",
-        "default": "(@percent% rett)"
-      },
-      {
         "label": "Tid",
         "default": "Tid: @time"
       },
