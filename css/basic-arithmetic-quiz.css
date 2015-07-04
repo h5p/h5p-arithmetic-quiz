@@ -114,6 +114,9 @@
   left: 0;
   min-width: 3em;
 }
+.h5p-baq-score-widget-number * {
+  text-shadow: none;
+}
 .h5p-baq .question {
   margin: 1em 0 0 0;
   font-size: 1.5em;

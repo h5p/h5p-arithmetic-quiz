@@ -37,28 +37,19 @@ H5P.BasicArithmeticQuiz.GamePage = (function ($, UI) {
       var i,j;
 
       switch (type) {
-        case ArithmeticType.ADDITION:
+        case ArithmeticType.DIVISION:
         case ArithmeticType.MULTIPLICATION:
           for (i=0; i<10; i++) {
             for (j=0; j<10; j++) {
-              questions.push(this.createQuestion(i,j));
+              questions.push(this.createQuestion(type === ArithmeticType.DIVISION ? i*j : i, j));
             }
           }
           break;
+        case ArithmeticType.ADDITION:
         case ArithmeticType.SUBTRACTION:
-          for (i=10; i>=0; i--) {
+          for (i=100; i>=0; i--) {
             for (j=i; j>=0; j--) {
-              questions.push(this.createQuestion(i,j));
-            }
-          }
-          break;
-
-        case ArithmeticType.DIVISION:
-          for (i=10; i>=0; i--) {
-            for (j=i; j>=0; j--) {
-              if (i % j === 0) {
-                questions.push(this.createQuestion(i,j));
-              }
+              questions.push(this.createQuestion(type === ArithmeticType.ADDITION ? i-j : i, j));
             }
           }
           break;
@@ -313,7 +304,8 @@ H5P.BasicArithmeticQuiz.GamePage = (function ($, UI) {
   function ScoreWidget(t) {
 
     var $score = $('<span>', {
-      'html': 0
+      'class': 'h5p-baq-score-widget-number',
+      html: 0
     });
 
     this.$scoreWidget = $('<div>', {
