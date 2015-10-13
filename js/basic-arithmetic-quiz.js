@@ -112,3 +112,15 @@ H5P.BasicArithmeticQuiz = (function ($, UI) {
 
   return BasicArithmeticQuiz;
 })(H5P.jQuery, H5P.JoubelUI);
+
+/**
+ * Enum defining the different arithmetic types
+ * @readonly
+ * @enum {string}
+ */
+H5P.BasicArithmeticQuiz.ArithmeticType = {
+  ADDITION: 'addition',
+  SUBTRACTION: 'subtraction',
+  MULTIPLICATION: 'multiplication',
+  DIVISION: 'division'
+};

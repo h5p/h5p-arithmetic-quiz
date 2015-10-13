@@ -16,6 +16,35 @@
   line-height: 1.25;
   text-shadow: 5px 2px 2px rgba(1, 72, 118, 0.5);
 }
+.h5p-baq .h5p-joubelui-score-bar * {
+  line-height: inherit;
+  text-shadow: none;
+}
+.h5p-baq .h5p-joubelui-score-bar {
+  margin-top: 0.3em;
+  font-size: 0.7em;
+}
+.h5p-baq .h5p-joubelui-score-bar-progress-wrapper,
+.h5p-baq .h5p-joubelui-score-bar-end {
+  border-color: rgba(0, 114, 187, 0.4);
+}
+.h5p-baq .h5p-joubelui-score-bar-progress,
+.h5p-baq .h5p-joubelui-score-bar-default-star,
+.h5p-baq .h5p-joubelui-score-bar-full-score-star {
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+.h5p-baq .h5p-joubelui-score-bar-default-star,
+.h5p-baq .h5p-joubelui-score-bar-full-score-star {
+  right: 0;
+}
+.h5p-baq .h5p-joubelui-score-bar-default-star::before,
+.h5p-baq .h5p-joubelui-score-bar-full-score-star::before,
+.h5p-baq .h5p-joubelui-score-bar-full-score-star::after {
+  left: 0.35em;
+  top: -0.1em;
+}
 .h5p-baq .h5p-joubelui-button {
   margin: 0;
   border-radius: 0;
@@ -27,6 +56,14 @@
 .h5p-baq-game {
   height: 100%;
   display: table-cell;
+}
+/* Don not show progress when igniting or when showing results*/
+.h5p-baq-game.counting-down .h5p-progressbar,
+.h5p-baq-game.result-page .h5p-progressbar {
+  visibility: hidden;
+}
+.h5p-baq-game .h5p-progressbar {
+  z-index: 1;
 }
 /* Intro page */
 .h5p-baq-intro-page {
@@ -106,6 +143,7 @@
   font-size: 0.4em;
   line-height: 1;
   z-index: 1;
+  text-shadow: 1px 1px 2px rgba(1, 72, 118, 0.5);
 }
 .h5p-baq-game > .timer {
   right: 0;
@@ -113,6 +151,12 @@
 .h5p-baq-game > .h5p-baq-score-widget {
   left: 0;
   min-width: 3em;
+}
+.h5p-baq-score-widget-number {
+  padding: 0 .3em;
+  background-color: #fff;
+  color: #1394c7;
+  border-radius: 2px;
 }
 .h5p-baq-score-widget-number * {
   text-shadow: none;

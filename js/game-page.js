@@ -1,92 +1,7 @@
 /**
  * Defines the H5P.BasicArithmeticQuiz.GamePage class
  */
-H5P.BasicArithmeticQuiz.GamePage = (function ($, UI) {
-
-  /**
-   * Enum defining the different arithmetic types
-   * @readonly
-   * @enum {string}
-   */
-  var ArithmeticType = {
-    ADDITION: 'addition',
-    SUBTRACTION: 'subtraction',
-    MULTIPLICATION: 'multiplication',
-    DIVISION: 'division'
-  };
-
-
-  /**
-   * Helper for creating quiz content for the different arithmetic types
-   *
-   * @class
-   * @private
-   * @param  {type} type Arithmetic type
-   */
-  function Arithmeticator(type) {
-
-    /**
-     * Create the content of a quiz. Randomizes the questions, and makes sure
-     * the maxQuestions parameter is taken into account
-     *
-     * @param  {number} maxQuestions Maximum numver of questions
-     * @return {array}              description
-     */
-    this.createQuiz = function (maxQuestions) {
-      var questions = [];
-      var i,j;
-
-      switch (type) {
-        case ArithmeticType.DIVISION:
-        case ArithmeticType.MULTIPLICATION:
-          for (i=0; i<10; i++) {
-            for (j=0; j<10; j++) {
-              questions.push(this.createQuestion(type === ArithmeticType.DIVISION ? i*j : i, j));
-            }
-          }
-          break;
-        case ArithmeticType.ADDITION:
-        case ArithmeticType.SUBTRACTION:
-          for (i=100; i>=0; i--) {
-            for (j=i; j>=0; j--) {
-              questions.push(this.createQuestion(type === ArithmeticType.ADDITION ? i-j : i, j));
-            }
-          }
-          break;
-      }
-
-      // Let's shuffle
-      questions = H5P.shuffleArray(questions);
-
-      return questions.length > maxQuestions ? questions.slice(0, maxQuestions) : questions;
-    };
-
-
-    /**
-     * Creates a single question and it's correct answer
-     *
-     * @param  {type} x description
-     * @param  {type} y description
-     * @return {Object} question An object containing the question and correct answer
-     * @return {string} question.q The question
-     * @return {number} question.correct The correct answer
-     */
-    this.createQuestion = function (x, y) {
-      switch (type) {
-        case ArithmeticType.ADDITION:
-          return { q: x + " + " + y, correct: x + y} ;
-        case ArithmeticType.SUBTRACTION:
-          return { q: x + " - " + y, correct: x - y} ;
-        case ArithmeticType.MULTIPLICATION:
-          return { q: x + " x " + y, correct: x * y} ;
-        case ArithmeticType.DIVISION:
-          return { q: x + " / " + y, correct: x / y} ;
-        default:
-          return {};
-      }
-    };
-  }
-
+H5P.BasicArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerator) {
 
   /**
    * Creates a new GamePage instance
@@ -107,14 +22,10 @@ H5P.BasicArithmeticQuiz.GamePage = (function ($, UI) {
     self.maxQuestions = maxQuestions;
 
     self.$gamepage = $('<div>', {
-      'class': 'h5p-baq-game'
+      'class': 'h5p-baq-game counting-down'
     });
 
-    /*self.gridResultsView = new GridResultsView(10,10);
-    self.gridResultsView.appendTo(self.$gamepage);
-    self.gridResultsView.getCell(5, 5).css({'background': 'blue'});*/
-
-    self.arithmeticator = new Arithmeticator(self.type);
+    self.questionsGenerator = new QuestionsGenerator(self.type, self.maxQuestions);
     self.score = 0;
     self.scoreWidget = new ScoreWidget(t);
     self.scoreWidget.appendTo(self.$gamepage);
@@ -127,17 +38,24 @@ H5P.BasicArithmeticQuiz.GamePage = (function ($, UI) {
     self.countdownWidget = new H5P.BasicArithmeticQuiz.CountdownWidget(4, t);
     self.slider.addSlide(self.countdownWidget.create());
     self.countdownWidget.on('ignition', function () {
+      self.$gamepage.removeClass('counting-down');
+      self.progressbar.setProgress(0);
       self.slider.next();
       self.timer.start();
+      self.setActivityStarted();
     });
 
     // Shuffle quizzes:
-    self.quizzes = self.arithmeticator.createQuiz(self.maxQuestions);
+    self.quizzes = self.questionsGenerator.get();
 
     var numQuestions = self.quizzes.length;
     for (var i = 0; i < numQuestions; i++) {
       self.slider.addSlide(self.createSlide(self.quizzes[i]));
     }
+
+    // Create progressbar
+    self.progressbar = UI.createProgressbar(numQuestions);
+    self.progressbar.appendTo(self.$gamepage);
 
     // Add result page:
     self.resultPage = new H5P.BasicArithmeticQuiz.ResultPage(numQuestions, t);
@@ -159,6 +77,7 @@ H5P.BasicArithmeticQuiz.GamePage = (function ($, UI) {
     });
 
     self.slider.on('move', function () {
+      self.progressbar.next();
       setTimeout(function () {
         self.resize();
       }, 0);
@@ -172,14 +91,12 @@ H5P.BasicArithmeticQuiz.GamePage = (function ($, UI) {
   GamePage.prototype = Object.create(H5P.EventDispatcher.prototype);
   GamePage.prototype.constructor = GamePage;
 
-
   /**
    * Starts the countdown
    */
   GamePage.prototype.startCountdown = function () {
     this.countdownWidget.start();
   };
-
 
   /**
    * Handles resizing
@@ -192,7 +109,6 @@ H5P.BasicArithmeticQuiz.GamePage = (function ($, UI) {
       var parentHeight = $alternatives.parent().height();
       var fontSize = parseInt($alternatives.css('fontSize'));
       fontSize = fontSize || 42;
-
 
       if (scaleDown) {
         while (fontSize > 10 && $alternatives.position().top + $alternatives.outerHeight() > parentHeight) {
@@ -213,7 +129,6 @@ H5P.BasicArithmeticQuiz.GamePage = (function ($, UI) {
     });
   };
 
-
   /**
    * Resets quiz
    */
@@ -223,9 +138,9 @@ H5P.BasicArithmeticQuiz.GamePage = (function ($, UI) {
     this.timer.reset();
     this.$gamepage.find('.reveal-wrong').removeClass('reveal-wrong');
     this.$gamepage.find('.reveal-correct').removeClass('reveal-correct');
+    this.$gamepage.addClass('counting-down');
     this.countdownWidget.restart();
   };
-
 
   /**
    * Creates a question slide
@@ -244,29 +159,28 @@ H5P.BasicArithmeticQuiz.GamePage = (function ($, UI) {
 
     var $question = $('<div>', {
       'class': 'question',
-      text: question.q + ' = ?'
+      text: question.textual + ' = ?'
     }).appendTo($slide);
 
     var $alternatives = $('<div>', {
       'class': 'h5p-baq-alternatives'
     });
 
-    var start = question.correct-3;
-    start = start >= 0 ? start : 0;
     var alternatives = [];
-    for (var k = start; k < start+6; k++) {
-      alternatives.push(new Alternative(k, k===question.correct));
+    for (var k = 0; k < question.alternatives.length; k++) {
+      alternatives.push(new Alternative(question.alternatives[k], question.alternatives[k]===question.correct));
     }
-    alternatives = H5P.shuffleArray(alternatives);
     alternatives.forEach(function (alternative) {
       alternative.appendTo($alternatives);
       alternative.on('answered', function () {
+
+        self.triggerXAPI('interacted');
 
         // Can't play it after the transition end is received, since this is not
         // accepted on iPad. Therefore we are playing it here with a delay instead
         H5P.BasicArithmeticQuiz.SoundEffects.play(alternative.correct ? 'positive-short' : 'negative-short', 300);
 
-        if (alternative.correct === true) {
+        if (alternative.correct) {
           self.score++;
           self.scoreWidget.update(self.score);
         }
@@ -367,7 +281,7 @@ H5P.BasicArithmeticQuiz.GamePage = (function ($, UI) {
 
   return GamePage;
 
-})(H5P.jQuery, H5P.JoubelUI);
+})(H5P.jQuery, H5P.JoubelUI, H5P.BasicArithmeticQuiz.ArithmeticType, H5P.BasicArithmeticQuiz.QuestionsGenerator);
 
 /*function GridResultsView(rows, cols) {
   var $grid = $('<table>', {

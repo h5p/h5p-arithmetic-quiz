@@ -27,6 +27,9 @@ H5P.BasicArithmeticQuiz.ResultPage = (function ($, UI) {
       'html': t.resultPageHeader
     }));
 
+    this.scoreBar = UI.createScoreBar(maxScore);
+    this.scoreBar.appendTo(this.$feedbackContainer);
+
     this.$score = $('<div>', {
       'class': 'h5p-baq-result-page-score'
     }).appendTo(this.$feedbackContainer);
@@ -40,9 +43,10 @@ H5P.BasicArithmeticQuiz.ResultPage = (function ($, UI) {
       'class': 'mq-control-button',
       click: function () {
         self.trigger('retry');
+        self.update(0, 0);
+        self.scoreBar.reset();
       }
     }).appendTo(this.$feedbackContainer);
-
 
     /**
      * Creates result page
@@ -52,7 +56,6 @@ H5P.BasicArithmeticQuiz.ResultPage = (function ($, UI) {
     this.create = function () {
       return this.$resultPage;
     };
-
 
     /**
      * Updates result page
@@ -64,6 +67,8 @@ H5P.BasicArithmeticQuiz.ResultPage = (function ($, UI) {
       var percent = Math.ceil((score / maxScore) * 100);
       this.$score.html(H5P.BasicArithmeticQuiz.tReplace(t.scoreOnResultPage, {score: score, maxScore: maxScore}));
       this.$time.html(H5P.BasicArithmeticQuiz.tReplace(t.time, {time: time}));
+
+      this.scoreBar.setScore(score);
     };
   }
   ResultPage.prototype = Object.create(H5P.EventDispatcher.prototype);

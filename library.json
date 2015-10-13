@@ -18,8 +18,10 @@
     {"path": "js/countdown-widget.js"},
     {"path": "js/timer-widget.js"},
     {"path": "js/intro-page.js"},
+    {"path": "js/qa-generator.js"},
     {"path": "js/game-page.js"},
     {"path": "js/result-page.js"}
+
   ],
   "preloadedCss": [
     {"path": "css/basic-arithmetic-quiz.css"}
@@ -28,7 +30,7 @@
     {
       "machineName": "FontAwesome",
       "majorVersion": 4,
-      "minorVersion": 1
+      "minorVersion": 3
     },
     {
       "machineName": "H5P.JoubelUI",
