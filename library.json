@@ -10,7 +10,7 @@
   "machineName": "H5P.BasicArithmeticQuiz",
   "fullscreen": 0,
   "embedTypes": [
-    "div"
+    "iframe"
   ],
   "preloadedJs": [
     {"path": "js/basic-arithmetic-quiz.js"},
