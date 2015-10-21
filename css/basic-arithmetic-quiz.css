@@ -58,11 +58,11 @@
   display: table-cell;
 }
 /* Don not show progress when igniting or when showing results*/
-.h5p-baq-game.counting-down .h5p-progressbar,
-.h5p-baq-game.result-page .h5p-progressbar {
+.h5p-baq-game.counting-down .h5p-joubelui-progressbar,
+.h5p-baq-game.result-page .h5p-joubelui-progressbar {
   visibility: hidden;
 }
-.h5p-baq-game .h5p-progressbar {
+.h5p-baq-game .h5p-joubelui-progressbar {
   z-index: 1;
 }
 /* Intro page */
