@@ -20,6 +20,7 @@ H5P.BasicArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGe
     var self = this;
     self.type = type;
     self.maxQuestions = maxQuestions;
+    self.sliding = false;
 
     self.$gamepage = $('<div>', {
       'class': 'h5p-baq-game counting-down'
@@ -81,6 +82,10 @@ H5P.BasicArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGe
       setTimeout(function () {
         self.resize();
       }, 0);
+    });
+
+    self.slider.on('moved', function () {
+      self.sliding = false;
     });
 
     self.slider.attach(self.$gamepage);
@@ -173,6 +178,12 @@ H5P.BasicArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGe
     alternatives.forEach(function (alternative) {
       alternative.appendTo($alternatives);
       alternative.on('answered', function () {
+
+        // Ignore clicks if in the middle of something else:
+        if (self.sliding) {
+          return;
+        }
+        self.sliding = true;
 
         self.triggerXAPI('interacted');
 
