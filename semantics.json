@@ -32,9 +32,11 @@
   },
   {
     "name": "maxQuestions",
-    "type": "text",
+    "type": "number",
     "label": "Max number of questions",
-    "optional": true
+    "default": 20,
+    "min": 2,
+    "max": 100
   },
   {
     "name": "UI",
