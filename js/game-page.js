@@ -79,9 +79,6 @@ H5P.BasicArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGe
 
     self.slider.on('move', function () {
       self.progressbar.next();
-      setTimeout(function () {
-        self.resize();
-      }, 0);
     });
 
     self.slider.on('moved', function () {
@@ -89,9 +86,6 @@ H5P.BasicArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGe
     });
 
     self.slider.attach(self.$gamepage);
-    setTimeout(function () {
-      self.resize();
-    },0);
   }
   GamePage.prototype = Object.create(H5P.EventDispatcher.prototype);
   GamePage.prototype.constructor = GamePage;
@@ -101,37 +95,6 @@ H5P.BasicArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGe
    */
   GamePage.prototype.startCountdown = function () {
     this.countdownWidget.start();
-  };
-
-  /**
-   * Handles resizing
-   */
-  GamePage.prototype.resize = function() {
-    this.$gamepage.find('.h5p-baq-alternatives:visible').each(function () {
-      var $alternatives = $(this);
-
-      var scaleDown = $alternatives.position().top + $alternatives.height() > $alternatives.parent().height();
-      var parentHeight = $alternatives.parent().height();
-      var fontSize = parseInt($alternatives.css('fontSize'));
-      fontSize = fontSize || 42;
-
-      if (scaleDown) {
-        while (fontSize > 10 && $alternatives.position().top + $alternatives.outerHeight() > parentHeight) {
-          fontSize -= fontSize * 0.05;
-          $alternatives.css({'font-size': fontSize + 'px'});
-        }
-      }
-      else {
-        var lastStep;
-        while (fontSize < 100 && $alternatives.position().top + $alternatives.outerHeight() < parentHeight) {
-          lastStep = fontSize * 0.05;
-          fontSize += lastStep;
-          $alternatives.css({'font-size': fontSize + 'px'});
-        }
-
-        $alternatives.css({'font-size': (fontSize - lastStep) + 'px'});
-      }
-    });
   };
 
   /**

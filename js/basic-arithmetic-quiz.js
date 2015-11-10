@@ -15,7 +15,8 @@ H5P.BasicArithmeticQuiz = (function ($, UI) {
    * @param {number} id
    */
   function BasicArithmeticQuiz(options, id) {
-    H5P.EventDispatcher.call(this);
+    // Add viewport meta to iframe
+    $('head').append('<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">');
 
     var self = this;
     // Extend defaults with provided options
@@ -43,17 +44,6 @@ H5P.BasicArithmeticQuiz = (function ($, UI) {
       self.introPage.remove();
       self.gamePage.appendTo(self.$container);
       self.gamePage.startCountdown();
-    });
-
-    self.on('resize', function() {
-      var width = self.$container.width();
-      if (width !== self.currentWidth) {
-        self.$container.css({
-          height: width * 0.6 + 'px'
-        });
-        self.currentWidth = width;
-      }
-      self.gamePage.resize();
     });
 
     /**
@@ -90,10 +80,6 @@ H5P.BasicArithmeticQuiz = (function ($, UI) {
       s.parentNode.insertBefore(wf, s);
     };
   }
-  // Extends the event dispatcher
-  BasicArithmeticQuiz.prototype = Object.create(H5P.EventDispatcher.prototype);
-  BasicArithmeticQuiz.prototype.constructor = BasicArithmeticQuiz;
-
 
   /**
    * Replaces placeholders in translatables texts
