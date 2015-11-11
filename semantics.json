@@ -3,7 +3,8 @@
     "name": "intro",
     "type": "text",
     "label": "Intro",
-    "description": "The intro text",
+    "description": "The intro text (maximum 100 characters)",
+    "maxLength": 100,
     "optional": true
   },
   {

@@ -98,6 +98,26 @@ H5P.BasicArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGe
   };
 
   /**
+   * Calculate maximum height
+   * @method getMaxHeight
+   * @return {number}
+   */
+  GamePage.prototype.getMaxHeight = function () {
+    var $slide = $('.question-page', this.$gamepage).first();
+    $slide.css({
+      display: 'block',
+      width: $('.h5p-container').width() + 'px'
+    });
+    var height = $slide.height();
+    $slide.css({
+      display: 'hidden',
+      width: '100%'
+    });
+
+    return height;
+  };
+
+  /**
    * Resets quiz
    */
   GamePage.prototype.reset = function () {

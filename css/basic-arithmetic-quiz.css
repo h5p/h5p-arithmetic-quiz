@@ -8,7 +8,7 @@
 
   display: table;
   height: 100%;
-  min-height: 330px;
+  min-height: 200px;
   width: 100%;
 }
 .h5p-baq * {
@@ -54,7 +54,6 @@
   outline: none;
 }
 .h5p-baq-game {
-  height: 100%;
   display: table-cell;
 }
 /* Don not show progress when igniting or when showing results*/
@@ -75,6 +74,7 @@
 .h5p-baq-intro-page > .h5p-baq-intro-page-title {
   font-weight: bold;
   line-height: 1.1;
+  font-size: 0.9em;
   margin-bottom: 0.8em;
 }
 .h5p-baq-intro-page > .h5p-baq-intro-page-title > span {
@@ -130,9 +130,16 @@
 .h5p-baq-countdown-bg.fuel {
   height: 100%;
 }
+
+.h5p-slide {
+  height: auto;
+}
+
 /* Hide statusbar on resultpage */
 .h5p-baq-game.result-page > .timer,
-.h5p-baq-game.result-page > .h5p-baq-score-widget {
+.h5p-baq-game.counting-down > .timer,
+.h5p-baq-game.result-page > .h5p-baq-score-widget,
+.h5p-baq-game.counting-down > .h5p-baq-score-widget {
   display: none;
 }
 .h5p-baq-game > .timer,
@@ -162,7 +169,7 @@
   text-shadow: none;
 }
 .h5p-baq .question {
-  margin: 1.5em 0 0 0;
+  margin: 1em 0 0 0;
   font-size: 1.5em;
   text-align: center;
 }
@@ -207,28 +214,14 @@
   -ms-transition: -ms-transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
 }
-
 @media screen and (max-width: 570px) {
   .h5p-baq-alternatives > .h5p-joubelui-button {
     width: 40%;
   }
-  .h5p-baq {
-    min-height: 430px;
-  }
 }
-
-@media screen and (orientation:landscape) {
-  .h5p-baq {
-    font-size: 25px;
-  }
-}
-
 @media screen and (max-device-width: 570px) and (orientation:landscape) {
   .h5p-baq-alternatives > .h5p-joubelui-button {
     width: 29%;
-  }
-  .h5p-baq {
-    min-height: 300px;
   }
 }
 .h5p-baq-alternatives > .h5p-joubelui-button:active,

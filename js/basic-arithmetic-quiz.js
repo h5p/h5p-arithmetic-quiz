@@ -42,9 +42,18 @@ H5P.BasicArithmeticQuiz = (function ($, UI) {
     self.introPage = new H5P.BasicArithmeticQuiz.IntroPage(self.options.intro, self.options.UI);
     self.introPage.on('start-game', function(){
       self.introPage.remove();
-      self.gamePage.appendTo(self.$container);
       self.gamePage.startCountdown();
     });
+
+    self.on('resize', function () {
+      // Set size based on gamePage
+      var height = self.gamePage.getMaxHeight() + 'px';
+      this.$container.css({height: height});
+      // Need to set height in pixels because of FF-bug
+      $('.h5p-baq-countdown').css({height: height});
+      $('.h5p-baq-result-page').css({height: height});
+    });
+
 
     /**
      * Attach function called by H5P framework to insert H5P content into page
@@ -57,6 +66,9 @@ H5P.BasicArithmeticQuiz = (function ($, UI) {
         this.addFont();
         this.$container.addClass('h5p-baq');
         this.introPage.appendTo($container);
+        self.gamePage.appendTo(self.$container);
+
+        self.trigger('resize');
 
         setTimeout(function () {
           H5P.BasicArithmeticQuiz.SoundEffects.setup();
