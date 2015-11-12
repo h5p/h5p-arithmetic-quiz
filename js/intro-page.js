@@ -1,9 +1,9 @@
-H5P.BasicArithmeticQuiz.IntroPage = (function ($, UI) {
+H5P.ArithmeticQuiz.IntroPage = (function ($, UI) {
   /**
    * Creates an IntroPage instance
    *
    * @class
-   * @namespace H5P.BasicArithmeticQuiz
+   * @namespace H5P.ArithmeticQuiz
    * @augments H5P.EventDispatcher
    *
    * @param  {string} text Introduction text

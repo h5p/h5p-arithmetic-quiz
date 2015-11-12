@@ -1,10 +1,10 @@
-H5P.BasicArithmeticQuiz.TimerWidget = (function ($) {
+H5P.ArithmeticQuiz.TimerWidget = (function ($) {
 
   /**
    * Creates a TimerWidget instance
    *
    * @class
-   * @namespace H5P.BasicArithmeticQuiz
+   * @namespace H5P.ArithmeticQuiz
    *
    * @param  {type} t Translation object
    */
@@ -18,7 +18,7 @@ H5P.BasicArithmeticQuiz.TimerWidget = (function ($) {
 
     var $timer = $('<div>', {
       'class': 'timer',
-      text: H5P.BasicArithmeticQuiz.tReplace(t.time, {time: '00:00'})
+      text: H5P.ArithmeticQuiz.tReplace(t.time, {time: '00:00'})
     });
 
 
@@ -79,7 +79,7 @@ H5P.BasicArithmeticQuiz.TimerWidget = (function ($) {
      * @private
      */
     var update = function () {
-      $timer.text(H5P.BasicArithmeticQuiz.tReplace(t.time, {time: humanizeTime(getTime()/1000)}));
+      $timer.text(H5P.ArithmeticQuiz.tReplace(t.time, {time: humanizeTime(getTime()/1000)}));
 
       timer = setTimeout(function(){
         update();

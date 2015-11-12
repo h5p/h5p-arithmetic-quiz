@@ -1,4 +1,4 @@
-H5P.BasicArithmeticQuiz.SoundEffects = (function ($) {
+H5P.ArithmeticQuiz.SoundEffects = (function ($) {
   SoundEffects = {
     types: [
       'positive-short',
@@ -19,7 +19,7 @@ H5P.BasicArithmeticQuiz.SoundEffects = (function ($) {
       return false;
     }
 
-    SoundEffects.libraryPath = H5P.getLibraryPath('H5P.BasicArithmeticQuiz-1.0');
+    SoundEffects.libraryPath = H5P.getLibraryPath('H5P.ArithmeticQuiz-1.0');
     H5P.SoundJS.alternateExtensions = ['mp3'];
     for (var i = 0; i < SoundEffects.types.length; i++) {
       var type = SoundEffects.types[i];

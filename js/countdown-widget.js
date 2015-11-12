@@ -1,14 +1,14 @@
 /**
- * Defines the H5P.BasicArithmeticQuiz.CountdownWidget class
+ * Defines the H5P.ArithmeticQuiz.CountdownWidget class
  */
-H5P.BasicArithmeticQuiz.CountdownWidget = (function ($) {
+H5P.ArithmeticQuiz.CountdownWidget = (function ($) {
 
   /**
    * A count down widget
    *
    * @class
    * @augments H5P.EventDispatcher
-   * @namespace H5P.BasicArithmeticQuiz
+   * @namespace H5P.ArithmeticQuiz
    * @fires H5P.Event
    *
    * @param  {type} seconds Number of seconds to count down

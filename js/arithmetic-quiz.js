@@ -1,12 +1,12 @@
 var H5P = H5P || {};
 
 /**
- * Defines the H5P.BasicArithmeticQuiz class
+ * Defines the H5P.ArithmeticQuiz class
  */
-H5P.BasicArithmeticQuiz = (function ($, UI) {
+H5P.ArithmeticQuiz = (function ($, UI) {
 
   /**
-   * Creates a new BasicArithmeticQuiz instance
+   * Creates a new ArithmeticQuiz instance
    *
    * @class
    * @augments H5P.EventDispatcher
@@ -14,7 +14,7 @@ H5P.BasicArithmeticQuiz = (function ($, UI) {
    * @param {Object} options
    * @param {number} id
    */
-  function BasicArithmeticQuiz(options, id) {
+  function ArithmeticQuiz(options, id) {
     // Add viewport meta to iframe
     $('head').append('<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">');
 
@@ -37,9 +37,9 @@ H5P.BasicArithmeticQuiz = (function ($, UI) {
     }, options);
     self.currentWidth = 0;
 
-    self.gamePage = new H5P.BasicArithmeticQuiz.GamePage(self.options.arithmeticType, self.options.maxQuestions, self.options.UI);
+    self.gamePage = new H5P.ArithmeticQuiz.GamePage(self.options.arithmeticType, self.options.maxQuestions, self.options.UI);
 
-    self.introPage = new H5P.BasicArithmeticQuiz.IntroPage(self.options.intro, self.options.UI);
+    self.introPage = new H5P.ArithmeticQuiz.IntroPage(self.options.intro, self.options.UI);
     self.introPage.on('start-game', function(){
       self.introPage.remove();
       self.gamePage.startCountdown();
@@ -71,7 +71,7 @@ H5P.BasicArithmeticQuiz = (function ($, UI) {
         self.trigger('resize');
 
         setTimeout(function () {
-          H5P.BasicArithmeticQuiz.SoundEffects.setup();
+          H5P.ArithmeticQuiz.SoundEffects.setup();
         },1);
       }
     };
@@ -101,14 +101,14 @@ H5P.BasicArithmeticQuiz = (function ($, UI) {
    * @param  {type} vars description
    * @return {type}      description
    */
-  BasicArithmeticQuiz.tReplace = function (text, vars) {
+  ArithmeticQuiz.tReplace = function (text, vars) {
     for (var placeholder in vars) {
       text = text.replace('@'+placeholder, vars[placeholder]);
     }
     return text;
   };
 
-  return BasicArithmeticQuiz;
+  return ArithmeticQuiz;
 })(H5P.jQuery, H5P.JoubelUI);
 
 /**
@@ -116,7 +116,7 @@ H5P.BasicArithmeticQuiz = (function ($, UI) {
  * @readonly
  * @enum {string}
  */
-H5P.BasicArithmeticQuiz.ArithmeticType = {
+H5P.ArithmeticQuiz.ArithmeticType = {
   ADDITION: 'addition',
   SUBTRACTION: 'subtraction',
   MULTIPLICATION: 'multiplication',

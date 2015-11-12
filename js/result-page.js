@@ -1,9 +1,9 @@
-H5P.BasicArithmeticQuiz.ResultPage = (function ($, UI) {
+H5P.ArithmeticQuiz.ResultPage = (function ($, UI) {
   /**
    * Creates a ResultPage instance
    *
    * @class
-   * @namespace H5P.BasicArithmeticQuiz
+   * @namespace H5P.ArithmeticQuiz
    * @augments H5P.EventDispatcher
    *
    * @param  {number} maxScore Max score
@@ -65,8 +65,8 @@ H5P.BasicArithmeticQuiz.ResultPage = (function ($, UI) {
      */
     this.update = function (score, time) {
       var percent = Math.ceil((score / maxScore) * 100);
-      this.$score.html(H5P.BasicArithmeticQuiz.tReplace(t.scoreOnResultPage, {score: score, maxScore: maxScore}));
-      this.$time.html(H5P.BasicArithmeticQuiz.tReplace(t.time, {time: time}));
+      this.$score.html(H5P.ArithmeticQuiz.tReplace(t.scoreOnResultPage, {score: score, maxScore: maxScore}));
+      this.$time.html(H5P.ArithmeticQuiz.tReplace(t.time, {time: time}));
 
       this.scoreBar.setScore(score);
     };

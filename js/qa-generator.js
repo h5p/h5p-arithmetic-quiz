@@ -1,7 +1,7 @@
 /**
- * Defines the H5P.BasicArithmeticQuiz.QuestionsGenerator class
+ * Defines the H5P.ArithmeticQuiz.QuestionsGenerator class
  */
-H5P.BasicArithmeticQuiz.QuestionsGenerator = (function (ArithmeticType) {
+H5P.ArithmeticQuiz.QuestionsGenerator = (function (ArithmeticType) {
 
   // Helper functions for creating wrong alternatives
   function add (question, param) {
@@ -67,7 +67,7 @@ H5P.BasicArithmeticQuiz.QuestionsGenerator = (function (ArithmeticType) {
   /**
    * Utility function that picks a alternative setup based on the weight
    * @method getRandomWeightedAlternativeSetup
-   * @param  {H5P.BasicArithmeticQuiz.ArithmeticType} type
+   * @param  {H5P.ArithmeticQuiz.ArithmeticType} type
    * @return {Object}
    */
   function getRandomWeightedAlternativeSetup (type) {
@@ -90,7 +90,7 @@ H5P.BasicArithmeticQuiz.QuestionsGenerator = (function (ArithmeticType) {
    * Questions generator classes
    * @method QuestionsGenerator
    * @constructor
-   * @param  {H5P.BasicArithmeticQuiz.ArithmeticType}   type
+   * @param  {H5P.ArithmeticQuiz.ArithmeticType}   type
    * @param  {number}           maxQuestions
    */
   function QuestionsGenerator(type, maxQuestions) {
@@ -194,4 +194,4 @@ H5P.BasicArithmeticQuiz.QuestionsGenerator = (function (ArithmeticType) {
   }
 
   return QuestionsGenerator;
-}(H5P.BasicArithmeticQuiz.ArithmeticType));
+}(H5P.ArithmeticQuiz.ArithmeticType));

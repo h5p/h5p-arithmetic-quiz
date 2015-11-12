@@ -1,7 +1,7 @@
-H5P Basic Arithmetic Quiz
+H5P Arithmetic Quiz
 =========================
 
-Basic arithmetic quiz containing addition, division, multiplication and subtraction of numbers between 0 and 10.
+Arithmetic quiz containing addition, division, multiplication and subtraction of numbers where the answer is between 0 and 100.
 
 ## License
 

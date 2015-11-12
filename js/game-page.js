@@ -1,7 +1,7 @@
 /**
- * Defines the H5P.BasicArithmeticQuiz.GamePage class
+ * Defines the H5P.ArithmeticQuiz.GamePage class
  */
-H5P.BasicArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerator) {
+H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerator) {
 
   /**
    * Creates a new GamePage instance
@@ -31,12 +31,12 @@ H5P.BasicArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGe
     self.scoreWidget = new ScoreWidget(t);
     self.scoreWidget.appendTo(self.$gamepage);
 
-    self.timer = new H5P.BasicArithmeticQuiz.TimerWidget(t);
+    self.timer = new H5P.ArithmeticQuiz.TimerWidget(t);
     self.timer.appendTo(self.$gamepage);
 
     self.slider = UI.createSlider();
 
-    self.countdownWidget = new H5P.BasicArithmeticQuiz.CountdownWidget(4, t);
+    self.countdownWidget = new H5P.ArithmeticQuiz.CountdownWidget(4, t);
     self.slider.addSlide(self.countdownWidget.create());
     self.countdownWidget.on('ignition', function () {
       self.$gamepage.removeClass('counting-down');
@@ -59,7 +59,7 @@ H5P.BasicArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGe
     self.progressbar.appendTo(self.$gamepage);
 
     // Add result page:
-    self.resultPage = new H5P.BasicArithmeticQuiz.ResultPage(numQuestions, t);
+    self.resultPage = new H5P.ArithmeticQuiz.ResultPage(numQuestions, t);
     self.slider.addSlide(self.resultPage.create());
 
     self.resultPage.on('retry', function () {
@@ -172,7 +172,7 @@ H5P.BasicArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGe
 
         // Can't play it after the transition end is received, since this is not
         // accepted on iPad. Therefore we are playing it here with a delay instead
-        H5P.BasicArithmeticQuiz.SoundEffects.play(alternative.correct ? 'positive-short' : 'negative-short', 300);
+        H5P.ArithmeticQuiz.SoundEffects.play(alternative.correct ? 'positive-short' : 'negative-short', 300);
 
         if (alternative.correct) {
           self.score++;
@@ -275,7 +275,7 @@ H5P.BasicArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGe
 
   return GamePage;
 
-})(H5P.jQuery, H5P.JoubelUI, H5P.BasicArithmeticQuiz.ArithmeticType, H5P.BasicArithmeticQuiz.QuestionsGenerator);
+})(H5P.jQuery, H5P.JoubelUI, H5P.ArithmeticQuiz.ArithmeticType, H5P.ArithmeticQuiz.QuestionsGenerator);
 
 /*function GridResultsView(rows, cols) {
   var $grid = $('<table>', {
