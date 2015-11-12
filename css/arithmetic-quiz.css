@@ -70,6 +70,17 @@
   display: table-cell;
   vertical-align: middle;
   text-align: center;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background: #1394c7;
+}
+.h5p-baq-intro-page-inner {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .h5p-baq-intro-page > .h5p-baq-intro-page-title {
   font-weight: bold;
@@ -192,7 +203,7 @@
   -webkit-align-content: flex-end;
   align-content: flex-end;
 
-  padding: .5em;
+  padding: .5em .5em 1em .5em;
 }
 .h5p-baq-alternatives > .h5p-joubelui-button {
   display: inline-block;

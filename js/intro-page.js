@@ -18,7 +18,11 @@ H5P.ArithmeticQuiz.IntroPage = (function ($, UI) {
       'class': 'h5p-baq-intro-page'
     });
 
-    this.$introPage.append($('<div>', {
+    var $innerWrapper = $('<div>', {
+      'class': 'h5p-baq-intro-page-inner'
+    });
+
+    $innerWrapper.append($('<div>', {
       'class': 'h5p-baq-intro-page-title'
     }).append($('<span>', {
       html: text
@@ -31,9 +35,9 @@ H5P.ArithmeticQuiz.IntroPage = (function ($, UI) {
       click: function () {
         self.trigger('start-game');
       }
-    });
-    $startButton.appendTo(this.$introPage);
+    }).appendTo($innerWrapper);
 
+    $innerWrapper.appendTo(this.$introPage);
 
     /**
      * Append Intropage to a container
