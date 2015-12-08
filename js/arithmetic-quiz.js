@@ -66,9 +66,15 @@ H5P.ArithmeticQuiz = (function ($, UI) {
         this.addFont();
         this.$container.addClass('h5p-baq');
         this.introPage.appendTo($container);
+
+        // Set gamePage xAPI parameters and append it.
+        self.gamePage.contentId = id;
+        self.gamePage.libraryInfo = self.libraryInfo;
         self.gamePage.appendTo(self.$container);
 
         self.trigger('resize');
+
+
 
         setTimeout(function () {
           H5P.ArithmeticQuiz.SoundEffects.setup();
