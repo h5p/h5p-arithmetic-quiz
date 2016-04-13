@@ -146,6 +146,7 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
     });
 
     var $question = $('<div>', {
+      'tabindex': '-1',
       'class': 'question',
       text: question.textual + ' = ?'
     }).appendTo($slide);
@@ -218,6 +219,7 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
 
     this.$scoreWidget = $('<div>', {
       'class': 'h5p-baq-score-widget',
+      'tabindex': '0',
       html: t.score + ' '
     }).append($score);
 
@@ -257,11 +259,31 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
     this.$button = UI.createButton({
       text: number,
       click: function () {
+        self.announce();
         self.trigger('answered');
+        setTimeout(self.dropLive, 500);
       }
     });
 
+    this.dropLive = function() {
+      var node = self.$liveRegion[0];
+      node.parentNode.removeChild(node);
+    };
+
+    this.announce = function() {
+      self.$liveRegion = $('<div>', {
+        'class': 'h5p-baq-live-feedback',
+        'aria-live': 'assertive',
+        'width': '1px',
+        'height': '1px',
+        text: self.correct ? 'correct' : 'incorrect'
+      }).appendTo(document.body.lastChild);
+    };
+    
+    
     this.reveal = function () {
+      //TODO: On incorrect answer, the correct answer has to be queued so it is
+      //      announced after incorrect
       this.$button.addClass(this.correct ? 'reveal-correct' : 'reveal-wrong');
     };
 
