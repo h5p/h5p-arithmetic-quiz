@@ -1,0 +1,60 @@
+[
+  {
+    "label": "Intro",
+    "description": "Der Introtext (maximal 100 Zeichen)",
+  },
+  {
+    "label": "arithmetischer Typ",
+    "options": [
+      {
+        "label": "Addition"
+      },
+      {
+        "label": "Subtraktion"
+      },
+      {
+        "label": "Multiplikation"
+      },
+      {
+        "label": "Division"
+      }
+    ],
+    "default": "Addition"
+  },
+  {
+    "label": "Max. Anzahl an Fragen",
+  },
+  {
+    "label": "Benutzeroberflächenübersetzungen",
+    "fields": [
+      {
+        "label": "Punkteerzielung während dem Quiz",
+        "default": "Punktzahl:"
+      },
+      {
+        "label": "Punktestand auf der Ergebnisseite",
+        "default": "Punktzahl: @score / @maxScore"
+      },
+      {
+        "label": "Zeit",
+        "default": "Zeit: @time"
+      },
+      {
+        "label": "Header der Ergebnisseite",
+        "default": "Beendet!"
+      },
+      {
+        "label": "Los Label",
+        "default": "LOS!"
+      },
+      {
+        "label": "Startknopf Label",
+        "default": "Start"
+      },
+      {
+        "label": "Nochmal versuchen Button Label",
+        "default": "Nochmal versuchen"
+      }
+    ]
+  }
+]
