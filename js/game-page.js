@@ -43,7 +43,7 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
       self.progressbar.setProgress(0);
       self.slider.next();
       self.timer.start();
-      self.setActivityStarted();
+      self.trigger('started-quiz');
     });
 
     // Shuffle quizzes:
@@ -70,7 +70,10 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
     self.slider.on('last-slide', function () {
       self.resultPage.update(self.score, self.timer.pause());
       self.$gamepage.addClass('result-page');
-      self.triggerXAPICompleted(self.score, numQuestions);
+      self.trigger('last-slide', {
+        score: self.score,
+        numQuestions: numQuestions
+      });
     });
 
     self.slider.on('first-slide', function () {
@@ -168,7 +171,7 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
         }
         self.sliding = true;
 
-        self.triggerXAPI('interacted');
+        self.trigger('alternative-chosen');
 
         // Can't play it after the transition end is received, since this is not
         // accepted on iPad. Therefore we are playing it here with a delay instead
