@@ -113,7 +113,7 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
     });
     var height = $slide.height();
     $slide.css({
-      display: 'hidden',
+      display: '',
       width: '100%'
     });
 
