@@ -51,7 +51,8 @@
   box-shadow: none;
 }
 .h5p-baq .h5p-joubelui-button:focus {
-  outline: none;
+  outline: 2px dashed #fff;
+  outline-offset: 4px;
 }
 .h5p-baq-game {
   display: table-cell;
@@ -240,9 +241,6 @@
 .h5p-baq-alternatives > .h5p-joubelui-button:active,
 .h5p-baq-alternatives > .h5p-joubelui-button:hover {
   background: rgba(255, 255, 255, 0.4);
-}
-.h5p-baq-alternatives > .h5p-joubelui-button:focus {
-  border-color: #ddd;
 }
 .h5p-baq-alternatives > .h5p-joubelui-button.reveal-correct {
   background: rgba(204, 232, 204, 0.7);
