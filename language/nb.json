@@ -53,6 +53,14 @@
       {
         "label": "Etikett på prøv igjen-knapp",
         "default": "Prøv igjen"
+      },
+      {
+        "label": "Rett svar tekst for hjelpemiddelteknologier",
+        "default": "Rett svar"
+      },
+      {
+        "label": "Galt svar tekst for hjelpemiddelteknologier",
+        "default": "Galt svar"
       }
     ]
   }

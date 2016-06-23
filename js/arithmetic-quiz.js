@@ -32,7 +32,9 @@ H5P.ArithmeticQuiz = (function ($, UI) {
         resultPageHeader: 'Finished!',
         retryButton: 'Retry',
         startButton: 'Start',
-        go: 'GO!'
+        go: 'GO!',
+        correctText: 'Correct',
+        incorrectText: 'Incorrect'
       }
     }, options);
     self.currentWidth = 0;

@@ -18,6 +18,7 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
     H5P.EventDispatcher.call(this);
 
     var self = this;
+    self.translations = t;
     self.type = type;
     self.maxQuestions = maxQuestions;
     self.sliding = false;
@@ -149,7 +150,6 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
     });
 
     var $question = $('<div>', {
-      'tabindex': '-1',
       'class': 'question',
       text: question.textual + ' = ?'
     }).appendTo($slide);
@@ -160,7 +160,7 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
 
     var alternatives = [];
     for (var k = 0; k < question.alternatives.length; k++) {
-      alternatives.push(new Alternative(question.alternatives[k], question.alternatives[k]===question.correct));
+      alternatives.push(new Alternative(question.alternatives[k], question.alternatives[k]===question.correct, self.translations));
     }
     alternatives.forEach(function (alternative) {
       alternative.appendTo($alternatives);
@@ -224,7 +224,6 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
       'class': 'h5p-baq-score-widget',
       'role': 'status',
       'aria-atomic': true,
-      'tabindex': '0',
       html: t.score + ' '
     }).append($score);
 
@@ -251,10 +250,11 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
    * @private
    * @augments H5P.EventDispatcher
    * @fires H5P.Event
-   * @param  {number} number Number on button
-   * @param  {bool} correct Correct or not
+   * @param {number} number Number on button
+   * @param {boolean} correct Correct or not
+   * @param {Object} t Translations
    */
-  function Alternative(number, correct) {
+  function Alternative(number, correct, t) {
     H5P.EventDispatcher.call(this);
     var self = this;
 
@@ -281,7 +281,7 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
         'aria-live': 'assertive',
         'width': '1px',
         'height': '1px',
-        text: self.correct ? 'correct' : 'incorrect'
+        text: self.correct ? t.correctText : t.incorrectText
       }).appendTo(document.body.lastChild);
     };
 
