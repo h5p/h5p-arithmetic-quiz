@@ -222,6 +222,8 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
 
     this.$scoreWidget = $('<div>', {
       'class': 'h5p-baq-score-widget',
+      'role': 'status',
+      'aria-atomic': true,
       html: t.score + ' '
     }).append($score);
 
