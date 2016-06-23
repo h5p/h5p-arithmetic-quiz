@@ -214,6 +214,7 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
    * @param  {Object} t Translation object
    */
   function ScoreWidget(t) {
+    var self = this;
 
     var $score = $('<span>', {
       'class': 'h5p-baq-score-widget-number',
@@ -238,7 +239,13 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
     };
 
     this.update = function (score) {
+      // Need this aria-busy to make sure readspeaker is not reading
+      // both old and new score
+      this.$scoreWidget.attr('aria-busy', true);
       this.scoreElement.innerHTML = score;
+      setTimeout(function () {
+        self.$scoreWidget.attr('aria-busy', false);
+      }, 1);
     };
   }
 
