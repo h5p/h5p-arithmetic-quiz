@@ -23,7 +23,8 @@ H5P.ArithmeticQuiz.CountdownWidget = (function ($) {
       'class': 'h5p-baq-countdown-inner',
     }).append($('<span>', {
       'class': 'h5p-baq-countdown-text',
-      text: seconds
+      text: seconds,
+      'aria-live': 'polite'
     }), $('<span>', {
       'class': 'h5p-baq-countdown-bg'
     })));

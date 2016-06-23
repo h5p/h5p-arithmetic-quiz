@@ -18,6 +18,7 @@ H5P.ArithmeticQuiz.TimerWidget = (function ($) {
 
     var $timer = $('<div>', {
       'class': 'timer',
+      'tabindex': '0',
       text: H5P.ArithmeticQuiz.tReplace(t.time, {time: '00:00'})
     });
 

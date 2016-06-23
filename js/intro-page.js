@@ -25,6 +25,7 @@ H5P.ArithmeticQuiz.IntroPage = (function ($, UI) {
     $innerWrapper.append($('<div>', {
       'class': 'h5p-baq-intro-page-title'
     }).append($('<span>', {
+      'tabindex': '0',
       html: text
     })));
 
@@ -32,6 +33,7 @@ H5P.ArithmeticQuiz.IntroPage = (function ($, UI) {
     var $startButton = UI.createButton({
       text: t.startButton,
       'class': 'mq-control-button',
+      'tabindex': '0',
       click: function () {
         self.trigger('start-game');
       }
