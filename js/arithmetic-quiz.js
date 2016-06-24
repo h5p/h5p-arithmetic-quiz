@@ -39,7 +39,7 @@ H5P.ArithmeticQuiz = (function ($, UI) {
     }, options);
     self.currentWidth = 0;
 
-    self.gamePage = new H5P.ArithmeticQuiz.GamePage(self.options.arithmeticType, self.options.maxQuestions, self.options.UI);
+    self.gamePage = new H5P.ArithmeticQuiz.GamePage(self.options.arithmeticType, self.options.maxQuestions, self.options.UI, id);
 
     self.gamePage.on('last-slide', function (e) {
       self.triggerXAPIScored(e.data.score, e.data.numQuestions, 'answered');

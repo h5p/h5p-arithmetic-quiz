@@ -12,12 +12,14 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
    * @param  {arithmeticType} type
    * @param  {number} maxQuestions Maximum number of questions
    * @param  {Object} t Object containing translation texts
+   * @param {number} id Unique id to identify this quiz
    * @fires H5P.XAPIEvent
    */
-  function GamePage(type, maxQuestions, t) {
+  function GamePage(type, maxQuestions, t, id) {
     H5P.EventDispatcher.call(this);
 
     var self = this;
+    self.id = id;
     self.translations = t;
     self.type = type;
     self.maxQuestions = maxQuestions;
@@ -52,7 +54,7 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
 
     var numQuestions = self.quizzes.length;
     for (var i = 0; i < numQuestions; i++) {
-      self.slider.addSlide(self.createSlide(self.quizzes[i]));
+      self.slider.addSlide(self.createSlide(self.quizzes[i], i));
     }
 
     // Create progressbar
@@ -145,22 +147,26 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
    * @param  {Object} question
    * @param  {string} question.q The question
    * @param  {number} question.correct The correct answer
+   * @param {number} i Index of question
    * @return {H5P.jQuery} The jquery dom element generated
    */
-  GamePage.prototype.createSlide = function (question) {
+  GamePage.prototype.createSlide = function (question, i) {
     var self = this;
 
     var $slide = $('<div>', {
       'class': 'question-page'
     });
 
-    var $question = $('<div>', {
+    $('<div>', {
       'class': 'question',
-      text: question.textual + ' = ?'
+      text: question.textual + ' = ?',
+      'id': 'arithmetic-quiz-' + self.id + '-question-' + i
     }).appendTo($slide);
 
     var $alternatives = $('<div>', {
-      'class': 'h5p-baq-alternatives'
+      'class': 'h5p-baq-alternatives',
+      'role': 'group',
+      'aria-labelledby': 'arithmetic-quiz-' + self.id + '-question-' + i
     });
 
     var alternatives = [];
