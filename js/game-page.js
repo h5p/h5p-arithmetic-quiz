@@ -87,6 +87,11 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
 
     self.slider.on('moved', function () {
       self.sliding = false;
+      // Set focus
+      var $button = self.$gamepage.find('.current .h5p-joubelui-button')[0];
+      if ($button) {
+        $button.focus();
+      }
     });
 
     self.slider.attach(self.$gamepage);
