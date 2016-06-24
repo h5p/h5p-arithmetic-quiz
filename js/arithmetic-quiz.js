@@ -34,7 +34,12 @@ H5P.ArithmeticQuiz = (function ($, UI) {
         startButton: 'Start',
         go: 'GO!',
         correctText: 'Correct',
-        incorrectText: 'Incorrect'
+        incorrectText: 'Incorrect',
+        humanizedQuestion: 'How much is :expression.',
+        plusOperator: 'plus',
+        minusOperator: 'minus',
+        multiplicationOperator: 'times',
+        divisionOperator: 'divided by'
       }
     }, options);
     self.currentWidth = 0;

@@ -157,9 +157,19 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
       'class': 'question-page'
     });
 
+    var humanizedExpression = question.textual
+      .replace('+', self.translations.plusOperator)
+      .replace('-', self.translations.minusOperator)
+      .replace(' x ', ' ' + self.translations.multiplicationOperator + ' ')
+      .replace('/', self.translations.divisionOperator);
+    var humanizedQuestion = self.translations.humanizedQuestion
+      .replace(':expression', humanizedExpression);
+
+
     $('<div>', {
       'class': 'question',
       text: question.textual + ' = ?',
+      'aria-label': humanizedQuestion,
       'id': 'arithmetic-quiz-' + self.id + '-question-' + i
     }).appendTo($slide);
 

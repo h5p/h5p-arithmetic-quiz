@@ -98,6 +98,36 @@
         "type": "text",
         "label": "Readspeaker text for incorrect answer",
         "default": "Incorrect"
+      },
+      {
+        "name": "humanizedQuestion",
+        "type": "text",
+        "label": "Readspeaker text for question",
+        "default": "How much is :expression."
+      },
+      {
+        "name": "plusOperator",
+        "type": "text",
+        "label": "Plus operator text",
+        "default": "plus"
+      },
+      {
+        "name": "subtractionOperator",
+        "type": "text",
+        "label": "Subtraction operator text",
+        "default": "minus"
+      },
+      {
+        "name": "multiplicationOperator",
+        "type": "text",
+        "label": "Multiplication operator text",
+        "default": "times"
+      },
+      {
+        "name": "divisionOperator",
+        "type": "text",
+        "label": "Division operator text",
+        "default": "divided by"
       }
     ]
   }
