@@ -22,23 +22,28 @@ H5P.ArithmeticQuiz.ResultPage = (function ($, UI) {
       'class': 'h5p-baq-result-page-feedback'
     }).appendTo(this.$resultPage);
 
-    this.$feedbackContainer.append($('<div>', {
+    this.$scoreStatus = $('<div>', {
+      'class': 'h5p-baq-result-page-score-status',
+      'aria-live': 'assertive'
+    }).appendTo(this.$feedbackContainer);
+
+    this.$scoreStatus.append($('<div>', {
       'class': 'h5p-baq-result-page-header',
       'html': t.resultPageHeader
     }));
 
     this.scoreBar = UI.createScoreBar(maxScore);
-    this.scoreBar.appendTo(this.$feedbackContainer);
+    this.scoreBar.appendTo(this.$scoreStatus);
 
     this.$score = $('<div>', {
       'class': 'h5p-baq-result-page-score'
-    }).appendTo(this.$feedbackContainer);
+    }).appendTo(this.$scoreStatus);
 
     this.$time = $('<div>', {
       'class': 'h5p-baq-result-page-time'
-    }).appendTo(this.$feedbackContainer);
+    }).appendTo(this.$scoreStatus);
 
-    this.$retryButton = UI.createButton({
+    UI.createButton({
       text: t.retryButton,
       'class': 'mq-control-button',
       click: function () {
