@@ -39,7 +39,8 @@ H5P.ArithmeticQuiz = (function ($, UI) {
         plusOperator: 'plus',
         minusOperator: 'minus',
         multiplicationOperator: 'times',
-        divisionOperator: 'divided by'
+        divisionOperator: 'divided by',
+        slideOfTotal: 'Slide :num of :total'
       }
     }, options);
     self.currentWidth = 0;

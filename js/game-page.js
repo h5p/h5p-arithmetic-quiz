@@ -58,7 +58,9 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
     }
 
     // Create progressbar
-    self.progressbar = UI.createProgressbar(numQuestions);
+    self.progressbar = UI.createProgressbar(numQuestions, {
+      progressText: t.slideOfTotal
+    });
     self.progressbar.appendTo(self.$gamepage);
 
     // Add result page:

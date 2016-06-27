@@ -81,6 +81,11 @@
       {
         "label": "Divisjon til tekst",
         "default": "delt på"
+      },
+      {
+        "label": "Side nummer tekst",
+        "description": "Angir nåværende side og totalt antall sider, variabler er :num og :total",
+        "default": "Side :num av :total"
       }
     ]
   }

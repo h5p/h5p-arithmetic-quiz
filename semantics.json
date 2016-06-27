@@ -128,6 +128,13 @@
         "type": "text",
         "label": "Division operator text",
         "default": "divided by"
+      },
+      {
+        "name": "slideOfTotal",
+        "type": "text",
+        "label": "Slide number text",
+        "description": "Announces current slide and total number of slides, variables are :num and :total",
+        "default": "Slide :num of :total"
       }
     ]
   }
