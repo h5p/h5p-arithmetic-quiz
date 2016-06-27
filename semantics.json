@@ -97,7 +97,13 @@
         "name": "incorrectText",
         "type": "text",
         "label": "Readspeaker text for incorrect answer",
-        "default": "Incorrect"
+        "default": "incorrect"
+      },
+      {
+        "name": "durationLabel",
+        "type": "text",
+        "label": "Readspeaker label for the timer",
+        "default": "Duration in hours, minutes and seconds."
       },
       {
         "name": "humanizedQuestion",

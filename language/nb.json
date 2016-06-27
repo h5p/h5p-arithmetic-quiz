@@ -63,6 +63,10 @@
         "default": "Galt svar"
       },
       {
+        "label": "Hjelpetekst for nedtellingsklokke for hjelpemiddelteknologier",
+        "default": "Tid brukt i timer, minutter og sekunder"
+      },
+      {
         "label": "Spørsmålstekst for hjelpemiddelteknologi",
         "default": "Hvor mye er :expression."
       },
