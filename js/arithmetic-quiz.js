@@ -34,7 +34,8 @@ H5P.ArithmeticQuiz = (function ($, UI) {
         startButton: 'Start',
         go: 'GO!',
         correctText: 'Correct',
-        incorrectText: 'Incorrect'
+        incorrectText: 'Incorrect',
+        durationLabel: 'Duration in hours, minutes and seconds.'
       }
     }, options);
     self.currentWidth = 0;
