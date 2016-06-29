@@ -350,6 +350,7 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
 
     // Create radio button and set up event listeners
     this.$button = $('<li>', {
+      'class': 'h5p-joubelui-button',
       'role': 'radio',
       'tabindex': -1,
       'text': number,
