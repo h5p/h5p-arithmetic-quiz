@@ -109,7 +109,7 @@
         "name": "humanizedQuestion",
         "type": "text",
         "label": "Readspeaker text for question",
-        "default": "How much is :expression."
+        "default": "What does :arithmetic equal?"
       },
       {
         "name": "plusOperator",

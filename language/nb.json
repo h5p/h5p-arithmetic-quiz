@@ -68,7 +68,7 @@
       },
       {
         "label": "Spørsmålstekst for hjelpemiddelteknologi",
-        "default": "Hvor mye er :expression."
+        "default": "Hva er :arithmetic lik?"
       },
       {
         "label": "Pluss tegn til tekst",

@@ -159,29 +159,29 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
       'class': 'question-page'
     });
 
-    var humanizedExpression = question.textual
-      .replace('+', self.translations.plusOperator)
-      .replace('-', self.translations.minusOperator)
-      .replace(' x ', ' ' + self.translations.multiplicationOperator + ' ')
-      .replace('/', self.translations.divisionOperator);
-    var humanizedQuestion = self.translations.humanizedQuestion
-      .replace(':expression', humanizedExpression);
+    // Make arithmetic readable, e.g. plus signs are not read by ChromeVox.
+    var readableArithmetic = question.textual
+        .replace('+', self.translations.plusOperator)
+        .replace('−', self.translations.minusOperator)
+        .replace('×', self.translations.multiplicationOperator)
+        .replace('÷', self.translations.divisionOperator);
 
+    var readableQuestion = self.translations.humanizedQuestion
+        .replace(':arithmetic', readableArithmetic);
+
+    var questionId = 'arithmetic-quiz-' + self.id + '-question-' + i;
 
     $('<div>', {
       'class': 'question',
-      text: question.textual + ' = ?',
-      'aria-label': humanizedQuestion,
-      'id': 'arithmetic-quiz-' + self.id + '-question-' + i
+      'text': question.textual + ' = ?',
+      'aria-label': readableQuestion,
+      'id': questionId
     }).appendTo($slide);
-
-    // Make arithmetic readable. Plus signes are not read by e.g. ChromeVox.
-    var readableArithmetic = question.textual.replace('+', 'plus');
 
     var $alternatives = $('<ul>', {
       'class': 'h5p-baq-alternatives',
       'role': 'radiogroup',
-      'aria-label': 'What does ' + readableArithmetic + ' equal?'
+      'aria-labelledby': questionId
     });
 
     // Index of the currently focused option.

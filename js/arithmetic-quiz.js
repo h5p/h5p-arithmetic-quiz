@@ -36,7 +36,7 @@ H5P.ArithmeticQuiz = (function ($, UI) {
         correctText: 'Correct',
         incorrectText: 'Incorrect',
         durationLabel: 'Duration in hours, minutes and seconds.',
-        humanizedQuestion: 'How much is :expression.',
+        humanizedQuestion: 'What does :arithmetic equal?',
         plusOperator: 'plus',
         minusOperator: 'minus',
         multiplicationOperator: 'times',
