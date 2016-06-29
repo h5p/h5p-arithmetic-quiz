@@ -154,15 +154,68 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
       text: question.textual + ' = ?'
     }).appendTo($slide);
 
-    var $alternatives = $('<div>', {
-      'class': 'h5p-baq-alternatives'
+    // Make arithmetic readable. Plus signes are not read by e.g. ChromeVox.
+    var readableArithmetic = question.textual.replace('+', 'plus');
+
+    var $alternatives = $('<ul>', {
+      'class': 'h5p-baq-alternatives',
+      'role': 'radiogroup',
+      'aria-label': 'What does ' + readableArithmetic + ' equal?'
     });
+
+    // Index of the currently focused option.
+    var focusedOption;
+
+    /**
+     * Handles focusing one of the options, making the rest non-tabbable.
+     * @private
+     */
+    var handleFocus = function () {
+      // Go through all alternatives
+      for (var i = 0; i < alternatives.length; i++) {
+        if (alternatives[i] === this) {
+          // Keep track of currently focused option
+          focusedOption = i;
+          alternatives[i].tabbable();
+        }
+        else {
+          // Remove from tab
+          alternatives[i].notTabbable();
+        }
+      }
+    };
+
+    /**
+     * Handles moving the focus from the current option to the previous option.
+     * @private
+     */
+    var handlePreviousOption = function () {
+      if (focusedOption !== 0) {
+        alternatives[focusedOption - 1].focus();
+      }
+    };
+
+    /**
+     * Handles moving the focus from the current option to the next option.
+     * @private
+     */
+    var handleNextOption = function () {
+      if (focusedOption !== alternatives.length - 1) {
+        alternatives[focusedOption + 1].focus();
+      }
+    };
 
     var alternatives = [];
     for (var k = 0; k < question.alternatives.length; k++) {
       alternatives.push(new Alternative(question.alternatives[k], question.alternatives[k]===question.correct, self.translations));
     }
-    alternatives.forEach(function (alternative) {
+    alternatives.forEach(function (alternative, index) {
+      if (index === 0 || index === alternatives.length - 1) {
+        alternative.tabbable();
+      }
+      alternative.on('focus', handleFocus);
+      alternative.on('previousOption', handlePreviousOption);
+      alternative.on('nextOption', handleNextOption);
       alternative.appendTo($alternatives);
       alternative.on('answered', function () {
 
@@ -261,14 +314,69 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
     self.number = number;
     self.correct = correct;
 
-    this.$button = UI.createButton({
-      text: number,
-      click: function () {
-        self.announce();
-        self.trigger('answered');
-        setTimeout(self.dropLive, 500);
+    var answer = function () {
+      self.announce();
+      self.trigger('answered');
+      setTimeout(self.dropLive, 500);
+    };
+
+    // Create radio button and set up event listeners
+    this.$button = $('<li>', {
+      'role': 'radio',
+      'tabindex': -1,
+      'text': number,
+      'on': {
+        'keydown': function (event) {
+          switch (event.which) {
+            case 13: // Enter
+            case 32: // Space
+              // Answer question
+              answer();
+              break;
+
+            case 37: // Left Arrow
+            case 38: // Up Arrow
+              // Go to previous Option
+              self.trigger('previousOption');
+              break;
+
+            case 39: // Right Arrow
+            case 40: // Down Arrow
+              // Go to next Option
+              self.trigger('nextOption');
+              break;
+          }
+        },
+        'focus': function () {
+          self.trigger('focus');
+        },
+        'click': function () {
+          // Answer question
+          answer();
+        }
       }
     });
+
+    /**
+     * Move focus to this option.
+     */
+    self.focus = function () {
+      self.$button.focus();
+    };
+
+    /**
+     * Makes it possible to tab your way to this option.
+     */
+    self.tabbable = function () {
+      self.$button.attr('tabindex', 0);
+    };
+
+    /**
+     * Make sure it's NOT possible to tab your way to this option.
+     */
+    self.notTabbable = function () {
+      self.$button.attr('tabindex', -1);
+    };
 
     this.dropLive = function() {
       var node = self.$liveRegion[0];
@@ -301,7 +409,6 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
   Alternative.prototype.constructor = Alternative;
 
   return GamePage;
-
 })(H5P.jQuery, H5P.JoubelUI, H5P.ArithmeticQuiz.ArithmeticType, H5P.ArithmeticQuiz.QuestionsGenerator);
 
 /*function GridResultsView(rows, cols) {
