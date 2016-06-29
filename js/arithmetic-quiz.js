@@ -34,12 +34,19 @@ H5P.ArithmeticQuiz = (function ($, UI) {
         startButton: 'Start',
         go: 'GO!',
         correctText: 'Correct',
-        incorrectText: 'Incorrect'
+        incorrectText: 'Incorrect',
+        durationLabel: 'Duration in hours, minutes and seconds.',
+        humanizedQuestion: 'How much is :expression.',
+        plusOperator: 'plus',
+        minusOperator: 'minus',
+        multiplicationOperator: 'times',
+        divisionOperator: 'divided by',
+        slideOfTotal: 'Slide :num of :total'
       }
     }, options);
     self.currentWidth = 0;
 
-    self.gamePage = new H5P.ArithmeticQuiz.GamePage(self.options.arithmeticType, self.options.maxQuestions, self.options.UI);
+    self.gamePage = new H5P.ArithmeticQuiz.GamePage(self.options.arithmeticType, self.options.maxQuestions, self.options.UI, id);
 
     self.gamePage.on('last-slide', function (e) {
       self.triggerXAPIScored(e.data.score, e.data.numQuestions, 'answered');

@@ -55,12 +55,41 @@
         "default": "Prøv igjen"
       },
       {
-        "label": "Rett svar tekst for hjelpemiddelteknologier",
+        "label": "Rett svar tekst for hjelpemiddelteknologi",
         "default": "Rett svar"
       },
       {
-        "label": "Galt svar tekst for hjelpemiddelteknologier",
+        "label": "Galt svar tekst for hjelpemiddelteknologi",
         "default": "Galt svar"
+      },
+      {
+        "label": "Hjelpetekst for nedtellingsklokke for hjelpemiddelteknologier",
+        "default": "Tid brukt i timer, minutter og sekunder"
+      },
+      {
+        "label": "Spørsmålstekst for hjelpemiddelteknologi",
+        "default": "Hvor mye er :expression."
+      },
+      {
+        "label": "Pluss tegn til tekst",
+        "default": "pluss"
+      },
+      {
+        "label": "Minus tegn til tekst",
+        "default": "minus"
+      },
+      {
+        "label": "Multiplikasjon til tekst",
+        "default": "ganger"
+      },
+      {
+        "label": "Divisjon til tekst",
+        "default": "delt på"
+      },
+      {
+        "label": "Side nummer tekst",
+        "description": "Angir nåværende side og totalt antall sider, variabler er :num og :total",
+        "default": "Side :num av :total"
       }
     ]
   }
