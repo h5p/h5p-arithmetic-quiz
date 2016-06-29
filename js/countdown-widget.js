@@ -11,7 +11,8 @@ H5P.ArithmeticQuiz.CountdownWidget = (function ($) {
    * @namespace H5P.ArithmeticQuiz
    * @fires H5P.Event
    *
-   * @param  {type} seconds Number of seconds to count down
+   * @param {number} seconds Number of seconds to count down
+   * @param {Object} t Translations
    */
   function CountdownWidget(seconds, t) {
     H5P.EventDispatcher.call(this);
@@ -19,6 +20,7 @@ H5P.ArithmeticQuiz.CountdownWidget = (function ($) {
 
     this.$countdownWidget = $('<div>', {
       'class': 'h5p-baq-countdown',
+      'aria-hidden': true
     }).append($('<div>', {
       'class': 'h5p-baq-countdown-inner',
     }).append($('<span>', {
@@ -46,6 +48,7 @@ H5P.ArithmeticQuiz.CountdownWidget = (function ($) {
      */
     this.start = function () {
       var self = this;
+      this.$countdownWidget.attr('aria-hidden', false);
 
       if (!self.$countdownWidget.find('.h5p-baq-countdown-bg').hasClass('fuel')) {
         setTimeout(function(){
@@ -54,6 +57,7 @@ H5P.ArithmeticQuiz.CountdownWidget = (function ($) {
       }
 
       if (seconds <= 0) {
+        self.$countdownWidget.attr('aria-hidden', true);
         self.trigger('ignition');
         return;
       }
