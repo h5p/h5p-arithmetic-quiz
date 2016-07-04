@@ -260,6 +260,7 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
         alternatives.forEach(function (alt) {
           alt.reveal();
         });
+
         setTimeout(function(){
           self.slider.next();
         }, 800);
@@ -342,10 +343,11 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
     self.number = number;
     self.correct = correct;
 
-    var answer = function () {
+    var answer = function (event) {
       self.announce();
       self.trigger('answered');
       setTimeout(self.dropLive, 500);
+      event.preventDefault();
     };
 
     // Create radio button and set up event listeners
@@ -360,28 +362,30 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
             case 13: // Enter
             case 32: // Space
               // Answer question
-              answer();
+              answer(event);
               break;
 
             case 37: // Left Arrow
             case 38: // Up Arrow
               // Go to previous Option
               self.trigger('previousOption');
+              event.preventDefault();
               break;
 
             case 39: // Right Arrow
             case 40: // Down Arrow
               // Go to next Option
               self.trigger('nextOption');
+              event.preventDefault();
               break;
           }
         },
         'focus': function () {
           self.trigger('focus');
         },
-        'click': function () {
+        'click': function (event) {
           // Answer question
-          answer();
+          answer(event);
         }
       }
     });
