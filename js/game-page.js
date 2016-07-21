@@ -258,12 +258,15 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
         }
 
         alternatives.forEach(function (alt) {
+          if (alt.correct && alternative !== alt) {
+            alternative.announce(self.translations.incorrectText.replace(':num', alt.number));
+          }
           alt.reveal();
         });
 
         setTimeout(function(){
           self.slider.next();
-        }, 800);
+        }, 3500);
       });
     });
 
@@ -344,7 +347,9 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
     self.correct = correct;
 
     var answer = function (event) {
-      self.announce();
+      if (self.correct) {
+        self.announce(t.correctText);
+      }
       self.trigger('answered');
       setTimeout(self.dropLive, 500);
       event.preventDefault();
@@ -416,13 +421,13 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
       node.parentNode.removeChild(node);
     };
 
-    this.announce = function() {
+    this.announce = function(text) {
       self.$liveRegion = $('<div>', {
         'class': 'h5p-baq-live-feedback',
         'aria-live': 'assertive',
         'width': '1px',
         'height': '1px',
-        text: self.correct ? t.correctText : t.incorrectText
+        html: text
       }).appendTo(document.body.lastChild);
     };
 

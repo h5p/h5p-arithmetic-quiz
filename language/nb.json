@@ -60,7 +60,7 @@
       },
       {
         "label": "Galt svar tekst for hjelpemiddelteknologi",
-        "default": "Galt svar"
+        "default": "Feil svar. Rett var :num"
       },
       {
         "label": "Hjelpetekst for nedtellingsklokke for hjelpemiddelteknologier",

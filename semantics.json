@@ -97,7 +97,7 @@
         "name": "incorrectText",
         "type": "text",
         "label": "Readspeaker text for incorrect answer",
-        "default": "incorrect"
+        "default": "Incorrect. Correct answer was :num"
       },
       {
         "name": "durationLabel",
