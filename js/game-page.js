@@ -437,7 +437,9 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
 
 
     this.reveal = function () {
-      this.$button.addClass(this.correct ? 'reveal-correct' : 'reveal-wrong');
+      this.$button.addClass(this.correct ? 'reveal-correct' : 'reveal-wrong')
+          .attr('tabindex', -1).attr('aria-disabled', true)
+          .off('keydown').off('focus').off('click');
     };
 
     this.appendTo = function ($container) {
