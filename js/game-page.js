@@ -417,8 +417,12 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
     };
 
     this.dropLive = function() {
-      var node = self.$liveRegion[0];
-      node.parentNode.removeChild(node);
+      if (self.$liveRegion) {
+        var node = self.$liveRegion[0];
+        if (node.parentNode) {
+          node.parentNode.removeChild(node);
+        }
+      }
     };
 
     this.announce = function(text) {
@@ -433,8 +437,6 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
 
 
     this.reveal = function () {
-      //TODO: On incorrect answer, the correct answer has to be queued so it is
-      //      announced after incorrect
       this.$button.addClass(this.correct ? 'reveal-correct' : 'reveal-wrong');
     };
 
