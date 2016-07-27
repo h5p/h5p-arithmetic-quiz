@@ -137,10 +137,11 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
     this.score = 0;
     this.scoreWidget.update(0);
     this.timer.reset();
-    this.$gamepage.find('.reveal-wrong').removeClass('reveal-wrong');
-    this.$gamepage.find('.reveal-correct').removeClass('reveal-correct');
+    this.$gamepage.find('.reveal-wrong').removeClass('reveal-wrong').removeAttr('aria-disabled');
+    this.$gamepage.find('.reveal-correct').removeClass('reveal-correct').removeAttr('aria-disabled');
     this.$gamepage.addClass('counting-down');
     this.countdownWidget.restart();
+    this.$gamepage.find('.h5p-joubelui-button:first-child, .h5p-joubelui-button:last-child').attr('tabindex', 0);
   };
 
   /**
@@ -363,6 +364,9 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
       'text': number,
       'on': {
         'keydown': function (event) {
+          if (self.$button.is('.reveal-correct, .reveal-wrong')) {
+            return;
+          }
           switch (event.which) {
             case 13: // Enter
             case 32: // Space
@@ -386,9 +390,15 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
           }
         },
         'focus': function () {
+          if (self.$button.is('.reveal-correct, reveal-wrong')) {
+            return;
+          }
           self.trigger('focus');
         },
         'click': function (event) {
+          if (self.$button.is('.reveal-correct, reveal-wrong')) {
+            return;
+          }
           // Answer question
           answer(event);
         }
@@ -438,8 +448,7 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
 
     this.reveal = function () {
       this.$button.addClass(this.correct ? 'reveal-correct' : 'reveal-wrong')
-          .attr('tabindex', -1).attr('aria-disabled', true)
-          .off('keydown').off('focus').off('click');
+          .attr('tabindex', -1).attr('aria-disabled', true);
     };
 
     this.appendTo = function ($container) {
