@@ -16,11 +16,12 @@ H5P.ArithmeticQuiz.TimerWidget = (function ($) {
     var timer;
     var startTime = 0;
 
-    var $timer = $('<div>', {
+    var $timer = $('<time>', {
+      'aria-label': t.durationLabel,
       'class': 'timer',
+      role: 'timer',
       text: H5P.ArithmeticQuiz.tReplace(t.time, {time: '00:00'})
     });
-
 
     /**
      * Humanize time

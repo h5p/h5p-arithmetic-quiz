@@ -53,6 +53,43 @@
       {
         "label": "Etikett på prøv igjen-knapp",
         "default": "Prøv igjen"
+      },
+      {
+        "label": "Rett svar tekst for hjelpemiddelteknologi",
+        "default": "Rett svar"
+      },
+      {
+        "label": "Galt svar tekst for hjelpemiddelteknologi",
+        "default": "Feil svar. Rett var :num"
+      },
+      {
+        "label": "Hjelpetekst for nedtellingsklokke for hjelpemiddelteknologier",
+        "default": "Tid brukt i timer, minutter og sekunder"
+      },
+      {
+        "label": "Spørsmålstekst for hjelpemiddelteknologi",
+        "default": "Hva er :arithmetic lik?"
+      },
+      {
+        "label": "Pluss tegn til tekst",
+        "default": "pluss"
+      },
+      {
+        "label": "Minus tegn til tekst",
+        "default": "minus"
+      },
+      {
+        "label": "Multiplikasjon til tekst",
+        "default": "ganger"
+      },
+      {
+        "label": "Divisjon til tekst",
+        "default": "delt på"
+      },
+      {
+        "label": "Side nummer tekst",
+        "description": "Angir nåværende side og totalt antall sider, variabler er :num og :total",
+        "default": "Side :num av :total"
       }
     ]
   }

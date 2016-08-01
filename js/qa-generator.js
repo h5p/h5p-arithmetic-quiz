@@ -133,11 +133,11 @@ H5P.ArithmeticQuiz.QuestionsGenerator = (function (ArithmeticType) {
         case ArithmeticType.ADDITION:
           return question.x + " + " + question.y;
         case ArithmeticType.SUBTRACTION:
-          return question.x + " - " + question.y;
+          return question.x + " − " + question.y;
         case ArithmeticType.MULTIPLICATION:
-          return question.x + " x " + question.y;
+          return question.x + " × " + question.y;
         case ArithmeticType.DIVISION:
-          return question.x + " / " + question.y;
+          return question.x + " ÷ " + question.y;
         default:
           return '';
       }
