@@ -64,6 +64,7 @@
 }
 .h5p-baq-game .h5p-joubelui-progressbar {
   z-index: 1;
+  overflow: hidden;
 }
 /* Intro page */
 .h5p-baq-intro-page {
