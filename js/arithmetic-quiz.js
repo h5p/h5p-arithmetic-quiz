@@ -61,7 +61,7 @@ H5P.ArithmeticQuiz = (function ($, UI) {
     });
 
     self.introPage = new H5P.ArithmeticQuiz.IntroPage(self.options.intro, self.options.UI);
-    self.introPage.on('start-game', function(){
+    self.introPage.on('start-game', function() {
       self.introPage.remove();
       self.gamePage.startCountdown();
     });
@@ -82,7 +82,7 @@ H5P.ArithmeticQuiz = (function ($, UI) {
      * @param {H5P.jQuery} $container
      */
     self.attach = function ($container) {
-      if( self.isRoot()) {
+      if (self.isRoot()) {
         self.setActivityStarted();
       }
 
@@ -99,11 +99,9 @@ H5P.ArithmeticQuiz = (function ($, UI) {
 
         self.trigger('resize');
 
-
-
         setTimeout(function () {
-          H5P.ArithmeticQuiz.SoundEffects.setup();
-        },1);
+          H5P.ArithmeticQuiz.SoundEffects.setup(self.getLibraryFilePath(''));
+        }, 1);
       }
     };
 
