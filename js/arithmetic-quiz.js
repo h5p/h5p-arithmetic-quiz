@@ -32,15 +32,36 @@ H5P.ArithmeticQuiz = (function ($, UI) {
         resultPageHeader: 'Finished!',
         retryButton: 'Retry',
         startButton: 'Start',
-        go: 'GO!'
+        go: 'GO!',
+        correctText: 'Correct',
+        incorrectText: 'Incorrect. Correct answer was :num',
+        durationLabel: 'Duration in hours, minutes and seconds.',
+        humanizedQuestion: 'What does :arithmetic equal?',
+        plusOperator: 'plus',
+        minusOperator: 'minus',
+        multiplicationOperator: 'times',
+        divisionOperator: 'divided by',
+        slideOfTotal: 'Slide :num of :total'
       }
     }, options);
     self.currentWidth = 0;
 
-    self.gamePage = new H5P.ArithmeticQuiz.GamePage(self.options.arithmeticType, self.options.maxQuestions, self.options.UI);
+    self.gamePage = new H5P.ArithmeticQuiz.GamePage(self.options.arithmeticType, self.options.maxQuestions, self.options.UI, id);
+
+    self.gamePage.on('last-slide', function (e) {
+      self.triggerXAPIScored(e.data.score, e.data.numQuestions, 'answered');
+    });
+
+    self.gamePage.on('started-quiz', function () {
+      self.setActivityStarted();
+    });
+
+    self.gamePage.on('alternative-chosen', function () {
+      self.triggerXAPI('interacted');
+    });
 
     self.introPage = new H5P.ArithmeticQuiz.IntroPage(self.options.intro, self.options.UI);
-    self.introPage.on('start-game', function(){
+    self.introPage.on('start-game', function() {
       self.introPage.remove();
       self.gamePage.startCountdown();
     });
@@ -61,6 +82,10 @@ H5P.ArithmeticQuiz = (function ($, UI) {
      * @param {H5P.jQuery} $container
      */
     self.attach = function ($container) {
+      if (self.isRoot()) {
+        self.setActivityStarted();
+      }
+
       if (this.$container === undefined) {
         this.$container = $container;
         this.addFont();
@@ -74,11 +99,9 @@ H5P.ArithmeticQuiz = (function ($, UI) {
 
         self.trigger('resize');
 
-
-
         setTimeout(function () {
-          H5P.ArithmeticQuiz.SoundEffects.setup();
-        },1);
+          H5P.ArithmeticQuiz.SoundEffects.setup(self.getLibraryFilePath(''));
+        }, 1);
       }
     };
 
