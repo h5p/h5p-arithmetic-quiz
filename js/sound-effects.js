@@ -5,7 +5,6 @@ H5P.ArithmeticQuiz.SoundEffects = (function ($) {
       'negative-short'
     ],
     sounds: [],
-    libraryPath: undefined,
     muted: false
   };
 
@@ -14,16 +13,15 @@ H5P.ArithmeticQuiz.SoundEffects = (function ($) {
    *
    * @return {boolean} True if setup was successfull, otherwise false
    */
-  SoundEffects.setup = function () {
+  SoundEffects.setup = function (libraryPath) {
     if (!H5P.SoundJS.initializeDefaultPlugins()) {
       return false;
     }
 
-    SoundEffects.libraryPath = H5P.getLibraryPath('H5P.ArithmeticQuiz-1.0');
     H5P.SoundJS.alternateExtensions = ['mp3'];
     for (var i = 0; i < SoundEffects.types.length; i++) {
       var type = SoundEffects.types[i];
-      H5P.SoundJS.registerSound(SoundEffects.libraryPath + '/sounds/' + type + '.ogg', type);
+      H5P.SoundJS.registerSound(libraryPath + 'sounds/' + type + '.ogg', type);
     }
 
     return true;
