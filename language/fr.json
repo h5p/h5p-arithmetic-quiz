@@ -1,97 +1,97 @@
 {
-  "semantics": [
+  "semantics":[
     {
-      "label": "Introduction",
-      "description": "Le texte d'introduction (maximum 100 caractères)"
+      "label":"Introduction",
+      "description":"Le texte d'introduction (maximum 100 caractères)"
     },
     {
-      "label": "Type d'opération",
-      "options": [
+      "label":"Type d'opération",
+      "options":[
         {
-          "label": "Addition"
+          "label":"Addition"
         },
         {
-          "label": "Soustraction"
+          "label":"Soustraction"
         },
         {
-          "label": "Multiplication"
+          "label":"Multiplication"
         },
         {
-          "label": "Division"
+          "label":"Division"
         }
       ],
-      "default": "addition"
+      "default":"addition"
     },
     {
-      "label": "Nombre maximum de questions"
+      "label":"Nombre maximum de questions"
     },
     {
-      "label": "Traduction de l'interface utilisateurs",
-      "fields": [
+      "label":"Traduction de l'interface utilisateurs",
+      "fields":[
         {
-          "label": "Score qui s'affiche pendant le quiz",
-          "default": "Score :"
+          "label":"Score qui s'affiche pendant le quiz",
+          "default":"Score :"
         },
         {
-          "label": "Score qui s'affiche sur la page des résultats",
-          "default": "Score : @score / @maxScore"
+          "label":"Score qui s'affiche sur la page des résultats",
+          "default":"Score : @score / @maxScore"
         },
         {
-          "label": "Temps",
-          "default": "Temps écoulé : @time"
+          "label":"Temps",
+          "default":"Temps écoulé : @time"
         },
         {
-          "label": "Titre de la page de résultats",
-          "default": "C'est terminé !"
+          "label":"Titre de la page de résultats",
+          "default":"C'est terminé !"
         },
         {
-          "label": "Texte du bouton GO",
-          "default": "GO !"
+          "label":"Texte du bouton GO",
+          "default":"GO !"
         },
         {
-          "label": "Texte du bouton de départ",
-          "default": "Commencer"
+          "label":"Texte du bouton de départ",
+          "default":"Commencer"
         },
         {
-          "label": "Texte du bouton \"Recommencer\"",
-          "default": "Recommencer"
+          "label":"Texte du bouton \"Recommencer\"",
+          "default":"Recommencer"
         },
         {
-          "label": "Texte exprimé par la synthèse vocale en cas de réponse correcte",
-          "default": "Réponse correcte"
+          "label":"Texte exprimé par la synthèse vocale en cas de réponse correcte",
+          "default":"Réponse correcte"
         },
         {
-          "label": "Texte exprimé par la synthèse vocale en cas de réponse incorrecte",
-          "default": "Réponse incorrecte"
+          "label":"Texte exprimé par la synthèse vocale en cas de réponse incorrecte",
+          "default":"Réponse incorrecte"
         },
         {
-          "label": "Chronomètre exprimé par la synthèse vocale",
-          "default": "Durée en heures, minutes et secondes."
+          "label":"Chronomètre exprimé par la synthèse vocale",
+          "default":"Durée en heures, minutes et secondes."
         },
         {
-          "label": "Question exprimée par la synthèse vocale",
-          "default": "Combien font :arithmetic ?"
+          "label":"Question exprimée par la synthèse vocale",
+          "default":"Combien font :arithmetic ?"
         },
         {
-          "label": "Texte pour le signe de l'addition",
-          "default": "plus"
+          "label":"Texte pour le signe de l'addition",
+          "default":"plus"
         },
         {
-          "label": "Texte pour le signe de la soustraction",
-          "default": "moins"
+          "label":"Texte pour le signe de la soustraction",
+          "default":"moins"
         },
         {
-          "label": "Texte pour le signe de la multiplication",
-          "default": "fois"
+          "label":"Texte pour le signe de la multiplication",
+          "default":"fois"
         },
         {
-          "label": "Texte pour le signe de la division",
-          "default": "divisé par"
+          "label":"Texte pour le signe de la division",
+          "default":"divisé par"
         },
         {
-          "label": "Texte du numéro de la page",
-          "description": "Annonce la page en cours et le nombre total de pages, les variables sont :num et :total",
-          "default": "Page :num sur :total"
+          "label":"Texte du numéro de la page",
+          "description":"Annonce la page en cours et le nombre total de pages, les variables sont :num et :total",
+          "default":"Page :num sur :total"
         }
       ]
     }
