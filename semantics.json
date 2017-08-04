@@ -57,13 +57,6 @@
         "default": "Score:"
       },
       {
-        "name": "scoreOnResultPage",
-        "type": "text",
-        "label": "Scoring on result page",
-        "importance": "low",
-        "default": "Score: @score / @maxScore"
-      },
-      {
         "name": "time",
         "type": "text",
         "label": "Time",

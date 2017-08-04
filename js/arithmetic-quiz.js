@@ -26,7 +26,6 @@ H5P.ArithmeticQuiz = (function ($, UI) {
       maxQuestions: undefined,
       UI: {
         score: 'Score @score',
-        scoreOnResultPage: 'Score: @score / @maxScore',
         scoreInPercent: '(@percent% correct)',
         time: 'Time: @time',
         resultPageHeader: 'Finished!',

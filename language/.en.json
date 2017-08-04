@@ -33,10 +33,6 @@
           "default": "Score:"
         },
         {
-          "label": "Scoring on result page",
-          "default": "Score: @score / @maxScore"
-        },
-        {
           "label": "Time",
           "default": "Time: @time"
         },

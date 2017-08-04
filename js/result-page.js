@@ -35,10 +35,6 @@ H5P.ArithmeticQuiz.ResultPage = (function ($, UI) {
     this.scoreBar = UI.createScoreBar(maxScore);
     this.scoreBar.appendTo(this.$scoreStatus);
 
-    this.$score = $('<div>', {
-      'class': 'h5p-baq-result-page-score'
-    }).appendTo(this.$scoreStatus);
-
     this.$time = $('<div>', {
       'class': 'h5p-baq-result-page-time'
     }).appendTo(this.$scoreStatus);
@@ -70,9 +66,7 @@ H5P.ArithmeticQuiz.ResultPage = (function ($, UI) {
      */
     this.update = function (score, time) {
       var percent = Math.ceil((score / maxScore) * 100);
-      this.$score.html(H5P.ArithmeticQuiz.tReplace(t.scoreOnResultPage, {score: score, maxScore: maxScore}));
       this.$time.html(H5P.ArithmeticQuiz.tReplace(t.time, {time: time}));
-
       this.scoreBar.setScore(score);
     };
   }
