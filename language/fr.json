@@ -33,10 +33,6 @@
           "default": "Score :"
         },
         {
-          "label": "Score qui s'affiche sur la page des résultats",
-          "default": "Score : @score / @maxScore"
-        },
-        {
           "label": "Temps",
           "default": "Temps écoulé : @time"
         },

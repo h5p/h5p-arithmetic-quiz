@@ -32,10 +32,6 @@
           "default": "Poeng:"
         },
         {
-          "label": "Poengtilbakemelding på resultatsiden",
-          "default": "Poeng: @score / @maxScore"
-        },
-        {
           "label": "Tid",
           "default": "Tid: @time"
         },
