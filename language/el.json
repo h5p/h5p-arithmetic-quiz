@@ -50,7 +50,7 @@
         },
         {
           "label":"Retry button label",
-          "default":"Retry"
+          "default":"Επανάληψη"
         },
         {
           "label":"Readspeaker text for correct answer",
