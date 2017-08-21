@@ -49,12 +49,12 @@
           "default":"Start"
         },
         {
-          "label":"Retry button label",
-          "default":"Retry"
+          "label":"Proovi uuesti nupu silt",
+          "default":"Proovi uuesti"
         },
         {
           "label":"Readspeaker text for correct answer",
-          "default":"Correct"
+          "default":"Õige"
         },
         {
           "label":"Readspeaker text for incorrect answer",
