@@ -49,15 +49,15 @@
           "default":"Start"
         },
         {
-          "label":"Retry button label",
-          "default":"Retry"
+          "label":"تسمية زر إعادة المحاولة",
+          "default":"إعادة المحاولة"
         },
         {
-          "label":"Readspeaker text for correct answer",
-          "default":"Correct"
+          "label":"النص Readspeaker عن الإجابة الصحيحة",
+          "default":"صحيح"
         },
         {
-          "label":"Readspeaker text for incorrect answer",
+          "label":"النص Readspeaker للإجابة غير صحيحة",
           "default":"Incorrect. Correct answer was :num"
         },
         {
@@ -85,9 +85,9 @@
           "default":"divided by"
         },
         {
-          "label":"Slide number text",
-          "description":"Announces current slide and total number of slides, variables are :num and :total",
-          "default":"Slide :num of :total"
+          "label":"النص رقم الشريحة",
+          "description":"تعلن الشريحة الحالية وعدد من الشرائح، والمتغيرات :num و:total",
+          "default":"الشريحة :num أو :total"
         }
       ]
     }
