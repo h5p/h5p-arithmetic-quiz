@@ -49,12 +49,12 @@
           "default":"Start"
         },
         {
-          "label":"Retry button label",
-          "default":"Retry"
+          "label":"Tekst van de Opnieuw proberen knop",
+          "default":"Opnieuw proberen"
         },
         {
           "label":"Readspeaker text for correct answer",
-          "default":"Correct"
+          "default":"Juist"
         },
         {
           "label":"Readspeaker text for incorrect answer",
