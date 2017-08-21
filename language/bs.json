@@ -49,15 +49,15 @@
           "default":"Start"
         },
         {
-          "label":"Retry button label",
-          "default":"Retry"
+          "label":"Oznaka za dugme \"Završi\"",
+          "default":"Ponovi"
         },
         {
-          "label":"Readspeaker text for correct answer",
+          "label":"\"Readspeaker\" tekst za tačan odgovor",
           "default":"Correct"
         },
         {
-          "label":"Readspeaker text for incorrect answer",
+          "label":"\"Readspeaker\" tekst za netačan odgovor",
           "default":"Incorrect. Correct answer was :num"
         },
         {
@@ -85,9 +85,9 @@
           "default":"divided by"
         },
         {
-          "label":"Slide number text",
-          "description":"Announces current slide and total number of slides, variables are :num and :total",
-          "default":"Slide :num of :total"
+          "label":"Tekst za broj slajda",
+          "description":"Prikazuje aktuelni slajd i broj svih slajdova, a mogućnosti su :num i :total",
+          "default":"Slajd :num od :total"
         }
       ]
     }

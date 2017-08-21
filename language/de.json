@@ -49,15 +49,15 @@
           "default":"Start"
         },
         {
-          "label":"Retry button label",
-          "default":"Retry"
+          "label":"Beschriftung des \"Beenden\"-Buttons",
+          "default":"Wiederholen"
         },
         {
-          "label":"Readspeaker text for correct answer",
-          "default":"Correct"
+          "label":"\"Readspeaker\"-Text für eine richtige Antwort",
+          "default":"Korrekt!"
         },
         {
-          "label":"Readspeaker text for incorrect answer",
+          "label":"\"Readspeaker\"-Text für eine falsche Antwort",
           "default":"Incorrect. Correct answer was :num"
         },
         {
@@ -85,9 +85,9 @@
           "default":"divided by"
         },
         {
-          "label":"Slide number text",
-          "description":"Announces current slide and total number of slides, variables are :num and :total",
-          "default":"Slide :num of :total"
+          "label":"Text für die Nummer des Schaubilds",
+          "description":"Gibt das aktuelle Schaubild und die Gesamtzahl der Schaubilder an, Variablen sind :num und :total",
+          "default":"Schaubild :num von :total"
         }
       ]
     }

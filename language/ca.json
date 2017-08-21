@@ -49,12 +49,12 @@
           "default":"Start"
         },
         {
-          "label":"Retry button label",
-          "default":"Retry"
+          "label":"Etiqueta del botó \"Tornar-ho a provar\"",
+          "default":"Tornar-ho a provar"
         },
         {
           "label":"Readspeaker text for correct answer",
-          "default":"Correct"
+          "default":"Correcte"
         },
         {
           "label":"Readspeaker text for incorrect answer",

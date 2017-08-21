@@ -33,61 +33,61 @@
           "default":"Score :"
         },
         {
-          "label":"Time",
-          "default":"Time: @time"
+          "label":"Temps",
+          "default":"Temps écoulé : @time"
         },
         {
-          "label":"Result page header",
-          "default":"Finished!"
+          "label":"Titre de la page de résultats",
+          "default":"C'est terminé !"
         },
         {
-          "label":"Go label",
-          "default":"GO!"
+          "label":"Texte du bouton GO",
+          "default":"GO !"
         },
         {
-          "label":"Start button label",
-          "default":"Start"
+          "label":"Texte du bouton de départ",
+          "default":"Commencer"
         },
         {
-          "label":"Retry button label",
-          "default":"Retry"
+          "label":"Texte du bouton \"Recommencer\"",
+          "default":"Recommencer"
         },
         {
-          "label":"Readspeaker text for correct answer",
-          "default":"Correct"
+          "label":"Texte exprimé par la synthèse vocale en cas de réponse correcte",
+          "default":"Réponse correcte"
         },
         {
-          "label":"Readspeaker text for incorrect answer",
-          "default":"Incorrect. Correct answer was :num"
+          "label":"Texte exprimé par la synthèse vocale en cas de réponse incorrecte",
+          "default":"Réponse incorrecte"
         },
         {
-          "label":"Readspeaker label for the timer",
-          "default":"Duration in hours, minutes and seconds."
+          "label":"Chronomètre exprimé par la synthèse vocale",
+          "default":"Durée en heures, minutes et secondes."
         },
         {
-          "label":"Readspeaker text for question",
-          "default":"What does :arithmetic equal?"
+          "label":"Question exprimée par la synthèse vocale",
+          "default":"Combien font :arithmetic ?"
         },
         {
-          "label":"Plus operator text",
+          "label":"Texte pour le signe de l'addition",
           "default":"plus"
         },
         {
-          "label":"Subtraction operator text",
-          "default":"minus"
+          "label":"Texte pour le signe de la soustraction",
+          "default":"moins"
         },
         {
-          "label":"Multiplication operator text",
-          "default":"times"
+          "label":"Texte pour le signe de la multiplication",
+          "default":"fois"
         },
         {
-          "label":"Division operator text",
-          "default":"divided by"
+          "label":"Texte pour le signe de la division",
+          "default":"divisé par"
         },
         {
-          "label":"Slide number text",
-          "description":"Announces current slide and total number of slides, variables are :num and :total",
-          "default":"Slide :num of :total"
+          "label":"Texte du numéro de diapositive",
+          "description":"Annonce la diapositive en cours et le nombre total de diapositives, les variables sont :sum et :total",
+          "default":"Diapositive :num sur :total"
         }
       ]
     }
