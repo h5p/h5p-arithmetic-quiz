@@ -1,36 +1,36 @@
 {
   "semantics":[
     {
-      "label":"Introduksjonstekst",
-      "description":"Tekst vises på forsiden"
+      "label":"Intro",
+      "description":"The intro text (maximum 100 characters)"
     },
     {
-      "label":"Aritmetisk type",
+      "label":"Arithmetic type",
       "options":[
         {
-          "label":"Addisjon (pluss)"
+          "label":"Addition"
         },
         {
-          "label":"Subtraksjon (minus)"
+          "label":"Subtraction"
         },
         {
-          "label":"Multiplikasjon (gange)"
+          "label":"Multiplication"
         },
         {
-          "label":"Divisjon (dele)"
+          "label":"Division"
         }
       ],
       "default":"addition"
     },
     {
-      "label":"Maksimalt antall spørsmål"
+      "label":"Max number of questions"
     },
     {
-      "label":"Oversettelser for brukergrensesnittet",
+      "label":"User interface translations",
       "fields":[
         {
-          "label":"Poengtilbakemelding under quizen",
-          "default":"Poeng:"
+          "label":"Scoring during quiz",
+          "default":"Score:"
         },
         {
           "label":"Time",

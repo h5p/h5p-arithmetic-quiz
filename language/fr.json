@@ -1,93 +1,93 @@
 {
-  "semantics": [
+  "semantics":[
     {
-      "label": "Introduction",
-      "description": "Le texte d'introduction (maximum 100 caractères)"
+      "label":"Introduction",
+      "description":"Le texte d'introduction (maximum 100 caractères)"
     },
     {
-      "label": "Type d'opération",
-      "options": [
+      "label":"Type d'opération",
+      "options":[
         {
-          "label": "Addition"
+          "label":"Addition"
         },
         {
-          "label": "Soustraction"
+          "label":"Soustraction"
         },
         {
-          "label": "Multiplication"
+          "label":"Multiplication"
         },
         {
-          "label": "Division"
+          "label":"Division"
         }
       ],
-      "default": "addition"
+      "default":"addition"
     },
     {
-      "label": "Nombre maximum de questions"
+      "label":"Nombre maximum de questions"
     },
     {
-      "label": "Traduction de l'interface utilisateurs",
-      "fields": [
+      "label":"Traduction de l'interface utilisateurs",
+      "fields":[
         {
-          "label": "Score qui s'affiche pendant le quiz",
-          "default": "Score :"
+          "label":"Score qui s'affiche pendant le quiz",
+          "default":"Score :"
         },
         {
-          "label": "Temps",
-          "default": "Temps écoulé : @time"
+          "label":"Time",
+          "default":"Time: @time"
         },
         {
-          "label": "Titre de la page de résultats",
-          "default": "C'est terminé !"
+          "label":"Result page header",
+          "default":"Finished!"
         },
         {
-          "label": "Texte du bouton GO",
-          "default": "GO !"
+          "label":"Go label",
+          "default":"GO!"
         },
         {
-          "label": "Texte du bouton de départ",
-          "default": "Commencer"
+          "label":"Start button label",
+          "default":"Start"
         },
         {
-          "label": "Texte du bouton \"Recommencer\"",
-          "default": "Recommencer"
+          "label":"Retry button label",
+          "default":"Retry"
         },
         {
-          "label": "Texte exprimé par la synthèse vocale en cas de réponse correcte",
-          "default": "Réponse correcte"
+          "label":"Readspeaker text for correct answer",
+          "default":"Correct"
         },
         {
-          "label": "Texte exprimé par la synthèse vocale en cas de réponse incorrecte",
-          "default": "Réponse incorrecte"
+          "label":"Readspeaker text for incorrect answer",
+          "default":"Incorrect. Correct answer was :num"
         },
         {
-          "label": "Chronomètre exprimé par la synthèse vocale",
-          "default": "Durée en heures, minutes et secondes."
+          "label":"Readspeaker label for the timer",
+          "default":"Duration in hours, minutes and seconds."
         },
         {
-          "label": "Question exprimée par la synthèse vocale",
-          "default": "Combien font :arithmetic ?"
+          "label":"Readspeaker text for question",
+          "default":"What does :arithmetic equal?"
         },
         {
-          "label": "Texte pour le signe de l'addition",
-          "default": "plus"
+          "label":"Plus operator text",
+          "default":"plus"
         },
         {
-          "label": "Texte pour le signe de la soustraction",
-          "default": "moins"
+          "label":"Subtraction operator text",
+          "default":"minus"
         },
         {
-          "label": "Texte pour le signe de la multiplication",
-          "default": "fois"
+          "label":"Multiplication operator text",
+          "default":"times"
         },
         {
-          "label": "Texte pour le signe de la division",
-          "default": "divisé par"
+          "label":"Division operator text",
+          "default":"divided by"
         },
         {
-          "label": "Texte du numéro de la page",
-          "description": "Annonce la page en cours et le nombre total de pages, les variables sont :num et :total",
-          "default": "Page :num sur :total"
+          "label":"Slide number text",
+          "description":"Announces current slide and total number of slides, variables are :num and :total",
+          "default":"Slide :num of :total"
         }
       ]
     }
