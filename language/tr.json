@@ -49,12 +49,12 @@
           "default":"Start"
         },
         {
-          "label":"Retry button label",
-          "default":"Retry"
+          "label":"Yeniden dene buton etiketi",
+          "default":"Yeniden dene"
         },
         {
           "label":"Readspeaker text for correct answer",
-          "default":"Correct"
+          "default":"Doğru"
         },
         {
           "label":"Readspeaker text for incorrect answer",
