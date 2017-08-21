@@ -33,61 +33,61 @@
           "default":"Poeng:"
         },
         {
-          "label":"Time",
-          "default":"Time: @time"
+          "label":"Tid",
+          "default":"Tid: @time"
         },
         {
-          "label":"Result page header",
-          "default":"Finished!"
+          "label":"Overskrift på resultatsiden",
+          "default":"Ferdig!"
         },
         {
-          "label":"Go label",
-          "default":"GO!"
+          "label":"Kjør etikett",
+          "default":"KJØR!"
         },
         {
-          "label":"Start button label",
+          "label":"Etikett på start-knapp",
           "default":"Start"
         },
         {
-          "label":"Retry button label",
-          "default":"Retry"
+          "label":"Tekst til \"Prøv igjen\" knapp",
+          "default":"Prøv igjen"
         },
         {
-          "label":"Readspeaker text for correct answer",
-          "default":"Correct"
+          "label":"Rett svar tekst for hjelpemiddelteknologi",
+          "default":"Riktig"
         },
         {
-          "label":"Readspeaker text for incorrect answer",
-          "default":"Incorrect. Correct answer was :num"
+          "label":"Galt svar tekst for hjelpemiddelteknologi",
+          "default":"Feil svar. Rett var :num"
         },
         {
-          "label":"Readspeaker label for the timer",
-          "default":"Duration in hours, minutes and seconds."
+          "label":"Hjelpetekst for nedtellingsklokke for hjelpemiddelteknologier",
+          "default":"Tid brukt i timer, minutter og sekunder"
         },
         {
-          "label":"Readspeaker text for question",
-          "default":"What does :arithmetic equal?"
+          "label":"Spørsmålstekst for hjelpemiddelteknologi",
+          "default":"Hva er :arithmetic lik?"
         },
         {
-          "label":"Plus operator text",
-          "default":"plus"
+          "label":"Pluss tegn til tekst",
+          "default":"pluss"
         },
         {
-          "label":"Subtraction operator text",
+          "label":"Minus tegn til tekst",
           "default":"minus"
         },
         {
-          "label":"Multiplication operator text",
-          "default":"times"
+          "label":"Multiplikasjon til tekst",
+          "default":"ganger"
         },
         {
-          "label":"Division operator text",
-          "default":"divided by"
+          "label":"Divisjon til tekst",
+          "default":"delt på"
         },
         {
-          "label":"Slide number text",
-          "description":"Announces current slide and total number of slides, variables are :num and :total",
-          "default":"Slide :num of :total"
+          "label":"Side nummer tekst",
+          "description":"Angir nåværende side og totalt antall sider, variabler er :num og :total",
+          "default":"Side :num av :total"
         }
       ]
     }
