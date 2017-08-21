@@ -49,15 +49,15 @@
           "default":"Start"
         },
         {
-          "label":"Retry button label",
-          "default":"Retry"
+          "label":"リトライボタンのラベル",
+          "default":"リトライ"
         },
         {
-          "label":"Readspeaker text for correct answer",
-          "default":"Correct"
+          "label":"正解のためのリードスピーカー用テキスト",
+          "default":"正解"
         },
         {
-          "label":"Readspeaker text for incorrect answer",
+          "label":"不正解ためのリードスピーカー用テキスト",
           "default":"Incorrect. Correct answer was :num"
         },
         {
