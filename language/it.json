@@ -2,22 +2,22 @@
   "semantics":[
     {
       "label":"Intro",
-      "description":"The intro text (maximum 100 characters)"
+      "description":"Testo introduttivo (massimo 100 caratteri)"
     },
     {
-      "label":"Arithmetic type",
+      "label":"Elemento di tipo aritmetico",
       "options":[
         {
-          "label":"Addition"
+          "label":"Addizione"
         },
         {
-          "label":"Subtraction"
+          "label":"Sottrazione"
         },
         {
-          "label":"Multiplication"
+          "label":"Moltiplicazione"
         },
         {
-          "label":"Division"
+          "label":"Divisione"
         }
       ],
       "default":"addition"
