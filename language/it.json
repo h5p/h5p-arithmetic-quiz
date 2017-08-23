@@ -23,71 +23,71 @@
       "default":"addition"
     },
     {
-      "label":"Max number of questions"
+      "label":"Numero massimo di domande"
     },
     {
-      "label":"User interface translations",
+      "label":"Traduzioni dell'interfaccia utente",
       "fields":[
         {
-          "label":"Scoring during quiz",
-          "default":"Score:"
+          "label":"Punteggio durante il quiz",
+          "default":"Punteggio:"
         },
         {
-          "label":"Time",
-          "default":"Time: @time"
+          "label":"Tempo",
+          "default":"Tempo: @time"
         },
         {
-          "label":"Result page header",
-          "default":"Finished!"
+          "label":"Intestazione della pagina del risultato",
+          "default":"Finito!"
         },
         {
-          "label":"Go label",
-          "default":"GO!"
+          "label":"Etichetta di \"Vai\"",
+          "default":"VAI!"
         },
         {
-          "label":"Start button label",
-          "default":"Start"
+          "label":"Etichetta del pulsante di inizio",
+          "default":"Inizio"
         },
         {
           "label":"Etichetta del pulsante Riprova",
           "default":"Riprova"
         },
         {
-          "label":"Testo ReadSpeaker per la risposta corretta",
+          "label":"Testo del riproduttore vocale per la risposta corretta",
           "default":"Corretto"
         },
         {
-          "label":"Testo ReadSpeaker per risposta errata",
-          "default":"Incorrect. Correct answer was :num"
+          "label":"Testo riproduttore vocale per la risposta sbagliata",
+          "default":"Sbagliato. La risposta corretta è :num"
         },
         {
-          "label":"Readspeaker label for the timer",
-          "default":"Duration in hours, minutes and seconds."
+          "label":"Etichetta del riproduttore vocale per il timer",
+          "default":"Durata in ore, minuti e secondi."
         },
         {
-          "label":"Readspeaker text for question",
-          "default":"What does :arithmetic equal?"
+          "label":"Testo del riproduttore vocale per la domanda",
+          "default":"A che cosa equvale :arithmetic?"
         },
         {
-          "label":"Plus operator text",
-          "default":"plus"
+          "label":"Testo dell'operatore somma",
+          "default":"più"
         },
         {
-          "label":"Subtraction operator text",
-          "default":"minus"
+          "label":"Testo dell'operatore di sottrazione",
+          "default":"meno"
         },
         {
-          "label":"Multiplication operator text",
-          "default":"times"
+          "label":"Testo dell'operatore di moltiplicazione",
+          "default":"moltiplicato"
         },
         {
-          "label":"Division operator text",
-          "default":"divided by"
+          "label":"Testo dell'operatore di divisione",
+          "default":"diviso"
         },
         {
-          "label":"Testo Numero diapositiva",
-          "description":"Annuncia diapositiva corrente e il numero totale di diapositive, le variabili sono :num e :total",
-          "default":":num diapositiva del :total"
+          "label":"Testo del numero della diapositiva",
+          "description":"Annuncia la diapositiva corrente e il numero totale delle diapositive. Le variabili sono :num e :total",
+          "default":"Diapositiva :num di :total"
         }
       ]
     }
