@@ -1,0 +1,95 @@
+{
+  "semantics":[
+    {
+      "label":"Intro",
+      "description":"The intro text (maximum 100 characters)"
+    },
+    {
+      "label":"Arithmetic type",
+      "options":[
+        {
+          "label":"Addition"
+        },
+        {
+          "label":"Subtraction"
+        },
+        {
+          "label":"Multiplication"
+        },
+        {
+          "label":"Division"
+        }
+      ],
+      "default":"addition"
+    },
+    {
+      "label":"Max number of questions"
+    },
+    {
+      "label":"User interface translations",
+      "fields":[
+        {
+          "label":"Scoring during quiz",
+          "default":"Score:"
+        },
+        {
+          "label":"Time",
+          "default":"Time: @time"
+        },
+        {
+          "label":"Result page header",
+          "default":"Finished!"
+        },
+        {
+          "label":"Go label",
+          "default":"GO!"
+        },
+        {
+          "label":"Start button label",
+          "default":"Start"
+        },
+        {
+          "label":"Beschriftung des \"Beenden\"-Buttons",
+          "default":"Wiederholen"
+        },
+        {
+          "label":"\"Readspeaker\"-Text für eine richtige Antwort",
+          "default":"Korrekt!"
+        },
+        {
+          "label":"\"Readspeaker\"-Text für eine falsche Antwort",
+          "default":"Incorrect. Correct answer was :num"
+        },
+        {
+          "label":"Readspeaker label for the timer",
+          "default":"Duration in hours, minutes and seconds."
+        },
+        {
+          "label":"Readspeaker text for question",
+          "default":"What does :arithmetic equal?"
+        },
+        {
+          "label":"Plus operator text",
+          "default":"plus"
+        },
+        {
+          "label":"Subtraction operator text",
+          "default":"minus"
+        },
+        {
+          "label":"Multiplication operator text",
+          "default":"times"
+        },
+        {
+          "label":"Division operator text",
+          "default":"divided by"
+        },
+        {
+          "label":"Text für die Nummer des Schaubilds",
+          "description":"Gibt das aktuelle Schaubild und die Gesamtzahl der Schaubilder an, Variablen sind :num und :total",
+          "default":"Schaubild :num von :total"
+        }
+      ]
+    }
+  ]
+}

@@ -1,92 +1,93 @@
 {
-  "semantics": [
+  "semantics":[
     {
-      "label": "Introduksjonstekst",
-      "description": "Tekst vises på forsiden"
+      "label":"Introduksjonstekst",
+      "description":"Tekst vises på forsiden"
     },
     {
-      "label": "Aritmetisk type",
-      "options": [
+      "label":"Aritmetisk type",
+      "options":[
         {
-          "label": "Addisjon (pluss)"
+          "label":"Addisjon (pluss)"
         },
         {
-          "label": "Subtraksjon (minus)"
+          "label":"Subtraksjon (minus)"
         },
         {
-          "label": "Multiplikasjon (gange)"
+          "label":"Multiplikasjon (gange)"
         },
         {
-          "label": "Divisjon (dele)"
+          "label":"Divisjon (dele)"
         }
-      ]
+      ],
+      "default":"addition"
     },
     {
-      "label": "Maksimalt antall spørsmål"
+      "label":"Maksimalt antall spørsmål"
     },
     {
-      "label": "Oversettelser for brukergrensesnittet",
-      "fields": [
+      "label":"Oversettelser for brukergrensesnittet",
+      "fields":[
         {
-          "label": "Poengtilbakemelding under quizen",
-          "default": "Poeng:"
+          "label":"Poengtilbakemelding under quizen",
+          "default":"Poeng:"
         },
         {
-          "label": "Tid",
-          "default": "Tid: @time"
+          "label":"Tid",
+          "default":"Tid: @time"
         },
         {
-          "label": "Overskrift på resultatsiden",
-          "default": "Ferdig!"
+          "label":"Overskrift på resultatsiden",
+          "default":"Ferdig!"
         },
         {
-          "label": "Kjør etikett",
-          "default": "KJØR!"
+          "label":"Kjør etikett",
+          "default":"KJØR!"
         },
         {
-          "label": "Etikett på start-knapp",
-          "default": "Start"
+          "label":"Etikett på start-knapp",
+          "default":"Start"
         },
         {
-          "label": "Etikett på prøv igjen-knapp",
-          "default": "Prøv igjen"
+          "label":"Tekst til \"Prøv igjen\" knapp",
+          "default":"Prøv igjen"
         },
         {
-          "label": "Rett svar tekst for hjelpemiddelteknologi",
-          "default": "Rett svar"
+          "label":"Rett svar tekst for hjelpemiddelteknologi",
+          "default":"Riktig"
         },
         {
-          "label": "Galt svar tekst for hjelpemiddelteknologi",
-          "default": "Feil svar. Rett var :num"
+          "label":"Galt svar tekst for hjelpemiddelteknologi",
+          "default":"Feil svar. Rett var :num"
         },
         {
-          "label": "Hjelpetekst for nedtellingsklokke for hjelpemiddelteknologier",
-          "default": "Tid brukt i timer, minutter og sekunder"
+          "label":"Hjelpetekst for nedtellingsklokke for hjelpemiddelteknologier",
+          "default":"Tid brukt i timer, minutter og sekunder"
         },
         {
-          "label": "Spørsmålstekst for hjelpemiddelteknologi",
-          "default": "Hva er :arithmetic lik?"
+          "label":"Spørsmålstekst for hjelpemiddelteknologi",
+          "default":"Hva er :arithmetic lik?"
         },
         {
-          "label": "Pluss tegn til tekst",
-          "default": "pluss"
+          "label":"Pluss tegn til tekst",
+          "default":"pluss"
         },
         {
-          "label": "Minus tegn til tekst",
-          "default": "minus"
+          "label":"Minus tegn til tekst",
+          "default":"minus"
         },
         {
-          "label": "Multiplikasjon til tekst",
-          "default": "ganger"
+          "label":"Multiplikasjon til tekst",
+          "default":"ganger"
         },
         {
-          "label": "Divisjon til tekst",
-          "default": "delt på"
+          "label":"Divisjon til tekst",
+          "default":"delt på"
         },
         {
-          "label": "Side nummer tekst",
-          "description": "Angir nåværende side og totalt antall sider, variabler er :num og :total",
-          "default": "Side :num av :total"
+          "label":"Side nummer tekst",
+          "description":"Angir nåværende side og totalt antall sider, variabler er :num og :total",
+          "default":"Side :num av :total"
         }
       ]
     }
