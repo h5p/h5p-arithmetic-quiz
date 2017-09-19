@@ -1,35 +1,35 @@
 {
   "semantics":[
     {
-      "label":"Intro",
-      "description":"The intro text (maximum 100 characters)"
+      "label":"Introductie",
+      "description":"De introductietekst (maximum 100 karakters)"
     },
     {
-      "label":"Arithmetic type",
+      "label":"Rekenkundig type",
       "options":[
         {
-          "label":"Addition"
+          "label":"Optellen"
         },
         {
-          "label":"Subtraction"
+          "label":"Aftrekken"
         },
         {
-          "label":"Multiplication"
+          "label":"Vermenigvuldigen"
         },
         {
-          "label":"Division"
+          "label":"Delen"
         }
       ],
-      "default":"addition"
+      "default":"Optellen"
     },
     {
-      "label":"Max number of questions"
+      "label":"Max aantal vragen"
     },
     {
-      "label":"User interface translations",
+      "label":"Gebruikers interface vertalingen",
       "fields":[
         {
-          "label":"Scoring during quiz",
+          "label":"Score tijdens de quiz",
           "default":"Score:"
         },
         {
@@ -37,15 +37,15 @@
           "default":"Time: @time"
         },
         {
-          "label":"Result page header",
-          "default":"Finished!"
+          "label":"Hoofding resultaten pagina",
+          "default":"Beëindigd!"
         },
         {
-          "label":"Go label",
-          "default":"GO!"
+          "label":"Start label",
+          "default":"Start!"
         },
         {
-          "label":"Start button label",
+          "label":"Startknop label",
           "default":"Start"
         },
         {
@@ -53,41 +53,41 @@
           "default":"Opnieuw proberen"
         },
         {
-          "label":"Readspeaker text for correct answer",
+          "label":"Readspeaker tekst voor het juiste antwoord",
           "default":"Juist"
         },
         {
-          "label":"Readspeaker text for incorrect answer",
-          "default":"Incorrect. Correct answer was :num"
+          "label":"Readspeaker tekst voor het foute antwoord",
+          "default":"Fout. Het juiste antwoord was :num"
         },
         {
-          "label":"Readspeaker label for the timer",
-          "default":"Duration in hours, minutes and seconds."
+          "label":"Readspeaker label voor de timer",
+          "default":"voortgang in uren, minuten en seconden."
         },
         {
-          "label":"Readspeaker text for question",
-          "default":"What does :arithmetic equal?"
+          "label":"Readspeaker tekst voor de vraag",
+          "default":"Wat is :rekenkundige gelijkheid?"
         },
         {
-          "label":"Plus operator text",
+          "label":"Plusteken tekst",
           "default":"plus"
         },
         {
-          "label":"Subtraction operator text",
-          "default":"minus"
+          "label":"Minteken tekst",
+          "default":"min"
         },
         {
-          "label":"Multiplication operator text",
-          "default":"times"
+          "label":"Maalteken tekst",
+          "default":"maal"
         },
         {
-          "label":"Division operator text",
-          "default":"divided by"
+          "label":"Deelteken tekst",
+          "default":"gedeeld door"
         },
         {
-          "label":"Slide number text",
-          "description":"Announces current slide and total number of slides, variables are :num and :total",
-          "default":"Slide :num of :total"
+          "label":"Slide nummer text",
+          "description":"Geeft het nummer van de huidige slide en het totaal aantal slides aan, variabelen zijn :num en :total",
+          "default":"Slide :num van :total"
         }
       ]
     }
