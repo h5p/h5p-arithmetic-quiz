@@ -3,7 +3,7 @@ var H5P = H5P || {};
 /**
  * Defines the H5P.ArithmeticQuiz class
  */
-H5P.ArithmeticQuiz = (function ($, UI) {
+H5P.ArithmeticQuiz = (function ($) {
 
   /**
    * Creates a new ArithmeticQuiz instance
@@ -137,7 +137,7 @@ H5P.ArithmeticQuiz = (function ($, UI) {
   };
 
   return ArithmeticQuiz;
-})(H5P.jQuery, H5P.JoubelUI);
+})(H5P.jQuery);
 
 /**
  * Enum defining the different arithmetic types

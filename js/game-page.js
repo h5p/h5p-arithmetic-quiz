@@ -192,7 +192,7 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
      * Handles focusing one of the options, making the rest non-tabbable.
      * @private
      */
-    var handleFocus = function () {
+    var handleFocus = function () {
       // Go through all alternatives
       for (var i = 0; i < alternatives.length; i++) {
         if (alternatives[i] === this) {
@@ -211,7 +211,7 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
      * Handles moving the focus from the current option to the previous option.
      * @private
      */
-    var handlePreviousOption = function () {
+    var handlePreviousOption = function () {
       if (focusedOption !== 0) {
         alternatives[focusedOption - 1].focus();
       }
@@ -221,7 +221,7 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
      * Handles moving the focus from the current option to the next option.
      * @private
      */
-    var handleNextOption = function () {
+    var handleNextOption = function () {
       if (focusedOption !== alternatives.length - 1) {
         alternatives[focusedOption + 1].focus();
       }
@@ -389,7 +389,7 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
               break;
           }
         },
-        'focus': function () {
+        'focus': function () {
           if (self.$button.is('.reveal-correct, reveal-wrong')) {
             return;
           }
@@ -408,21 +408,21 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
     /**
      * Move focus to this option.
      */
-    self.focus = function () {
+    self.focus = function () {
       self.$button.focus();
     };
 
     /**
      * Makes it possible to tab your way to this option.
      */
-    self.tabbable = function () {
+    self.tabbable = function () {
       self.$button.attr('tabindex', 0);
     };
 
     /**
      * Make sure it's NOT possible to tab your way to this option.
      */
-    self.notTabbable = function () {
+    self.notTabbable = function () {
       self.$button.attr('tabindex', -1);
     };
 
