@@ -9,8 +9,6 @@ H5P.ArithmeticQuiz.TimerWidget = (function ($) {
    * @param  {type} t Translation object
    */
   function TimerWidget(t) {
-    var self = this;
-
     var totalTime = 0;
     var isRunning = false;
     var timer;

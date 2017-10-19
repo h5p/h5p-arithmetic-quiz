@@ -29,7 +29,7 @@ H5P.ArithmeticQuiz.IntroPage = (function ($, UI) {
     })));
 
     // Create and add the start button:
-    var $startButton = UI.createButton({
+    UI.createButton({
       text: t.startButton,
       'class': 'mq-control-button',
       click: function () {
