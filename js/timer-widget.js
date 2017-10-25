@@ -39,11 +39,11 @@ H5P.ArithmeticQuiz.TimerWidget = (function ($) {
       text: H5P.ArithmeticQuiz.tReplace(t.time, {time: '0'})
     });
 
-    $ariaTimer.on('focus', () => {
+    $ariaTimer.on('focus', function () {
       incrementingAria = false;
     });
 
-    $ariaTimer.on('blur', () => {
+    $ariaTimer.on('blur', function () {
       incrementingAria = true;
     });
 
