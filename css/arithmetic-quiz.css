@@ -150,6 +150,14 @@
 .h5p-baq-game > .timer {
   right: 0;
 }
+
+.h5p-baq-game > .timer.aria-timer {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
 .h5p-baq-game > .h5p-baq-score-widget {
   left: 0;
   min-width: 3em;

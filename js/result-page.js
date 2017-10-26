@@ -65,7 +65,6 @@ H5P.ArithmeticQuiz.ResultPage = (function ($, UI) {
      * @param  {string} time
      */
     this.update = function (score, time) {
-      var percent = Math.ceil((score / maxScore) * 100);
       this.$time.html(H5P.ArithmeticQuiz.tReplace(t.time, {time: time}));
       this.scoreBar.setScore(score);
     };

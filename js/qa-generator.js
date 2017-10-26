@@ -96,6 +96,7 @@ H5P.ArithmeticQuiz.QuestionsGenerator = (function (ArithmeticType) {
   function QuestionsGenerator(type, maxQuestions) {
     var self = this;
     var questions = [];
+    var i, j;
 
     /**
      * Generates alternative for a question
@@ -178,7 +179,7 @@ H5P.ArithmeticQuiz.QuestionsGenerator = (function (ArithmeticType) {
     }
 
     // Create alternatives
-    for (var i = 0; i < questions.length; i++) {
+    for (i = 0; i < questions.length; i++) {
       generateAlternatives(questions[i]);
       questions[i].textual = createTextualQuestion(questions[i]);
     }
@@ -190,7 +191,7 @@ H5P.ArithmeticQuiz.QuestionsGenerator = (function (ArithmeticType) {
      */
     self.get = function () {
       return questions;
-    }
+    };
   }
 
   return QuestionsGenerator;

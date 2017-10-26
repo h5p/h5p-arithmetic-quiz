@@ -1,93 +1,93 @@
 {
   "semantics":[
     {
-      "label":"Intro",
-      "description":"The intro text (maximum 100 characters)"
+      "label":"Johdanto",
+      "description":"Johdantoteksti (Max 100 merkkiä)"
     },
     {
-      "label":"Arithmetic type",
+      "label":"Laskutyyppi",
       "options":[
         {
-          "label":"Addition"
+          "label":"Summa"
         },
         {
-          "label":"Subtraction"
+          "label":"Vähennys"
         },
         {
-          "label":"Multiplication"
+          "label":"Kerto"
         },
         {
-          "label":"Division"
+          "label":"Jako"
         }
       ],
       "default":"addition"
     },
     {
-      "label":"Max number of questions"
+      "label":"Kysymyksien enimmäismäärä"
     },
     {
-      "label":"User interface translations",
+      "label":"Käyttöliittymän omat tekstit",
       "fields":[
         {
-          "label":"Scoring during quiz",
-          "default":"Score:"
+          "label":"Tehtävänaikainen pistelasku",
+          "default":"Pisteet:"
         },
         {
-          "label":"Time",
-          "default":"Time: @time"
+          "label":"Aika",
+          "default":"Aika: @time"
         },
         {
-          "label":"Result page header",
-          "default":"Finished!"
+          "label":"Tulossivun otsikko",
+          "default":"Tehty!"
         },
         {
-          "label":"Go label",
-          "default":"GO!"
+          "label":"Käynnistä painikkeen teksti",
+          "default":"Käynnistä!"
         },
         {
-          "label":"Start button label",
-          "default":"Start"
+          "label":"Aloita painikkeen teksti",
+          "default":"Aloita"
         },
         {
-          "label":"Retry button label",
+          "label":"Painikkeen Yritä uudelleen teksti",
           "default":"Yritä uudelleen"
         },
         {
-          "label":"Readspeaker text for correct answer",
-          "default":"Correct"
+          "label":"Readspeaker teksti oikealle vastaukselle",
+          "default":"Oikein"
         },
         {
-          "label":"Readspeaker text for incorrect answer",
-          "default":"Incorrect. Correct answer was :num"
+          "label":"Readspeaker teksti väärälle vastaukselle",
+          "default":"Väärin. Oikea vastaus oli :num"
         },
         {
-          "label":"Readspeaker label for the timer",
-          "default":"Duration in hours, minutes and seconds."
+          "label":"Readspeaker selite ajastimelle",
+          "default":"Kesto tunneissa, minuuteissa ja sekunneissa."
         },
         {
-          "label":"Readspeaker text for question",
-          "default":"What does :arithmetic equal?"
+          "label":"Readspeaker teksti kysymykselle",
+          "default":"Kuinka paljon on :arithmetic"
         },
         {
-          "label":"Plus operator text",
+          "label":"Summaoperaattorin teksti",
           "default":"plus"
         },
         {
-          "label":"Subtraction operator text",
-          "default":"minus"
+          "label":"Vähennysoperaattorin teksti",
+          "default":"miinus"
         },
         {
-          "label":"Multiplication operator text",
-          "default":"times"
+          "label":"Kerroinoperaattorin teksti",
+          "default":"kertaa"
         },
         {
-          "label":"Division operator text",
-          "default":"divided by"
+          "label":"Jako-operaattorin teksti",
+          "default":"jaettuna"
         },
         {
-          "label":"Slide number text",
-          "description":"Announces current slide and total number of slides, variables are :num and :total",
-          "default":"Slide :num of :total"
+          "label":"Sivunumeron teksti",
+          "description":"Ilmoittaa nykyisen sivunumeron ja sivumäärän. Muuttujat :num ja :total",
+          "default":"Sivu :num \/ :total"
         }
       ]
     }
