@@ -1,7 +1,7 @@
 /**
  * Defines the H5P.ArithmeticQuiz.GamePage class
  */
-H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerator) {
+H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, EquationType, QuestionsGenerator) {
 
   /**
    * Creates a new GamePage instance
@@ -10,26 +10,29 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
    * @augments H5P.EventDispatcher
    * @namespace H5P
    * @param  {arithmeticType} type
+   * @param  {equationType} difficulty of equations if enabled
    * @param  {number} maxQuestions Maximum number of questions
+   * @param  {number} maxValue Maximum value for euqation operations
    * @param  {Object} t Object containing translation texts
    * @param {number} id Unique id to identify this quiz
    * @fires H5P.XAPIEvent
    */
-  function GamePage(type, maxQuestions, t, id) {
+  function GamePage(type, equationType, maxQuestions, maxValue, t, id) {
     H5P.EventDispatcher.call(this);
-
     var self = this;
     self.id = id;
     self.translations = t;
     self.type = type;
+    self.equationType = equationType;
     self.maxQuestions = maxQuestions;
+    self.maxValue = maxValue;
     self.sliding = false;
 
     self.$gamepage = $('<div>', {
       'class': 'h5p-baq-game counting-down'
     });
 
-    self.questionsGenerator = new QuestionsGenerator(self.type, self.maxQuestions);
+    self.questionsGenerator = new QuestionsGenerator(self.type, self.equationType, self.maxQuestions, self.maxValue);
     self.score = 0;
     self.scoreWidget = new ScoreWidget(t);
     self.scoreWidget.appendTo(self.$gamepage);
@@ -460,7 +463,7 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
   Alternative.prototype.constructor = Alternative;
 
   return GamePage;
-})(H5P.jQuery, H5P.JoubelUI, H5P.ArithmeticQuiz.ArithmeticType, H5P.ArithmeticQuiz.QuestionsGenerator);
+})(H5P.jQuery, H5P.JoubelUI, H5P.ArithmeticQuiz.ArithmeticType, H5P.ArithmeticQuiz.EquationType, H5P.ArithmeticQuiz.QuestionsGenerator);
 
 /*function GridResultsView(rows, cols) {
   var $grid = $('<table>', {

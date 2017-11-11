@@ -1,7 +1,12 @@
 /**
  * Defines the H5P.ArithmeticQuiz.QuestionsGenerator class
  */
-H5P.ArithmeticQuiz.QuestionsGenerator = (function (ArithmeticType) {
+H5P.ArithmeticQuiz.QuestionsGenerator = (function (ArithmeticType, EquationType) {
+
+  var unknown = ["x", "y", "z", "a", "b"];
+  var Fraction = algebra.Fraction;
+  var Expression = algebra.Expression;
+  var Equation = algebra.Equation;
 
   // Helper functions for creating wrong alternatives
   function add (question, param) {
@@ -14,6 +19,15 @@ H5P.ArithmeticQuiz.QuestionsGenerator = (function (ArithmeticType) {
     // Creates random number between correct-10 and correct+10:
     return (question.correct - 10) + Math.floor(Math.random() * 20);
   }
+  function randomNum (max) {
+    var min = 2;
+    // Creates random number between min and max:
+    var num = Math.floor(Math.random()*(max-min+1)+min);
+    if (num === 0) {
+      num = randomNum (max);
+    }
+    return num;
+  } 
   function multiply (question, param) {
     if (Math.random() > 0.5) {
       return (question.x+param) * question.y;
@@ -29,6 +43,123 @@ H5P.ArithmeticQuiz.QuestionsGenerator = (function (ArithmeticType) {
     else {
       return Math.floor(question.x / (question.y + param));
     }
+  }
+
+  // 
+  /**
+   * Do a random operation on equation expression
+   * @method randomOperation
+   * @param  {operations}  array of operations to choose from randomly
+   * @param  {expr}  algebra.js expression
+   * @param  {max}  maximum value used in operations
+   */
+  function randomOperation(operations, expr, max) {
+    // get a random operation
+    var operation = operations[Math.floor(Math.random() * operations.length)];
+    number = randomNum(max);
+    switch (operation) {
+      case "/":
+        if (number > 0) {
+          expr = expr.divide(number);
+        }
+        break;
+      case "*":
+        expr = expr.multiply(number);
+        break;
+      case "+":
+        expr = expr.add(number);
+        break;
+      case "-":
+        expr = expr.subtract(number);
+        break;
+    }
+    return expr;
+  }
+
+  /**
+   * Generates equation type for a question
+   * @method generateEquation
+   * @param  {item}  variable name of expression
+   * @param  {expr}  algebra.js expression
+   * @param  {equationType}  type of equation (basic, intermediate, advanced)
+   * @param  {max}  maximum value used in operations
+   */
+  function generateEquation(item, type, equationType, max) {
+    var equation = undefined;
+    var solution = undefined;
+    var number = undefined;
+    var expression1 = new Expression(item);
+    var expression2 = new Expression(item);
+    
+    switch (type) {
+      case ArithmeticType.ADDITION:
+        expression1 = expression1.add(randomNum(max));
+        expression1 = expression1.add(randomNum(max));
+        expression2 = expression2.add(randomNum(max));
+        break;
+      case ArithmeticType.SUBTRACTION:
+        expression1 = expression1.subtract(randomNum(max));
+        expression1 = expression1.subtract(randomNum(max));
+        expression2 = expression2.subtract(randomNum(max));
+        break;
+      case ArithmeticType.MULTIPLICATION:
+        expression1 = expression1.multiply(randomNum(max));
+        expression2 = expression2.multiply(randomNum(max));
+        break;
+      case ArithmeticType.DIVISION:
+        number = new Fraction(randomNum(max), randomNum(max));
+        expression1 = expression1.divide(number);
+        number = new Fraction(randomNum(max), randomNum(max));
+        expression2 = expression2.divide(number);
+        break;
+    }
+    
+    switch (equationType) {
+      case EquationType.BASIC:      
+        equation = new Equation(expression1, randomNum(max) + randomNum(max));
+        try {
+          solution = equation.solveFor(item);
+        } catch(err) {
+          equation = generateEquation(item, type, equationType, max);
+          solution = equation.solveFor(item);
+        }          
+        break;
+      case EquationType.INTERMEDIATE:
+        var operations = ["*"]
+        expression1 = randomOperation(operations, expression1, max);
+        var operations = ["+", "-"]
+        expression1 = randomOperation(operations, expression1, max);
+        equation = new Equation(expression1, randomNum(max) + randomNum(max));
+        try {
+          solution = equation.solveFor(item);
+        } catch(err) {
+          equation = generateEquation(item, type, equationType, max);
+          solution = equation.solveFor(item);
+        }          
+        break;
+      case EquationType.ADVANCED:
+        var operations = ["*"]
+        // expression1 = expression1.multiply(item); // Quadratic equations ..
+        expression1 = randomOperation(operations, expression1, max);
+        expression2 = randomOperation(operations, expression2, max);
+        var operations = ["+", "-"]
+        expression1 = randomOperation(operations, expression1, max);
+        expression2 = randomOperation(operations, expression2, max);
+        equation = new Equation(expression1, expression2);
+        try {
+          solution = equation.solveFor(item);
+        } catch(err) {
+          equation = generateEquation(item, type, equationType, max);
+          solution = equation.solveFor(item);
+        }          
+        break;
+    }
+    if ( (solution.toString() === "0") || (solution.toString() === "1")) {
+      // rebuild
+      equation = generateEquation(item, type, equationType, max);
+    }
+    
+    return equation;      
   }
 
   /**
@@ -91,9 +222,11 @@ H5P.ArithmeticQuiz.QuestionsGenerator = (function (ArithmeticType) {
    * @method QuestionsGenerator
    * @constructor
    * @param  {H5P.ArithmeticQuiz.ArithmeticType}   type
+   * @param  {H5P.ArithmeticQuiz.EquationType}   equationType
    * @param  {number}           maxQuestions
+   * @param  {number}           maxValue for operations
    */
-  function QuestionsGenerator(type, maxQuestions) {
+  function QuestionsGenerator(type, equationType, maxQuestions, maxValue) {
     var self = this;
     var questions = [];
     var i, j;
@@ -124,6 +257,35 @@ H5P.ArithmeticQuiz.QuestionsGenerator = (function (ArithmeticType) {
     }
 
     /**
+     * Generates alternative for a question
+     * @method generateAlternatives
+     * @param  {Object}             question
+     * @param  {H5P.ArithmeticQuiz.EquationType}   equation type
+     * @param  {maxValue}           max value for operations
+     */
+    function generateEquationAlternatives(question, equationType, maxValue) {
+      question.alternatives = [];
+      var equation = undefined;
+      // Generate 5 wrong ones:
+      while (question.alternatives.length !== 5) {
+        equation = generateEquation(question.variable, question.type, equationType, maxValue);
+        var alternative = equation.toString();
+        var solution = equation.solveFor(question.variable).toString();
+        
+        // check if alternative is present already and is not the correct one
+        if (solution !== question.correct && question.alternatives.indexOf(solution) === -1) {
+          question.alternatives.push(solution);
+        }
+      }
+
+      // Add correct one
+      question.alternatives.push(question.correct);
+
+      // Shuffle alternatives:
+      question.alternatives = H5P.shuffleArray(question.alternatives);
+    }
+ 
+    /**
      * Creates textual representation for question
      * @method createTextualQuestion
      * @param  {Object}              question Question Object
@@ -144,33 +306,53 @@ H5P.ArithmeticQuiz.QuestionsGenerator = (function (ArithmeticType) {
       }
     }
 
-    // Generate questions
-    switch (type) {
-      case ArithmeticType.DIVISION:
-      case ArithmeticType.MULTIPLICATION:
-        for (i=1; i<10; i++) {
-          for (j=1; j<10; j++) {
-            questions.push({
-              x:  type === ArithmeticType.DIVISION ? i * j : i,
-              y: j,
-              correct: type === ArithmeticType.DIVISION ? (i * j) / j : i * j
-            });
-          }
+    // Generate questions or equations
+    if (equationType !== undefined) {
+      // Generate equations
+      for (i=50; i>=0; i--) {
+        for (j=i; j>=0; j--) {
+          var item = unknown[Math.floor(Math.random()*unknown.length)];
+          var equation = generateEquation(item, type, equationType, maxValue);
+          var solution = equation.solveFor(item);
+          questions.push({
+            variable: item,
+            expression: equation.toString(),
+            correct: solution.toString(),
+            textual: equation.toString(),
+          });
         }
-        break;
-      case ArithmeticType.ADDITION:
-      case ArithmeticType.SUBTRACTION:
-        for (i=100; i>=0; i--) {
-          for (j=i; j>=0; j--) {
-            questions.push({
-              x: type === ArithmeticType.ADDITION ? i - j : i,
-              y: j,
-              correct: type === ArithmeticType.ADDITION ? i : i - j
-            });
+      }
+    
+    } else {
+      // Generate questions
+      switch (type) {
+        case ArithmeticType.DIVISION:
+        case ArithmeticType.MULTIPLICATION:
+          for (i=1; i<10; i++) {
+            for (j=1; j<10; j++) {
+              questions.push({
+                x:  type === ArithmeticType.DIVISION ? i * j : i,
+                y: j,
+                correct: type === ArithmeticType.DIVISION ? (i * j) / j : i * j
+              });
+            }
           }
-        }
-        break;
+          break;
+        case ArithmeticType.ADDITION:
+        case ArithmeticType.SUBTRACTION:
+          for (i=100; i>=0; i--) {
+            for (j=i; j>=0; j--) {
+              questions.push({
+                x: type === ArithmeticType.ADDITION ? i - j : i,
+                y: j,
+                correct: type === ArithmeticType.ADDITION ? i : i - j
+              });
+            }
+          }
+          break;
+      }
     }
+
     // Let's shuffle
     questions = H5P.shuffleArray(questions);
 
@@ -180,8 +362,12 @@ H5P.ArithmeticQuiz.QuestionsGenerator = (function (ArithmeticType) {
 
     // Create alternatives
     for (i = 0; i < questions.length; i++) {
-      generateAlternatives(questions[i]);
-      questions[i].textual = createTextualQuestion(questions[i]);
+      if (equationType !== undefined) {
+        generateEquationAlternatives(questions[i], equationType, maxValue);
+      } else {
+        generateAlternatives(questions[i]);
+        questions[i].textual = createTextualQuestion(questions[i]);
+      }
     }
 
     /**
@@ -195,4 +381,4 @@ H5P.ArithmeticQuiz.QuestionsGenerator = (function (ArithmeticType) {
   }
 
   return QuestionsGenerator;
-}(H5P.ArithmeticQuiz.ArithmeticType));
+}(H5P.ArithmeticQuiz.ArithmeticType, H5P.ArithmeticQuiz.EquationType));

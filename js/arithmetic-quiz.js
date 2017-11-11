@@ -23,7 +23,10 @@ H5P.ArithmeticQuiz = (function ($) {
     self.options = $.extend(true, {}, {
       intro: '',
       arithmeticType: 'addition',
+      equationType: undefined,
+      enableEquations: undefined,
       maxQuestions: undefined,
+      maxValue: undefined,
       UI: {
         score: 'Score @score',
         scoreInPercent: '(@percent% correct)',
@@ -44,8 +47,11 @@ H5P.ArithmeticQuiz = (function ($) {
       }
     }, options);
     self.currentWidth = 0;
-
-    self.gamePage = new H5P.ArithmeticQuiz.GamePage(self.options.arithmeticType, self.options.maxQuestions, self.options.UI, id);
+    // Reset equation type if not enabled
+    if (self.options.enableEquations === false) {
+      self.options.equations.equationType = undefined;
+    }
+    self.gamePage = new H5P.ArithmeticQuiz.GamePage(self.options.arithmeticType, self.options.equations.equationType, self.options.maxQuestions, self.options.equations.maxValue, self.options.UI, id);
 
     self.gamePage.on('last-slide', function (e) {
       self.triggerXAPIScored(e.data.score, e.data.numQuestions, 'answered');
@@ -149,4 +155,15 @@ H5P.ArithmeticQuiz.ArithmeticType = {
   SUBTRACTION: 'subtraction',
   MULTIPLICATION: 'multiplication',
   DIVISION: 'division'
+};
+
+/**
+ * Enum defining the different equation types
+ * @readonly
+ * @enum {string}
+ */
+H5P.ArithmeticQuiz.EquationType = {
+  BASIC: 'basic',
+  INTERMEDIATE: 'intermediate',
+  ADVANCED: 'advanced'
 };

@@ -43,6 +43,58 @@
     "max": 100
   },
   {
+    "name": "enableEquations",
+    "type": "boolean",
+    "label": "Enable linear equations",
+    "importance": "low",
+    "description": "Enables linear equations mode.",
+    "default": false
+  },      
+  {
+    "name": "equations",
+    "type": "group",
+    "label": "Equation settings",
+    "widget": "showWhen",
+    "showWhen": {
+      "rules": [
+        {
+          "field": "enableEquations",
+          "equals": true
+        }
+      ]
+    },    
+    "fields": [    
+      {
+        "name": "equationType",
+        "type": "select",
+        "label": "Equation type",
+        "options": [
+          {
+            "value": "basic",
+            "label": "Basic"
+          },
+          {
+            "value": "intermediate",
+            "label": "Intermediate"
+          },
+          {
+            "value": "advanced",
+            "label": "Advanced"
+          }
+        ],
+        "default": "intermediate"
+      },
+      {
+        "name": "maxValue",
+        "type": "number",
+        "label": "Max value for operations",
+        "default": 8,
+        "min": 2,
+        "max": 20
+      }
+    ]
+  },
+  {
     "name": "UI",
     "type": "group",
     "label": "User interface translations",

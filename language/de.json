@@ -1,11 +1,11 @@
 {
   "semantics":[
     {
-      "label":"Intro",
-      "description":"The intro text (maximum 100 characters)"
+      "label":"Einleitung",
+      "description":"Einleitungstext (maximal 100 Zeichen)"
     },
     {
-      "label":"Arithmetic type",
+      "label":"Arithmetischer Typ",
       "options":[
         {
           "label":"Addition"
@@ -23,7 +23,34 @@
       "default":"addition"
     },
     {
-      "label":"Max number of questions"
+      "label":"Max. Anzahl von Fragen"
+    },
+    {
+      "label":"Lineare Gleichungen aktivieren",
+      "description":"Aktiviert den Lineare Gleichungen modus."
+    },
+    {
+      "label":"Einstellungen für Gleichungen",
+      "fields":[
+        {
+          "label":"Typ der Gleichung",
+          "options":[
+            {
+              "label":"Leicht"
+            },
+            {
+              "label":"Mittel"
+            },
+            {
+              "label":"Fortgeschritten"
+            }
+          ],
+          "default":"intermediate"
+        },
+        {
+          "label":"Maximalwert für Operationen"
+        }
+      ]
     },
     {
       "label":"User interface translations",
