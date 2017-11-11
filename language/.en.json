@@ -26,6 +26,33 @@
       "label": "Max number of questions"
     },
     {
+      "label": "Enable linear equations",
+      "description": "Enables linear equations mode."
+    },
+    {
+      "label":"Equation settings",
+      "fields":[
+        {
+          "label":"Equation type",
+          "options":[
+            {
+              "label":"Basic"
+            },
+            {
+              "label":"Intermediate"
+            },
+            {
+              "label":"Advanced"
+            }
+          ],
+          "default":"intermediate"
+        },
+        {
+          "label":"Max value for operations"
+        }
+      ]
+    },    
+    {
       "label": "User interface translations",
       "fields": [
         {
