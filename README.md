@@ -9,21 +9,21 @@ It rely on algebra.js by nicolewhite to build, display, and solve algebraic equa
 
 Sample equations:
 
-  Basic equations:
-    Addition: [ x + 17 = 12 ]
-    Subtraction: [ y - 6 = 13 ]
-    Multiplication: [ 8y = 5 ]
-    Division: [ 7/3y = 22 ]
-  Intermediate equations:
-    Addition: [ 11x + 111 = 9 ]
-    Subtraction: [ 6y - 110 = 17 ]
-    Multiplication: [ 72y + 11 = 15 ]
-    Division: [ 88/5y + 3 = 13 ]
-  Advanced equations:
-    Addition: [ 6x + 57 = 5x + 51 ]
-    Subtraction: [ 8y - 74 = 6y - 23 ]
-    Multiplication: [ 14y - 8 = 6y + 4 ]
-    Division: [ 32/11y + 6 = 5y - 7 ]
+  * Basic equations:
+    * Addition: [ x + 17 = 12 ]
+    * Subtraction: [ y - 6 = 13 ]
+    * Multiplication: [ 8y = 5 ]
+    * Division: [ 7/3y = 22 ]
+  * Intermediate equations:
+    * Addition: [ 11x + 111 = 9 ]
+    * Subtraction: [ 6y - 110 = 17 ]
+    * Multiplication: [ 72y + 11 = 15 ]
+    * Division: [ 88/5y + 3 = 13 ]
+  * Advanced equations:
+    * Addition: [ 6x + 57 = 5x + 51 ]
+    * Subtraction: [ 8y - 74 = 6y - 23 ]
+    * Multiplication: [ 14y - 8 = 6y + 4 ]
+    * Division: [ 32/11y + 6 = 5y - 7 ]
 
 ## License
 
