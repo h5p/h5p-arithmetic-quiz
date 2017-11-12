@@ -174,14 +174,24 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, EquationType, Qu
         .replace(':arithmetic', readableArithmetic);
 
     var questionId = 'arithmetic-quiz-' + self.id + '-question-' + i;
-
+    var readableText = question.textual + ' = ?';
+    if (question.expression !== undefined) {
+      readableText = question.textual;
+    }
     $('<div>', {
       'class': 'question',
-      'text': question.textual + ' = ?',
+      'text': readableText,
       'aria-label': readableQuestion,
       'id': questionId
     }).appendTo($slide);
-
+    if (question.expression !== undefined) {
+      $('<div>', {
+        'class': 'question',
+        'text': question.variable + ' = ?',
+        //'aria-label': readableQuestion,
+        'id': questionId
+      }).appendTo($slide);
+    }
     var $alternatives = $('<ul>', {
       'class': 'h5p-baq-alternatives',
       'role': 'radiogroup',
