@@ -1,6 +1,6 @@
 {
   "title": "Arithmetic Quiz",
-  "description": "Arithmetic quiz containing addition, division, multiplication, subtraction and equations",
+  "description": "Arithmetic quiz containing addition, division, multiplication, subtraction and linear equations",
   "majorVersion": 1,
   "minorVersion": 1,
   "patchVersion": 4,

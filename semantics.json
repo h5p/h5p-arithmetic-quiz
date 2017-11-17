@@ -9,9 +9,37 @@
     "optional": true
   },
   {
+    "name": "quizType",
+    "type": "select",
+    "label": "Quiz type",
+    "importance": "high",
+    "options": [
+      {
+        "value": "arithmetic",
+        "label": "Arithmetic Operations Quiz"
+      },
+      {
+        "value": "linearEquation",
+        "label": "Linear Equations Quiz"
+      }
+    ],
+    "default": "arithmetic"
+  },
+  {
     "name": "arithmeticType",
     "type": "select",
     "label": "Arithmetic type",
+    "widget": "showWhen",
+    "showWhen": {
+      "rules": [
+        {
+          "field": "quizType",
+          "equals": [
+            "arithmetic"
+          ]
+        }
+      ]
+    },
     "importance": "high",
     "options": [
       {
@@ -34,6 +62,56 @@
     "default": "addition"
   },
   {
+    "name": "equationType",
+    "type": "select",
+    "label": "Equation type",
+    "widget": "showWhen",
+    "showWhen": {
+      "rules": [
+        {
+          "field": "quizType",
+          "equals": [
+            "linearEquation"
+          ]
+        }
+      ]
+    },
+    "importance": "high",
+    "options": [
+      {
+        "value": "basic",
+        "label": "Basic [ 3x = 12 ]"
+      },
+      {
+        "value": "intermediate",
+        "label": "Intermediate [ 4x - 3 = 13 ]"
+      },
+      {
+        "value": "advanced",
+        "label": "Advanced [ 5x + 3 = 3x + 15 ]"
+      }
+    ],
+    "default": "intermediate"
+  },
+  {
+    "name": "useFractions",
+    "type": "boolean",
+    "label": "Enable fractions",
+    "description": "Enable to allow fractions in equations.",
+    "default": false,
+    "widget": "showWhen",
+    "showWhen": {
+      "rules": [
+        {
+          "field": "quizType",
+          "equals": [
+            "linearEquation"
+          ]
+        }
+      ]
+    }
+  },
+  {
     "name": "maxQuestions",
     "type": "number",
     "label": "Max number of questions",
@@ -41,58 +119,6 @@
     "default": 20,
     "min": 2,
     "max": 100
-  },
-  {
-    "name": "enableEquations",
-    "type": "boolean",
-    "label": "Enable linear equations",
-    "importance": "low",
-    "description": "Enables linear equations mode.",
-    "default": false
-  },      
-  {
-    "name": "equations",
-    "type": "group",
-    "label": "Equation settings",
-    "widget": "showWhen",
-    "showWhen": {
-      "rules": [
-        {
-          "field": "enableEquations",
-          "equals": true
-        }
-      ]
-    },    
-    "fields": [    
-      {
-        "name": "equationType",
-        "type": "select",
-        "label": "Equation type",
-        "options": [
-          {
-            "value": "basic",
-            "label": "Basic"
-          },
-          {
-            "value": "intermediate",
-            "label": "Intermediate"
-          },
-          {
-            "value": "advanced",
-            "label": "Advanced"
-          }
-        ],
-        "default": "intermediate"
-      },
-      {
-        "name": "maxValue",
-        "type": "number",
-        "label": "Max value for operations",
-        "default": 8,
-        "min": 2,
-        "max": 20
-      }
-    ]
   },
   {
     "name": "UI",
@@ -172,6 +198,20 @@
         "default": "What does :arithmetic equal?"
       },
       {
+        "name": "humanizedEquation",
+        "type": "text",
+        "label": "Readspeaker text for equation question",
+        "importance": "low",
+        "default": "For the equation :equation, what does :item equal?"
+      },
+      {
+        "name": "humanizedVariable",
+        "type": "text",
+        "label": "Readspeaker text for equation variable",
+        "importance": "low",
+        "default": "What does :item equal?"
+      },
+      {
         "name": "plusOperator",
         "type": "text",
         "label": "Plus operator text",
@@ -198,6 +238,13 @@
         "label": "Division operator text",
         "importance": "low",
         "default": "divided by"
+      },
+      {
+        "name": "equalitySign",
+        "type": "text",
+        "label": "Equality sign text",
+        "importance": "low",
+        "default": "equal"
       },
       {
         "name": "slideOfTotal",

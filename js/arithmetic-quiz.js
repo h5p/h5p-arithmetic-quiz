@@ -22,11 +22,11 @@ H5P.ArithmeticQuiz = (function ($) {
     // Extend defaults with provided options
     self.options = $.extend(true, {}, {
       intro: '',
+      quizType: undefined,
       arithmeticType: 'addition',
       equationType: undefined,
-      enableEquations: undefined,
+      useFractions: undefined,
       maxQuestions: undefined,
-      maxValue: undefined,
       UI: {
         score: 'Score @score',
         scoreInPercent: '(@percent% correct)',
@@ -39,19 +39,23 @@ H5P.ArithmeticQuiz = (function ($) {
         incorrectText: 'Incorrect. Correct answer was :num',
         durationLabel: 'Duration in hours, minutes and seconds.',
         humanizedQuestion: 'What does :arithmetic equal?',
+        humanizedEquation: 'For the equation :equation, what does :item equal?',
+        humanizedVariable: 'What does :item equal?',
         plusOperator: 'plus',
         minusOperator: 'minus',
         multiplicationOperator: 'times',
         divisionOperator: 'divided by',
+        equalitySign: 'equal',
         slideOfTotal: 'Slide :num of :total'
       }
     }, options);
     self.currentWidth = 0;
-    // Reset equation type if not enabled
-    if (self.options.enableEquations === false) {
-      self.options.equations.equationType = undefined;
+
+    // Reset equation type if not selected
+    if (self.options.quizType === H5P.ArithmeticQuiz.QuizType.ARITHMETIC) {
+      self.options.equationType = undefined;
     }
-    self.gamePage = new H5P.ArithmeticQuiz.GamePage(self.options.arithmeticType, self.options.equations.equationType, self.options.maxQuestions, self.options.equations.maxValue, self.options.UI, id);
+    self.gamePage = new H5P.ArithmeticQuiz.GamePage(self.options.arithmeticType, self.options.equationType, self.options.maxQuestions, self.options.useFractions, self.options.UI, id);
 
     self.gamePage.on('last-slide', function (e) {
       self.triggerXAPIScored(e.data.score, e.data.numQuestions, 'answered');
@@ -166,4 +170,14 @@ H5P.ArithmeticQuiz.EquationType = {
   BASIC: 'basic',
   INTERMEDIATE: 'intermediate',
   ADVANCED: 'advanced'
+};
+
+/**
+ * Enum defining the different quiz types
+ * @readonly
+ * @enum {string}
+ */
+H5P.ArithmeticQuiz.QuizType = {
+  ARITHMETIC: 'arithmetic',
+  LINEAREQUATION: 'linearEquation'
 };

@@ -5,6 +5,18 @@
       "description": "The intro text (maximum 100 characters)"
     },
     {
+      "label": "Quiz type",
+      "options": [
+        {
+          "label": "Arithmetic Operations Quiz"
+        },
+        {
+          "label": "Linear Equations Quiz"
+        }
+      ],
+      "default": "arithmetic"
+    },
+    {
       "label": "Arithmetic type",
       "options": [
         {
@@ -23,35 +35,27 @@
       "default": "addition"
     },
     {
-      "label": "Max number of questions"
-    },
-    {
-      "label": "Enable linear equations",
-      "description": "Enables linear equations mode."
-    },
-    {
-      "label":"Equation settings",
-      "fields":[
+      "label":"Equation type",
+      "options": [
         {
-          "label":"Equation type",
-          "options":[
-            {
-              "label":"Basic"
-            },
-            {
-              "label":"Intermediate"
-            },
-            {
-              "label":"Advanced"
-            }
-          ],
-          "default":"intermediate"
+          "label":"Basic [ 3x = 12 ]"
         },
         {
-          "label":"Max value for operations"
+          "label":"Intermediate [ 4x - 3 = 13 ]"
+        },
+        {
+          "label":"Advanced [ 5x + 3 = 3x + 15 ]"
         }
-      ]
-    },    
+      ],
+      "default":"intermediate"
+    },
+    {
+      "label": "Enable fractions",
+      "description": "Enable to allow fractions in equations."
+    },
+    {
+      "label": "Max number of questions"
+    },
     {
       "label": "User interface translations",
       "fields": [
@@ -96,6 +100,14 @@
           "default": "What does :arithmetic equal?"
         },
         {
+          "label": "Readspeaker text for equation question",
+          "default": "For the equation :equation, what does :item equal?"
+        },
+        {
+          "label": "Readspeaker text for equation variable",
+          "default": "What does :item equal?"
+        },        
+        {
           "label": "Plus operator text",
           "default": "plus"
         },
@@ -111,6 +123,10 @@
           "label": "Division operator text",
           "default": "divided by"
         },
+        {
+          "label": "Equality sign text",
+          "default": "equal"
+        },        
         {
           "label": "Slide number text",
           "description": "Announces current slide and total number of slides, variables are :num and :total",
