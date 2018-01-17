@@ -33,11 +33,11 @@
           "default":"Score:"
         },
         {
-          "label":"Time",
-          "default":"Time: @time"
+          "label":"Tijd",
+          "default":"Tijd: @time"
         },
         {
-          "label":"Hoofding resultaten pagina",
+          "label":"Kop resultaten pagina",
           "default":"Beëindigd!"
         },
         {
@@ -85,9 +85,9 @@
           "default":"gedeeld door"
         },
         {
-          "label":"Slide nummer text",
+          "label":"Dia nummer tekst",
           "description":"Geeft het nummer van de huidige slide en het totaal aantal slides aan, variabelen zijn :num en :total",
-          "default":"Slide :num van :total"
+          "default":"Dia :num van :total"
         }
       ]
     }
