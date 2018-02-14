@@ -92,15 +92,12 @@ H5P.ArithmeticQuiz.QuestionsGenerator = (function (ArithmeticType, EquationType)
     var equation = undefined;
     var solution = undefined;
     var number1 = undefined;
-    var number2 = undefined;
     var operations = undefined;
     
     number1 = randomNum();
-    number2 = randomNum();
 
     if (useFractions === true) {
       number1 = new Fraction(randomNum(), randomNum(3, 7));
-      number2 = new Fraction(randomNum(), randomNum(3, 7));
     }
 
     var expression1 = new Expression(item);
