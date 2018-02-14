@@ -22,7 +22,7 @@ H5P.ArithmeticQuiz = (function ($) {
     // Extend defaults with provided options
     self.options = $.extend(true, {}, {
       intro: '',
-      quizType: undefined,
+      quizType: 'arithmetic',
       arithmeticType: 'addition',
       equationType: undefined,
       useFractions: undefined,
