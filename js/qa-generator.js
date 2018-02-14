@@ -54,7 +54,7 @@ H5P.ArithmeticQuiz.QuestionsGenerator = (function (ArithmeticType, EquationType)
   function randomOperation(operations, expr, useFractions) {
     // get a random operation
     var operation = operations[Math.floor(Math.random() * operations.length)];
-    number = randomNum(1, 7);
+    var number = randomNum(1, 7);
     switch (operation) {
       case "/":
         if (number > 0) {
