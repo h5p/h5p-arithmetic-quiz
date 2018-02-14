@@ -157,7 +157,7 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, EquationType, Qu
         .replaceAll('/', self.translations.divisionOperator)
         .replaceAll('÷', self.translations.divisionOperator)
         .replaceAll('=', self.translations.equalitySign);
-  }
+  };
 
   /**
    * Creates a question slide
