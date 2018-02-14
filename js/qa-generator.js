@@ -250,7 +250,6 @@ H5P.ArithmeticQuiz.QuestionsGenerator = (function (ArithmeticType, EquationType)
       // Generate 5 wrong ones:
       while (question.alternatives.length !== 5) {
         equation = generateEquation(question.variable, question.type, equationType, useFractions);
-        var alternative = equation.toString();
         var solution = equation.solveFor(question.variable).toString();
         
         // check if alternative is present already and is not the correct one
