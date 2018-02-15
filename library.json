@@ -32,6 +32,9 @@
       "path": "js/intro-page.js"
     },
     {
+      "path": "js/qe-generator.js"
+    },
+    {
       "path": "js/qa-generator.js"
     },
     {
