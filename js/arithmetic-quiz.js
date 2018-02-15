@@ -51,12 +51,8 @@ H5P.ArithmeticQuiz = (function ($) {
     }, options);
     self.currentWidth = 0;
 
-    // Reset equation type if not selected
-    if (self.options.quizType === H5P.ArithmeticQuiz.QuizType.ARITHMETIC) {
-      self.options.equationType = undefined;
-    }
-    self.gamePage = new H5P.ArithmeticQuiz.GamePage(self.options.arithmeticType, self.options.equationType, self.options.maxQuestions, self.options.useFractions, self.options.UI, id);
-
+    self.gamePage = new H5P.ArithmeticQuiz.GamePage(self.options.quizType, self.options, id);
+    
     self.gamePage.on('last-slide', function (e) {
       self.triggerXAPIScored(e.data.score, e.data.numQuestions, 'answered');
     });
