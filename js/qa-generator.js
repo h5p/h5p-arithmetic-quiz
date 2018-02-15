@@ -198,11 +198,11 @@ H5P.ArithmeticQuiz.ArithmeticGenerator = (function (ArithmeticType) {
   ArithmeticGenerator.prototype.readableQuestion = function (translations, readableSigns, question) {
     return translations.humanizedQuestion
       .replace(':arithmetic', readableSigns);
-  }
+  };
 
   ArithmeticGenerator.prototype.readableText = function (question) {
     return question.textual + ' = ?';    
-  }
+  };
     
   return ArithmeticGenerator;
 }(H5P.ArithmeticQuiz.ArithmeticType));

@@ -14,10 +14,7 @@ H5P.ArithmeticQuiz.EquationsGenerator = (function (EquationType) {
   function subtract (question, param) {
     return question.correct - param;
   }
-  function randomInt (question) {
-    // Creates random number between correct-10 and correct+10:
-    return (question.correct - 10) + Math.floor(Math.random() * 20);
-  }
+
   function randomNum (min = 1, max = 7) {
     // Creates random number between min and max:
     var num = Math.floor(Math.random()*(max-min+1)+min);
@@ -106,14 +103,14 @@ H5P.ArithmeticQuiz.EquationsGenerator = (function (EquationType) {
     switch (equationType) {
       case EquationType.BASIC:
         // [ 3x = 12 ]
-        expression1 = expression1.multiply(randomNum());
+        expression1 = expression1.multiply(randomNum(2, 4));
         equation = new Equation(expression1, number1);
         break;
       case EquationType.INTERMEDIATE:
         // [ 4x - 3 = 13 ]
         operations = ["+", "-"];
         expression1 = randomOperation(operations, expression1, useFractions);
-        expression1 = expression1.multiply(randomNum(1, 3));
+        expression1 = expression1.multiply(randomNum(2, 3));
         equation = new Equation(expression1, number1);
         break;
       case EquationType.ADVANCED:
@@ -122,8 +119,8 @@ H5P.ArithmeticQuiz.EquationsGenerator = (function (EquationType) {
         // expression1 = expression1.multiply(item); // Quadratic equations ..
         expression1 = randomOperation(operations, expression1, useFractions);
         expression2 = randomOperation(operations, expression2, useFractions);
-        expression1 = expression1.multiply(randomNum());
-        expression2 = expression2.multiply(randomNum());
+        expression1 = expression1.multiply(randomNum(2, 3));
+        expression2 = expression2.multiply(randomNum(2, 3));
         expression1 = expression1.simplify();
         expression2 = expression2.simplify();
         equation = new Equation(expression1, expression2);
@@ -134,9 +131,9 @@ H5P.ArithmeticQuiz.EquationsGenerator = (function (EquationType) {
     } catch(err) {
       equation = generateEquation(item, type, equationType, useFractions);
       solution = equation.solveFor(item);
-    }          
-    if ( (solution.toString() === "0") || (solution.toString() === "1")) {
-      // rebuild
+    }
+    if ( (solution.toString() === "0") || (solution.toString() === "1") || solution.toString().length > 4) {
+      // Rebuild
       equation = generateEquation(item, type, equationType, useFractions);
     }
 
@@ -227,11 +224,11 @@ H5P.ArithmeticQuiz.EquationsGenerator = (function (EquationType) {
     return translations.humanizedEquation
       .replace(':equation', readableSigns)
       .replace(':item', question.variable);
-  }
+  };
 
   EquationsGenerator.prototype.readableText = function (question) {
     return question.textual;      
-  }
+  };
 
   return EquationsGenerator;
 }(H5P.ArithmeticQuiz.EquationType));
