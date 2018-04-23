@@ -3,7 +3,7 @@
   "description": "Arithmetic quiz containing addition, division, multiplication and subtraction",
   "majorVersion": 1,
   "minorVersion": 1,
-  "patchVersion": 4,
+  "patchVersion": 5,
   "runnable": 1,
   "author": "Joubel",
   "license": "MIT",
