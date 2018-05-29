@@ -19,8 +19,7 @@
         {
           "label":"Jako"
         }
-      ],
-      "default":"addition"
+      ]
     },
     {
       "label":"Kysymyksien enimmäismäärä"
