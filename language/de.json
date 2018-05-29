@@ -2,50 +2,49 @@
   "semantics":[
     {
       "label":"Intro",
-      "description":"The intro text (maximum 100 characters)"
+      "description":"Der Introtext (maximal 100 Zeichen)"
     },
     {
-      "label":"Arithmetic type",
+      "label":"Arithmetischer Typ",
       "options":[
         {
           "label":"Addition"
         },
         {
-          "label":"Subtraction"
+          "label":"Subtraktion"
         },
         {
-          "label":"Multiplication"
+          "label":"Multiplikation"
         },
         {
           "label":"Division"
         }
-      ],
-      "default":"addition"
+      ]
     },
     {
-      "label":"Max number of questions"
+      "label":"Max. Anzahl an Fragen"
     },
     {
-      "label":"User interface translations",
+      "label":"Benutzeroberflächenübersetzungen",
       "fields":[
         {
-          "label":"Scoring during quiz",
-          "default":"Score:"
+          "label":"Punkteerzielung während dem Quiz",
+          "default":"Punktzahl:"
         },
         {
-          "label":"Time",
-          "default":"Time: @time"
+          "label":"Zeit",
+          "default":"Zeit: @time"
         },
         {
-          "label":"Result page header",
-          "default":"Finished!"
+          "label":"Header der Ergebnisseite",
+          "default":"Beendet!"
         },
         {
-          "label":"Go label",
-          "default":"GO!"
+          "label":"Los Label",
+          "default":"LOS!"
         },
         {
-          "label":"Start button label",
+          "label":"Startknopf Label",
           "default":"Start"
         },
         {

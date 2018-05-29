@@ -19,8 +19,7 @@
         {
           "label":"Divisjon (dele)"
         }
-      ],
-      "default":"addition"
+      ]
     },
     {
       "label":"Maksimalt antall spørsmål"
