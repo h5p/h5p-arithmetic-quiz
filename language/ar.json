@@ -1,92 +1,92 @@
 {
-  "semantics":[
+  "semantics": [
     {
-      "label":"Intro",
-      "description":"The intro text (maximum 100 characters)"
+      "label": "مقدمة",
+      "description": "نص المقدمة (بحد أقصى 100 محرف)"
     },
     {
-      "label":"Arithmetic type",
-      "options":[
+      "label": "نوع الحساب",
+      "options": [
         {
-          "label":"Addition"
+          "label": "إضافة"
         },
         {
-          "label":"Subtraction"
+          "label": "طرح"
         },
         {
-          "label":"Multiplication"
+          "label": "ضرب"
         },
         {
-          "label":"Division"
+          "label": "قسمة"
         }
       ]
     },
     {
-      "label":"Max number of questions"
+      "label": "العدد الاعظمي للأسئلة"
     },
     {
-      "label":"User interface translations",
-      "fields":[
+      "label": "ترجمة واجهة المستخدم",
+      "fields": [
         {
-          "label":"Scoring during quiz",
-          "default":"Score:"
+          "label": "التسجيل خلال الاختبار",
+          "default": "Score:"
         },
         {
-          "label":"Time",
-          "default":"Time: @time"
+          "label": "الوقت",
+          "default": "Time: @time"
         },
         {
-          "label":"Result page header",
-          "default":"Finished!"
+          "label": "ترويسة صفحة النتيجة",
+          "default": "Finished!"
         },
         {
-          "label":"Go label",
-          "default":"GO!"
+          "label": "اذهب الى الللافتة",
+          "default": "GO!"
         },
         {
-          "label":"Start button label",
-          "default":"Start"
+          "label": "لافتة زر البدء",
+          "default": "Start"
         },
         {
-          "label":"تسمية زر إعادة المحاولة",
-          "default":"إعادة المحاولة"
+          "label": "لافتة زر اعادة المحاولة",
+          "default": "Retry"
         },
         {
-          "label":"النص Readspeaker عن الإجابة الصحيحة",
-          "default":"صحيح"
+          "label": "تحويل النص الى  كلام من اجل الاجابة الصحيحة",
+          "default": "Correct"
         },
         {
-          "label":"النص Readspeaker للإجابة غير صحيحة",
-          "default":"Incorrect. Correct answer was :num"
+          "label": "تحويل النص الى كلام من اجل الاجابة الخاطئة",
+          "default": "Incorrect. Correct answer was :num"
         },
         {
-          "label":"Readspeaker label for the timer",
-          "default":"Duration in hours, minutes and seconds."
+          "label": "لافتة النص المحول الى كلام من اجل المؤقت",
+          "default": "Duration in hours, minutes and seconds."
         },
         {
-          "label":"Readspeaker text for question",
-          "default":"What does :arithmetic equal?"
+          "label": "لافتة النص المحول الى كلام من اجل السؤال ",
+          "default": "What does :arithmetic equal?"
         },
         {
-          "label":"Plus operator text",
-          "default":"plus"
+          "label": "نص المعامل +",
+          "default": "plus"
         },
         {
-          "label":"Subtraction operator text",
-          "default":"minus"
+          "label": "نص المعامل -",
+          "default": "minus"
         },
         {
-          "label":"Multiplication operator text",
-          "default":"times"
+          "label": "نص معامل الضرب",
+          "default": "times"
         },
         {
-          "label":"Division operator text",
-          "default":"divided by"
+          "label": "نص نعامل القسمة",
+          "default": "divided by"
         },
         {
-          "label":"النص رقم الشريحة",
-          "description":"تعلن الشريحة الحالية وعدد من الشرائح، والمتغيرات :num و:total",
-          "default":"الشريحة :num أو :total"
+          "label": "نص رقم الشريحة",
+          "description": "تعلن عن الشريحة الحالية والعدد الإجمالي للشرائح ، والمتغيرات هي: num و: total",
+          "default": "Slide :num of :total"
         }
       ]
     }
