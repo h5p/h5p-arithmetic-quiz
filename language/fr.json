@@ -19,8 +19,7 @@
         {
           "label":"Division"
         }
-      ],
-      "default":"addition"
+      ]
     },
     {
       "label":"Nombre maximum de questions"
