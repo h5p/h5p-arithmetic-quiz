@@ -2,54 +2,53 @@
   "semantics":[
     {
       "label":"Intro",
-      "description":"The intro text (maximum 100 characters)"
+      "description":"Der Introtext (maximal 100 Zeichen)"
     },
     {
-      "label":"Arithmetic type",
+      "label":"Arithmetischer Typ",
       "options":[
         {
           "label":"Addition"
         },
         {
-          "label":"Subtraction"
+          "label":"Subtraktion"
         },
         {
-          "label":"Multiplication"
+          "label":"Multiplikation"
         },
         {
           "label":"Division"
         }
-      ],
-      "default":"addition"
+      ]
     },
     {
-      "label":"Max number of questions"
+      "label":"Max. Anzahl an Fragen"
     },
     {
-      "label":"User interface translations",
+      "label":"Benutzeroberflächenübersetzungen",
       "fields":[
         {
-          "label":"Scoring during quiz",
-          "default":"Score:"
+          "label":"Erreichte Punkte während des Quizzes",
+          "default":"Punktzahl:"
         },
         {
-          "label":"Time",
-          "default":"Time: @time"
+          "label":"Zeit",
+          "default":"Zeit: @time"
         },
         {
-          "label":"Result page header",
-          "default":"Finished!"
+          "label":"Kopfzeile der Ergebnisseite",
+          "default":"Beendet!"
         },
         {
-          "label":"Go label",
-          "default":"GO!"
+          "label":"Beschriftung für \"Los\"",
+          "default":"LOS!"
         },
         {
-          "label":"Start button label",
+          "label":"Beschriftung für den \"Start\"-Button",
           "default":"Start"
         },
         {
-          "label":"Beschriftung des \"Beenden\"-Buttons",
+          "label":"Beschriftung für den \"Wiederholen\"-Button",
           "default":"Wiederholen"
         },
         {
@@ -58,34 +57,34 @@
         },
         {
           "label":"\"Readspeaker\"-Text für eine falsche Antwort",
-          "default":"Incorrect. Correct answer was :num"
+          "default":"Falsch. Die richtige Antwort war :num."
         },
         {
-          "label":"Readspeaker label for the timer",
-          "default":"Duration in hours, minutes and seconds."
+          "label":"\"Readspeaker\"-Text für den Timer",
+          "default":"Dauer in Stunden, Minuten und Sekunden."
         },
         {
-          "label":"Readspeaker text for question",
-          "default":"What does :arithmetic equal?"
+          "label":"\"Readspeaker\"-Text für die Frage",
+          "default":"Was ergibt :arithmetic?"
         },
         {
-          "label":"Plus operator text",
+          "label":"\"Readspeaker\"-Text für das Pluszeichen",
           "default":"plus"
         },
         {
-          "label":"Subtraction operator text",
+          "label":"\"Readspeaker\"-Text für das Minuszeichen",
           "default":"minus"
         },
         {
-          "label":"Multiplication operator text",
-          "default":"times"
+          "label":"\"Readspeaker\"-Text für das Malzeichen",
+          "default":"mal"
         },
         {
-          "label":"Division operator text",
-          "default":"divided by"
+          "label":"\"Readspeaker\"-Text für das Geteiltzeichen",
+          "default":"geteilt durch"
         },
         {
-          "label":"Text für die Nummer des Schaubilds",
+          "label":"\"Readspeaker\"-Text für die Nummer des Schaubilds",
           "description":"Gibt das aktuelle Schaubild und die Gesamtzahl der Schaubilder an, Variablen sind :num und :total",
           "default":"Schaubild :num von :total"
         }

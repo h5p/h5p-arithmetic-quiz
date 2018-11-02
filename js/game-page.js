@@ -162,13 +162,13 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
 
     // Make arithmetic readable, e.g. plus signs are not read by ChromeVox.
     var readableArithmetic = question.textual
-        .replace('+', self.translations.plusOperator)
-        .replace('−', self.translations.minusOperator)
-        .replace('×', self.translations.multiplicationOperator)
-        .replace('÷', self.translations.divisionOperator);
+      .replace('+', self.translations.plusOperator)
+      .replace('−', self.translations.minusOperator)
+      .replace('×', self.translations.multiplicationOperator)
+      .replace('÷', self.translations.divisionOperator);
 
     var readableQuestion = self.translations.humanizedQuestion
-        .replace(':arithmetic', readableArithmetic);
+      .replace(':arithmetic', readableArithmetic);
 
     var questionId = 'arithmetic-quiz-' + self.id + '-question-' + i;
 

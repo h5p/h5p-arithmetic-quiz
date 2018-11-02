@@ -19,8 +19,7 @@
         {
           "label":"Delen"
         }
-      ],
-      "default":"Optellen"
+      ]
     },
     {
       "label":"Max aantal vragen"
