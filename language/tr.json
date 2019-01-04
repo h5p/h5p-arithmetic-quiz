@@ -86,7 +86,7 @@
         {
           "label":"Slayt numarası metni",
           "description":"Şimdiki slaytı ve toplam slayt sayısını bildirir, değişkenler: :num ve :total",
-          "default":"Toplam :total slayttan :num no\'lu slayt"
+          "default":"Toplam :total slayttan :num no'lu slayt"
         }
       ]
     }
