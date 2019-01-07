@@ -1,92 +1,92 @@
 {
   "semantics":[
     {
-      "label":"Intro",
-      "description":"The intro text (maximum 100 characters)"
+      "label":"Giriş",
+      "description":"Giriş metni (mmaksimum 100 karakter)"
     },
     {
-      "label":"Arithmetic type",
+      "label":"Aritmetik işlem",
       "options":[
         {
-          "label":"Addition"
+          "label":"Toplama"
         },
         {
-          "label":"Subtraction"
+          "label":"Çıkarma"
         },
         {
-          "label":"Multiplication"
+          "label":"Çarpma"
         },
         {
-          "label":"Division"
+          "label":"Bölme"
         }
       ]
     },
     {
-      "label":"Max number of questions"
+      "label":"Maksimum soru sayısı"
     },
     {
-      "label":"User interface translations",
+      "label":"Kullanıcı arayüzü çevirileri",
       "fields":[
         {
-          "label":"Scoring during quiz",
-          "default":"Score:"
+          "label":"Quiz sırasında puanlama",
+          "default":"Puan:"
         },
         {
-          "label":"Time",
-          "default":"Time: @time"
+          "label":"Süre",
+          "default":"Süre: @time"
         },
         {
-          "label":"Result page header",
-          "default":"Finished!"
+          "label":"Sonuç sayfası başlığı",
+          "default":"Tamamlandı!"
         },
         {
-          "label":"Go label",
-          "default":"GO!"
+          "label":"Başla etiketi",
+          "default":"BAŞLA!"
         },
         {
-          "label":"Start button label",
-          "default":"Start"
+          "label":"Başlatma butonu etiketi",
+          "default":"Başlat"
         },
         {
           "label":"Yeniden dene buton etiketi",
           "default":"Yeniden dene"
         },
         {
-          "label":"Readspeaker text for correct answer",
+          "label":"Doğru cevap için sesli okuyucu (yardımcı teknolojiler) metni",
           "default":"Doğru"
         },
         {
-          "label":"Readspeaker text for incorrect answer",
-          "default":"Incorrect. Correct answer was :num"
+          "label":"Yanlış cevap için sesli okuyucu (yardımcı teknolojiler) metni",
+          "default":"Yanlış. Doğru cevap :num"
         },
         {
-          "label":"Readspeaker label for the timer",
-          "default":"Duration in hours, minutes and seconds."
+          "label":"Zamanlayıcı için sesli okuyucu (yardımcı teknolojiler) etiketi",
+          "default":"Saat, dakika ve saniye cinsinden süre."
         },
         {
-          "label":"Readspeaker text for question",
-          "default":"What does :arithmetic equal?"
+          "label":"Soru için sesli okuyucu (yardımcı teknolojiler) metni",
+          "default":":arithmetic kaça eşittir?"
         },
         {
-          "label":"Plus operator text",
-          "default":"plus"
+          "label":"Toplama işlemi metni",
+          "default":"artı"
         },
         {
-          "label":"Subtraction operator text",
-          "default":"minus"
+          "label":"Çıkarma işlemi metni",
+          "default":"eksi"
         },
         {
-          "label":"Multiplication operator text",
-          "default":"times"
+          "label":"Çarpma işlemi metni",
+          "default":"çarpı"
         },
         {
-          "label":"Division operator text",
-          "default":"divided by"
+          "label":"Bölme işlemi metni",
+          "default":"bölü"
         },
         {
-          "label":"Slide number text",
-          "description":"Announces current slide and total number of slides, variables are :num and :total",
-          "default":"Slide :num of :total"
+          "label":"Slayt numarası metni",
+          "description":"Şimdiki slaytı ve toplam slayt sayısını bildirir, değişkenler: :num ve :total",
+          "default":"Toplam :total slayttan :num no'lu slayt"
         }
       ]
     }
