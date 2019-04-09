@@ -1,92 +1,92 @@
 {
   "semantics":[
     {
-      "label":"Intro",
-      "description":"The intro text (maximum 100 characters)"
+      "label":"Sissejuhatus",
+      "description":"Sissejuhatav tekst (kuni 100 märki)"
     },
     {
-      "label":"Arithmetic type",
+      "label":"Tehte tüüp",
       "options":[
         {
-          "label":"Addition"
+          "label":"Liitmine"
         },
         {
-          "label":"Subtraction"
+          "label":"Lahutamine"
         },
         {
-          "label":"Multiplication"
+          "label":"Korrutamine"
         },
         {
-          "label":"Division"
+          "label":"Jagamine"
         }
       ]
     },
     {
-      "label":"Max number of questions"
+      "label":"Küsimuste suurim hulk"
     },
     {
-      "label":"User interface translations",
+      "label":"Kasutajaliidese tõlked",
       "fields":[
         {
-          "label":"Scoring during quiz",
-          "default":"Score:"
+          "label":"Punktisumma viktoriini ajal",
+          "default":"Punktisumma:"
         },
         {
-          "label":"Time",
-          "default":"Time: @time"
+          "label":"Aeg",
+          "default":"Aeg: @time"
         },
         {
-          "label":"Result page header",
-          "default":"Finished!"
+          "label":"Tulemuste lehe päis",
+          "default":"Valmis!"
         },
         {
-          "label":"Go label",
-          "default":"GO!"
+          "label":"Käivita nupu tekst",
+          "default":"Käivita!"
         },
         {
-          "label":"Start button label",
-          "default":"Start"
+          "label":"Alusta nupu tekst",
+          "default":"Alusta"
         },
         {
-          "label":"Proovi uuesti nupu silt",
+          "label":"Proovi uuesti nupu tekst",
           "default":"Proovi uuesti"
         },
         {
-          "label":"Readspeaker text for correct answer",
+          "label":"Õige vastuse tekstilugeri tekst",
           "default":"Õige"
         },
         {
-          "label":"Readspeaker text for incorrect answer",
-          "default":"Incorrect. Correct answer was :num"
+          "label":"Vale vastuse tekstilugeri tekst",
+          "default":"Vale. Õige vastus oli :num"
         },
         {
-          "label":"Readspeaker label for the timer",
-          "default":"Duration in hours, minutes and seconds."
+          "label":"Tekstilugeri tekst taimerile",
+          "default":"Kestus tundides, minutites ja sekundites."
         },
         {
-          "label":"Readspeaker text for question",
-          "default":"What does :arithmetic equal?"
+          "label":"Tekstilugeri tekst küsimusele",
+          "default":"Kui palju on :arithmetic ?"
         },
         {
-          "label":"Plus operator text",
-          "default":"plus"
+          "label":"Liitmistehte tekst",
+          "default":"pluss"
         },
         {
-          "label":"Subtraction operator text",
-          "default":"minus"
+          "label":"Lahutamistehte tekst",
+          "default":"miinus"
         },
         {
-          "label":"Multiplication operator text",
-          "default":"times"
+          "label":"Korrutamistehte tekst",
+          "default":"korda"
         },
         {
-          "label":"Division operator text",
-          "default":"divided by"
+          "label":"Lahutamistehte tekst",
+          "default":"jagatud"
         },
         {
-          "label":"Slide number text",
-          "description":"Announces current slide and total number of slides, variables are :num and :total",
-          "default":"Slide :num of :total"
+          "label":"Leheküljenumbri tekst",
+          "description":"Väljastab jooksva lehekülje ja lehtede koguhulga arvud. Muutujad on :num ja :total",
+          "default":"Lehekülg :num / :total"
         }
       ]
     }
