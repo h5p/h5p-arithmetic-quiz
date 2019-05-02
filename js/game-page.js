@@ -1,7 +1,7 @@
 /**
  * Defines the H5P.ArithmeticQuiz.GamePage class
  */
-H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerator) {
+H5P.ArithmeticQuiz.GamePage = (function ($, UI, QuizType) {
 
   /**
    * Creates a new GamePage instance
@@ -9,37 +9,42 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
    * @class
    * @augments H5P.EventDispatcher
    * @namespace H5P
-   * @param  {arithmeticType} type
-   * @param  {number} maxQuestions Maximum number of questions
-   * @param  {Object} t Object containing translation texts
+   * @param  {quizType} quizType
+   * @param  {Object} t Object containing all options
    * @param {number} id Unique id to identify this quiz
    * @fires H5P.XAPIEvent
    */
-  function GamePage(type, maxQuestions, t, id) {
+  function GamePage(quizType, options, id) {
     H5P.EventDispatcher.call(this);
-
     var self = this;
+    self.quizType = quizType;
     self.id = id;
-    self.translations = t;
-    self.type = type;
-    self.maxQuestions = maxQuestions;
+    self.translations = options.UI;
+    self.arithmeticType = options.arithmeticType;
+    self.equationType = options.equationType;
+    self.useFractions = options.useFractions;
+    self.maxQuestions = options.maxQuestions;
     self.sliding = false;
 
     self.$gamepage = $('<div>', {
       'class': 'h5p-baq-game counting-down'
     });
 
-    self.questionsGenerator = new QuestionsGenerator(self.type, self.maxQuestions);
+    if (self.quizType === H5P.ArithmeticQuiz.QuizType.ARITHMETIC) {
+      self.questionsGenerator = new H5P.ArithmeticQuiz.ArithmeticGenerator(self.arithmeticType, self.maxQuestions);
+    } else {
+      self.questionsGenerator = new H5P.ArithmeticQuiz.EquationsGenerator(self.arithmeticType, self.equationType, self.maxQuestions, self.useFractions);
+    }
     self.score = 0;
-    self.scoreWidget = new ScoreWidget(t);
+    self.scoreWidget = new ScoreWidget(self.translations);
     self.scoreWidget.appendTo(self.$gamepage);
 
-    self.timer = new H5P.ArithmeticQuiz.TimerWidget(t);
+    self.timer = new H5P.ArithmeticQuiz.TimerWidget(self.translations);
     self.timer.appendTo(self.$gamepage);
 
     self.slider = UI.createSlider();
 
-    self.countdownWidget = new H5P.ArithmeticQuiz.CountdownWidget(4, t);
+    self.countdownWidget = new H5P.ArithmeticQuiz.CountdownWidget(4, self.translations);
     self.slider.addSlide(self.countdownWidget.create());
     self.countdownWidget.on('ignition', function () {
       self.$gamepage.removeClass('counting-down');
@@ -59,12 +64,12 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
 
     // Create progressbar
     self.progressbar = UI.createProgressbar(numQuestions, {
-      progressText: t.slideOfTotal
+      progressText: self.translations.slideOfTotal
     });
     self.progressbar.appendTo(self.$gamepage);
 
     // Add result page:
-    self.resultPage = new H5P.ArithmeticQuiz.ResultPage(numQuestions, t);
+    self.resultPage = new H5P.ArithmeticQuiz.ResultPage(numQuestions, self.translations);
     self.slider.addSlide(self.resultPage.create());
 
     self.resultPage.on('retry', function () {
@@ -144,40 +149,61 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
     this.$gamepage.find('.h5p-joubelui-button:first-child, .h5p-joubelui-button:last-child').attr('tabindex', 0);
   };
 
+  GamePage.prototype.makeSignsReadable = function (questionTextual) {
+    var self = this;
+    questionTextual = String(questionTextual);
+    return questionTextual
+        .replaceAll('\\+', self.translations.plusOperator)
+        .replaceAll('−', self.translations.minusOperator)
+        .replaceAll('-', self.translations.minusOperator)
+        .replaceAll('×', self.translations.multiplicationOperator)
+        .replaceAll('/', self.translations.divisionOperator)
+        .replaceAll('÷', self.translations.divisionOperator)
+        .replaceAll('=', self.translations.equalitySign);
+  };
+
   /**
    * Creates a question slide
    *
    * @param  {Object} question
    * @param  {string} question.q The question
    * @param  {number} question.correct The correct answer
-   * @param {number} i Index of question
+   * @param  {number} i Index of question
    * @return {H5P.jQuery} The jquery dom element generated
    */
   GamePage.prototype.createSlide = function (question, i) {
     var self = this;
-
+    var readableSigns = undefined;
+    var readableQuestion = undefined;
+    var readableText = undefined;
     var $slide = $('<div>', {
       'class': 'question-page'
     });
 
-    // Make arithmetic readable, e.g. plus signs are not read by ChromeVox.
-    var readableArithmetic = question.textual
-      .replace('+', self.translations.plusOperator)
-      .replace('−', self.translations.minusOperator)
-      .replace('×', self.translations.multiplicationOperator)
-      .replace('÷', self.translations.divisionOperator);
-
-    var readableQuestion = self.translations.humanizedQuestion
-      .replace(':arithmetic', readableArithmetic);
+    // Make equations readable, e.g. plus signs are not read by ChromeVox.
+    readableSigns = self.makeSignsReadable(question.textual);
+    readableQuestion = self.questionsGenerator.readableQuestion(self.translations, readableSigns, question);
+    readableText = self.questionsGenerator.readableText(question);
 
     var questionId = 'arithmetic-quiz-' + self.id + '-question-' + i;
 
     $('<div>', {
       'class': 'question',
-      'text': question.textual + ' = ?',
+      'text': readableText,
       'aria-label': readableQuestion,
       'id': questionId
     }).appendTo($slide);
+
+    if (question.expression !== undefined) {
+      var readableVariable = self.translations.humanizedVariable
+          .replace(':item', question.variable);
+      $('<div>', {
+        'class': 'question',
+        'text': question.variable + ' = ?',
+        'aria-label': readableVariable,
+        'id': questionId
+      }).appendTo($slide);
+    }
 
     var $alternatives = $('<ul>', {
       'class': 'h5p-baq-alternatives',
@@ -228,9 +254,12 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
     };
 
     var alternatives = [];
+    var readableAlternative = undefined;
     for (var k = 0; k < question.alternatives.length; k++) {
-      alternatives.push(new Alternative(question.alternatives[k], question.alternatives[k]===question.correct, self.translations));
+      readableAlternative = self.makeSignsReadable(question.alternatives[k]);
+      alternatives.push(new Alternative(question.alternatives[k], readableAlternative, question.alternatives[k]===question.correct, self.translations));
     }
+
     alternatives.forEach(function (alternative, index) {
       if (index === 0 || index === alternatives.length - 1) {
         alternative.tabbable();
@@ -260,7 +289,7 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
 
         alternatives.forEach(function (alt) {
           if (alt.correct && alternative !== alt) {
-            alternative.announce(self.translations.incorrectText.replace(':num', alt.number));
+            alternative.announce(self.translations.incorrectText.replace(':num', alt.readableResult));
           }
           alt.reveal();
         });
@@ -283,6 +312,12 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
    */
   GamePage.prototype.appendTo = function ($container) {
     this.$gamepage.appendTo($container);
+  };
+
+  String.prototype.replaceAll = function(target, replacement) {
+      //var target = this;
+      return this.split(target).join(replacement);
+      //return target.replace(new RegExp(search, 'g'), replacement);
   };
 
   /**
@@ -340,11 +375,12 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
    * @param {boolean} correct Correct or not
    * @param {Object} t Translations
    */
-  function Alternative(number, correct, t) {
+  function Alternative(number, readableResult, correct, t) {
     H5P.EventDispatcher.call(this);
     var self = this;
 
     self.number = number;
+    self.readableResult = readableResult;
     self.correct = correct;
 
     var answer = function (event) {
@@ -460,29 +496,4 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, ArithmeticType, QuestionsGenerat
   Alternative.prototype.constructor = Alternative;
 
   return GamePage;
-})(H5P.jQuery, H5P.JoubelUI, H5P.ArithmeticQuiz.ArithmeticType, H5P.ArithmeticQuiz.QuestionsGenerator);
-
-/*function GridResultsView(rows, cols) {
-  var $grid = $('<table>', {
-    'class': 'h5p-baq-grid-results',
-    cellspacing: 0,
-    cellpadding: 0,
-    'border-collapse': 'collapse'
-  });
-
-  for (var i = 0; i < rows; i++) {
-    var $tr = $('<tr>');
-    for (var j = 0; j < rows; j++) {
-      $tr.append($('<td>'));
-    }
-    $grid.append($tr);
-  }
-
-  this.appendTo = function ($container) {
-    $grid.appendTo($container);
-  }
-
-  this.getCell = function (row, col) {
-    return $grid.find('tr:nth-child('+row+')').find('td:nth-child('+col+')');
-  }
-}*/
+})(H5P.jQuery, H5P.JoubelUI, H5P.ArithmeticQuiz.QuizType);
