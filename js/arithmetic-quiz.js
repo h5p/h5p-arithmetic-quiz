@@ -22,7 +22,10 @@ H5P.ArithmeticQuiz = (function ($) {
     // Extend defaults with provided options
     self.options = $.extend(true, {}, {
       intro: '',
+      quizType: 'arithmetic',
       arithmeticType: 'addition',
+      equationType: undefined,
+      useFractions: undefined,
       maxQuestions: undefined,
       UI: {
         score: 'Score @score',
@@ -36,17 +39,20 @@ H5P.ArithmeticQuiz = (function ($) {
         incorrectText: 'Incorrect. Correct answer was :num',
         durationLabel: 'Duration in hours, minutes and seconds.',
         humanizedQuestion: 'What does :arithmetic equal?',
+        humanizedEquation: 'For the equation :equation, what does :item equal?',
+        humanizedVariable: 'What does :item equal?',
         plusOperator: 'plus',
         minusOperator: 'minus',
         multiplicationOperator: 'times',
         divisionOperator: 'divided by',
+        equalitySign: 'equal',
         slideOfTotal: 'Slide :num of :total'
       }
     }, options);
     self.currentWidth = 0;
 
-    self.gamePage = new H5P.ArithmeticQuiz.GamePage(self.options.arithmeticType, self.options.maxQuestions, self.options.UI, id);
-
+    self.gamePage = new H5P.ArithmeticQuiz.GamePage(self.options.quizType, self.options, id);
+    
     self.gamePage.on('last-slide', function (e) {
       self.triggerXAPIScored(e.data.score, e.data.numQuestions, 'answered');
     });
@@ -149,4 +155,25 @@ H5P.ArithmeticQuiz.ArithmeticType = {
   SUBTRACTION: 'subtraction',
   MULTIPLICATION: 'multiplication',
   DIVISION: 'division'
+};
+
+/**
+ * Enum defining the different equation types
+ * @readonly
+ * @enum {string}
+ */
+H5P.ArithmeticQuiz.EquationType = {
+  BASIC: 'basic',
+  INTERMEDIATE: 'intermediate',
+  ADVANCED: 'advanced'
+};
+
+/**
+ * Enum defining the different quiz types
+ * @readonly
+ * @enum {string}
+ */
+H5P.ArithmeticQuiz.QuizType = {
+  ARITHMETIC: 'arithmetic',
+  LINEAREQUATION: 'linearEquation'
 };

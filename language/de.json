@@ -1,25 +1,56 @@
 {
-  "semantics":[
+  "semantics": [
     {
       "label":"Intro",
       "description":"Der Introtext (maximal 100 Zeichen)"
     },
     {
+      "label": "Quiz type",
+      "options": [
+        {
+          "label": "Arithmetic Operations Quiz"
+        },
+        {
+          "label": "Linear Equations Quiz"
+        }
+      ],
+      "default": "arithmetic"
+    },
+    {
       "label":"Arithmetischer Typ",
-      "options":[
+      "options": [
         {
-          "label":"Addition"
+          "label": "Addition"
         },
         {
-          "label":"Subtraktion"
+          "label": "Subtraktion"
         },
         {
-          "label":"Multiplikation"
+          "label": "Multiplikation"
         },
         {
-          "label":"Division"
+          "label": "Division"
         }
       ]
+    },
+    {
+      "label":"Equation type",
+      "options": [
+        {
+          "label":"Basic [ 3x = 12 ]"
+        },
+        {
+          "label":"Intermediate [ 4x - 3 = 13 ]"
+        },
+        {
+          "label":"Advanced [ 5x + 3 = 3x + 15 ]"
+        }
+      ],
+      "default":"intermediate"
+    },
+    {
+      "label": "Enable fractions",
+      "description": "Enable to allow fractions in equations."
     },
     {
       "label":"Max. Anzahl an Fragen"
@@ -68,6 +99,14 @@
           "default":"Was ergibt :arithmetic?"
         },
         {
+          "label": "Readspeaker text for equation question",
+          "default": "For the equation :equation, what does :item equal?"
+        },
+        {
+          "label": "Readspeaker text for equation variable",
+          "default": "What does :item equal?"
+        },
+        {
           "label":"\"Readspeaker\"-Text für das Pluszeichen",
           "default":"plus"
         },
@@ -82,6 +121,10 @@
         {
           "label":"\"Readspeaker\"-Text für das Geteiltzeichen",
           "default":"geteilt durch"
+        },
+        {
+          "label": "Equality sign text",
+          "default": "equal"
         },
         {
           "label":"\"Readspeaker\"-Text für die Nummer des Schaubilds",

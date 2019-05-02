@@ -1,7 +1,7 @@
 /**
- * Defines the H5P.ArithmeticQuiz.QuestionsGenerator class
+ * Defines the H5P.ArithmeticQuiz.ArithmeticGenerator class
  */
-H5P.ArithmeticQuiz.QuestionsGenerator = (function (ArithmeticType) {
+H5P.ArithmeticQuiz.ArithmeticGenerator = (function (ArithmeticType) {
 
   // Helper functions for creating wrong alternatives
   function add (question, param) {
@@ -87,13 +87,13 @@ H5P.ArithmeticQuiz.QuestionsGenerator = (function (ArithmeticType) {
   }
 
   /**
-   * Questions generator classes
-   * @method QuestionsGenerator
+   * Arithmetic Questions generator classes
+   * @method ArithmeticGenerator
    * @constructor
    * @param  {H5P.ArithmeticQuiz.ArithmeticType}   type
    * @param  {number}           maxQuestions
    */
-  function QuestionsGenerator(type, maxQuestions) {
+  function ArithmeticGenerator(type, maxQuestions) {
     var self = this;
     var questions = [];
     var i, j;
@@ -192,7 +192,17 @@ H5P.ArithmeticQuiz.QuestionsGenerator = (function (ArithmeticType) {
     self.get = function () {
       return questions;
     };
+    
   }
 
-  return QuestionsGenerator;
+  ArithmeticGenerator.prototype.readableQuestion = function (translations, readableSigns, question) {
+    return translations.humanizedQuestion
+      .replace(':arithmetic', readableSigns);
+  };
+
+  ArithmeticGenerator.prototype.readableText = function (question) {
+    return question.textual + ' = ?';    
+  };
+    
+  return ArithmeticGenerator;
 }(H5P.ArithmeticQuiz.ArithmeticType));

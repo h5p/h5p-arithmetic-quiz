@@ -3,6 +3,14 @@ H5P Arithmetic Quiz
 
 Arithmetic quiz containing addition, division, multiplication and subtraction of numbers where the answer is between 0 and 100.
 
+Choosing Linear Equations Quiz different types of equation will be generated.
+You can also configure if fractions should be used and the difficulty of the equations:
+ * Basic [ 3x = 12 ]
+ * Intermediate [ 4x - 3 = 13 ]
+ * Advanced [ 5x + 3 = 3x + 15 ]
+ 
+It rely on algebra.js by nicolewhite to build, display, and solve algebraic equations.
+
 ## License
 
 (The MIT License)
