@@ -1,92 +1,133 @@
 {
-  "semantics":[
+  "semantics": [
     {
-      "label":"Introduction",
-      "description":"Le texte d'introduction (maximum 100 caractères)"
+      "label": "Introduction",
+      "description": "Le texte d'introduction (maximum 100 caractères)"
     },
     {
-      "label":"Type d'opération",
-      "options":[
+      "label": "Quiz type",
+      "options": [
         {
-          "label":"Addition"
+          "label": "Arithmetic Operations Quiz"
         },
         {
-          "label":"Soustraction"
-        },
-        {
-          "label":"Multiplication"
-        },
-        {
-          "label":"Division"
+          "label": "Linear Equations Quiz"
         }
       ]
     },
     {
-      "label":"Nombre maximum de questions"
+      "label": "Type d'opération",
+      "options": [
+        {
+          "label": "Addition"
+        },
+        {
+          "label": "Soustraction"
+        },
+        {
+          "label": "Multiplication"
+        },
+        {
+          "label": "Division"
+        }
+      ]
     },
     {
-      "label":"Traduction de l'interface utilisateurs",
-      "fields":[
+      "label": "Equation type",
+      "options": [
         {
-          "label":"Score qui s'affiche pendant le quiz",
-          "default":"Score :"
+          "label": "Basic [ 3x = 12 ]"
         },
         {
-          "label":"Temps",
-          "default":"Temps écoulé : @time"
+          "label": "Intermediate [ 4x - 3 = 13 ]"
         },
         {
-          "label":"Titre de la page de résultats",
-          "default":"C'est terminé !"
+          "label": "Advanced [ 5x + 3 = 3x + 15 ]"
+        }
+      ]
+    },
+    {
+      "label": "Enable fractions",
+      "description": "Enable to allow fractions in equations."
+    },
+    {
+      "label": "Nombre maximum de questions"
+    },
+    {
+      "label": "Traduction de l'interface utilisateurs",
+      "fields": [
+        {
+          "label": "Score qui s'affiche pendant le quiz",
+          "default": "Score :"
         },
         {
-          "label":"Texte du bouton GO",
-          "default":"GO !"
+          "label": "Temps",
+          "default": "Temps écoulé : @time"
         },
         {
-          "label":"Texte du bouton de départ",
-          "default":"Commencer"
+          "label": "Titre de la page de résultats",
+          "default": "C'est terminé !"
         },
         {
-          "label":"Texte du bouton \"Recommencer\"",
-          "default":"Recommencer"
+          "label": "Texte du bouton GO",
+          "default": "GO !"
         },
         {
-          "label":"Texte exprimé par la synthèse vocale en cas de réponse correcte",
-          "default":"Réponse correcte"
+          "label": "Texte du bouton de départ",
+          "default": "Commencer"
         },
         {
-          "label":"Texte exprimé par la synthèse vocale en cas de réponse incorrecte",
-          "default":"Réponse incorrecte"
+          "label": "Texte du bouton \"Recommencer\"",
+          "default": "Recommencer"
         },
         {
-          "label":"Chronomètre exprimé par la synthèse vocale",
-          "default":"Durée en heures, minutes et secondes."
+          "label": "Texte exprimé par la synthèse vocale en cas de réponse correcte",
+          "default": "Réponse correcte"
         },
         {
-          "label":"Question exprimée par la synthèse vocale",
-          "default":"Combien font :arithmetic ?"
+          "label": "Texte exprimé par la synthèse vocale en cas de réponse incorrecte",
+          "default": "Réponse incorrecte"
         },
         {
-          "label":"Texte pour le signe de l'addition",
-          "default":"plus"
+          "label": "Chronomètre exprimé par la synthèse vocale",
+          "default": "Durée en heures, minutes et secondes."
         },
         {
-          "label":"Texte pour le signe de la soustraction",
-          "default":"moins"
+          "label": "Question exprimée par la synthèse vocale",
+          "default": "Combien font :arithmetic ?"
         },
         {
-          "label":"Texte pour le signe de la multiplication",
-          "default":"fois"
+          "label": "Readspeaker text for equation question",
+          "default": "For the equation :equation, what does :item equal?"
         },
         {
-          "label":"Texte pour le signe de la division",
-          "default":"divisé par"
+          "label": "Readspeaker text for equation variable",
+          "default": "What does :item equal?"
         },
         {
-          "label":"Texte du numéro de diapositive",
-          "description":"Annonce la diapositive en cours et le nombre total de diapositives, les variables sont :sum et :total",
-          "default":"Diapositive :num sur :total"
+          "label": "Texte pour le signe de l'addition",
+          "default": "plus"
+        },
+        {
+          "label": "Texte pour le signe de la soustraction",
+          "default": "moins"
+        },
+        {
+          "label": "Texte pour le signe de la multiplication",
+          "default": "fois"
+        },
+        {
+          "label": "Texte pour le signe de la division",
+          "default": "divisé par"
+        },
+        {
+          "label": "Equality sign text",
+          "default": "equal"
+        },
+        {
+          "label": "Texte du numéro de diapositive",
+          "description": "Annonce la diapositive en cours et le nombre total de diapositives, les variables sont :sum et :total",
+          "default": "Diapositive :num sur :total"
         }
       ]
     }

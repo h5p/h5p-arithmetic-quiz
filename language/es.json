@@ -1,92 +1,133 @@
 {
-  "semantics":[
+  "semantics": [
     {
-      "label":"Intro",
-      "description":"The intro text (maximum 100 characters)"
+      "label": "Intro",
+      "description": "The intro text (maximum 100 characters)"
     },
     {
-      "label":"Arithmetic type",
-      "options":[
+      "label": "Quiz type",
+      "options": [
         {
-          "label":"Addition"
+          "label": "Arithmetic Operations Quiz"
         },
         {
-          "label":"Subtraction"
-        },
-        {
-          "label":"Multiplication"
-        },
-        {
-          "label":"Division"
+          "label": "Linear Equations Quiz"
         }
       ]
     },
     {
-      "label":"Max number of questions"
+      "label": "Arithmetic type",
+      "options": [
+        {
+          "label": "Addition"
+        },
+        {
+          "label": "Subtraction"
+        },
+        {
+          "label": "Multiplication"
+        },
+        {
+          "label": "Division"
+        }
+      ]
     },
     {
-      "label":"User interface translations",
-      "fields":[
+      "label": "Equation type",
+      "options": [
         {
-          "label":"Scoring during quiz",
-          "default":"Score:"
+          "label": "Basic [ 3x = 12 ]"
         },
         {
-          "label":"Time",
-          "default":"Time: @time"
+          "label": "Intermediate [ 4x - 3 = 13 ]"
         },
         {
-          "label":"Result page header",
-          "default":"Finished!"
+          "label": "Advanced [ 5x + 3 = 3x + 15 ]"
+        }
+      ]
+    },
+    {
+      "label": "Enable fractions",
+      "description": "Enable to allow fractions in equations."
+    },
+    {
+      "label": "Max number of questions"
+    },
+    {
+      "label": "User interface translations",
+      "fields": [
+        {
+          "label": "Scoring during quiz",
+          "default": "Score:"
         },
         {
-          "label":"Go label",
-          "default":"GO!"
+          "label": "Time",
+          "default": "Time: @time"
         },
         {
-          "label":"Start button label",
-          "default":"Start"
+          "label": "Result page header",
+          "default": "Finished!"
         },
         {
-          "label":"Retry button label",
-          "default":"Reintentar"
+          "label": "Go label",
+          "default": "GO!"
         },
         {
-          "label":"Readspeaker text for correct answer",
-          "default":"Correct"
+          "label": "Start button label",
+          "default": "Start"
         },
         {
-          "label":"Readspeaker text for incorrect answer",
-          "default":"Incorrect. Correct answer was :num"
+          "label": "Retry button label",
+          "default": "Reintentar"
         },
         {
-          "label":"Readspeaker label for the timer",
-          "default":"Duration in hours, minutes and seconds."
+          "label": "Readspeaker text for correct answer",
+          "default": "Correct"
         },
         {
-          "label":"Readspeaker text for question",
-          "default":"What does :arithmetic equal?"
+          "label": "Readspeaker text for incorrect answer",
+          "default": "Incorrect. Correct answer was :num"
         },
         {
-          "label":"Plus operator text",
-          "default":"plus"
+          "label": "Readspeaker label for the timer",
+          "default": "Duration in hours, minutes and seconds."
         },
         {
-          "label":"Subtraction operator text",
-          "default":"minus"
+          "label": "Readspeaker text for question",
+          "default": "What does :arithmetic equal?"
         },
         {
-          "label":"Multiplication operator text",
-          "default":"times"
+          "label": "Readspeaker text for equation question",
+          "default": "For the equation :equation, what does :item equal?"
         },
         {
-          "label":"Division operator text",
-          "default":"divided by"
+          "label": "Readspeaker text for equation variable",
+          "default": "What does :item equal?"
         },
         {
-          "label":"Slide number text",
-          "description":"Announces current slide and total number of slides, variables are :num and :total",
-          "default":"Slide :num of :total"
+          "label": "Plus operator text",
+          "default": "plus"
+        },
+        {
+          "label": "Subtraction operator text",
+          "default": "minus"
+        },
+        {
+          "label": "Multiplication operator text",
+          "default": "times"
+        },
+        {
+          "label": "Division operator text",
+          "default": "divided by"
+        },
+        {
+          "label": "Equality sign text",
+          "default": "equal"
+        },
+        {
+          "label": "Slide number text",
+          "description": "Announces current slide and total number of slides, variables are :num and :total",
+          "default": "Slide :num of :total"
         }
       ]
     }

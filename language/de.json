@@ -13,8 +13,7 @@
         {
           "label": "Linear Equations Quiz"
         }
-      ],
-      "default": "arithmetic"
+      ]
     },
     {
       "label":"Arithmetischer Typ",
@@ -45,8 +44,7 @@
         {
           "label":"Advanced [ 5x + 3 = 3x + 15 ]"
         }
-      ],
-      "default":"intermediate"
+      ]
     },
     {
       "label": "Enable fractions",

@@ -1,92 +1,133 @@
 {
-  "semantics":[
+  "semantics": [
     {
-      "label":"Sissejuhatus",
-      "description":"Sissejuhatav tekst (kuni 100 märki)"
+      "label": "Sissejuhatus",
+      "description": "Sissejuhatav tekst (kuni 100 märki)"
     },
     {
-      "label":"Tehte tüüp",
-      "options":[
+      "label": "Quiz type",
+      "options": [
         {
-          "label":"Liitmine"
+          "label": "Arithmetic Operations Quiz"
         },
         {
-          "label":"Lahutamine"
-        },
-        {
-          "label":"Korrutamine"
-        },
-        {
-          "label":"Jagamine"
+          "label": "Linear Equations Quiz"
         }
       ]
     },
     {
-      "label":"Küsimuste suurim hulk"
+      "label": "Tehte tüüp",
+      "options": [
+        {
+          "label": "Liitmine"
+        },
+        {
+          "label": "Lahutamine"
+        },
+        {
+          "label": "Korrutamine"
+        },
+        {
+          "label": "Jagamine"
+        }
+      ]
     },
     {
-      "label":"Kasutajaliidese tõlked",
-      "fields":[
+      "label": "Equation type",
+      "options": [
         {
-          "label":"Punktisumma viktoriini ajal",
-          "default":"Punktisumma:"
+          "label": "Basic [ 3x = 12 ]"
         },
         {
-          "label":"Aeg",
-          "default":"Aeg: @time"
+          "label": "Intermediate [ 4x - 3 = 13 ]"
         },
         {
-          "label":"Tulemuste lehe päis",
-          "default":"Valmis!"
+          "label": "Advanced [ 5x + 3 = 3x + 15 ]"
+        }
+      ]
+    },
+    {
+      "label": "Enable fractions",
+      "description": "Enable to allow fractions in equations."
+    },
+    {
+      "label": "Küsimuste suurim hulk"
+    },
+    {
+      "label": "Kasutajaliidese tõlked",
+      "fields": [
+        {
+          "label": "Punktisumma viktoriini ajal",
+          "default": "Punktisumma:"
         },
         {
-          "label":"Käivita nupu tekst",
-          "default":"Käivita!"
+          "label": "Aeg",
+          "default": "Aeg: @time"
         },
         {
-          "label":"Alusta nupu tekst",
-          "default":"Alusta"
+          "label": "Tulemuste lehe päis",
+          "default": "Valmis!"
         },
         {
-          "label":"Proovi uuesti nupu tekst",
-          "default":"Proovi uuesti"
+          "label": "Käivita nupu tekst",
+          "default": "Käivita!"
         },
         {
-          "label":"Õige vastuse tekstilugeri tekst",
-          "default":"Õige"
+          "label": "Alusta nupu tekst",
+          "default": "Alusta"
         },
         {
-          "label":"Vale vastuse tekstilugeri tekst",
-          "default":"Vale. Õige vastus oli :num"
+          "label": "Proovi uuesti nupu tekst",
+          "default": "Proovi uuesti"
         },
         {
-          "label":"Tekstilugeri tekst taimerile",
-          "default":"Kestus tundides, minutites ja sekundites."
+          "label": "Õige vastuse tekstilugeri tekst",
+          "default": "Õige"
         },
         {
-          "label":"Tekstilugeri tekst küsimusele",
-          "default":"Kui palju on :arithmetic ?"
+          "label": "Vale vastuse tekstilugeri tekst",
+          "default": "Vale. Õige vastus oli :num"
         },
         {
-          "label":"Liitmistehte tekst",
-          "default":"pluss"
+          "label": "Tekstilugeri tekst taimerile",
+          "default": "Kestus tundides, minutites ja sekundites."
         },
         {
-          "label":"Lahutamistehte tekst",
-          "default":"miinus"
+          "label": "Tekstilugeri tekst küsimusele",
+          "default": "Kui palju on :arithmetic ?"
         },
         {
-          "label":"Korrutamistehte tekst",
-          "default":"korda"
+          "label": "Readspeaker text for equation question",
+          "default": "For the equation :equation, what does :item equal?"
         },
         {
-          "label":"Lahutamistehte tekst",
-          "default":"jagatud"
+          "label": "Readspeaker text for equation variable",
+          "default": "What does :item equal?"
         },
         {
-          "label":"Leheküljenumbri tekst",
-          "description":"Väljastab jooksva lehekülje ja lehtede koguhulga arvud. Muutujad on :num ja :total",
-          "default":"Lehekülg :num / :total"
+          "label": "Liitmistehte tekst",
+          "default": "pluss"
+        },
+        {
+          "label": "Lahutamistehte tekst",
+          "default": "miinus"
+        },
+        {
+          "label": "Korrutamistehte tekst",
+          "default": "korda"
+        },
+        {
+          "label": "Lahutamistehte tekst",
+          "default": "jagatud"
+        },
+        {
+          "label": "Equality sign text",
+          "default": "equal"
+        },
+        {
+          "label": "Leheküljenumbri tekst",
+          "description": "Väljastab jooksva lehekülje ja lehtede koguhulga arvud. Muutujad on :num ja :total",
+          "default": "Lehekülg :num / :total"
         }
       ]
     }

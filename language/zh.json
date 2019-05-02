@@ -5,6 +5,17 @@
       "description": "關於測驗的說明文字（不可超過 100 字元）"
     },
     {
+      "label": "Quiz type",
+      "options": [
+        {
+          "label": "Arithmetic Operations Quiz"
+        },
+        {
+          "label": "Linear Equations Quiz"
+        }
+      ]
+    },
+    {
       "label": "算術類型",
       "options": [
         {
@@ -20,6 +31,24 @@
           "label": "除法"
         }
       ]
+    },
+    {
+      "label": "Equation type",
+      "options": [
+        {
+          "label": "Basic [ 3x = 12 ]"
+        },
+        {
+          "label": "Intermediate [ 4x - 3 = 13 ]"
+        },
+        {
+          "label": "Advanced [ 5x + 3 = 3x + 15 ]"
+        }
+      ]
+    },
+    {
+      "label": "Enable fractions",
+      "description": "Enable to allow fractions in equations."
     },
     {
       "label": "題目數"
@@ -68,6 +97,14 @@
           "default": "What does :arithmetic equal?"
         },
         {
+          "label": "Readspeaker text for equation question",
+          "default": "For the equation :equation, what does :item equal?"
+        },
+        {
+          "label": "Readspeaker text for equation variable",
+          "default": "What does :item equal?"
+        },
+        {
           "label": "報讀器算術符號文本-加",
           "default": "plus"
         },
@@ -82,6 +119,10 @@
         {
           "label": "報讀器算術符號文本-除",
           "default": "divided by"
+        },
+        {
+          "label": "Equality sign text",
+          "default": "equal"
         },
         {
           "label": "題號顯示方式",

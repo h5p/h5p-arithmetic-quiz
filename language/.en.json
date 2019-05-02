@@ -13,8 +13,7 @@
         {
           "label": "Linear Equations Quiz"
         }
-      ],
-      "default": "arithmetic"
+      ]
     },
     {
       "label": "Arithmetic type",
@@ -34,19 +33,18 @@
       ]
     },
     {
-      "label":"Equation type",
+      "label": "Equation type",
       "options": [
         {
-          "label":"Basic [ 3x = 12 ]"
+          "label": "Basic [ 3x = 12 ]"
         },
         {
-          "label":"Intermediate [ 4x - 3 = 13 ]"
+          "label": "Intermediate [ 4x - 3 = 13 ]"
         },
         {
-          "label":"Advanced [ 5x + 3 = 3x + 15 ]"
+          "label": "Advanced [ 5x + 3 = 3x + 15 ]"
         }
-      ],
-      "default":"intermediate"
+      ]
     },
     {
       "label": "Enable fractions",
@@ -105,7 +103,7 @@
         {
           "label": "Readspeaker text for equation variable",
           "default": "What does :item equal?"
-        },        
+        },
         {
           "label": "Plus operator text",
           "default": "plus"
@@ -125,7 +123,7 @@
         {
           "label": "Equality sign text",
           "default": "equal"
-        },        
+        },
         {
           "label": "Slide number text",
           "description": "Announces current slide and total number of slides, variables are :num and :total",

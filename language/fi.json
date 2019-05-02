@@ -1,92 +1,133 @@
 {
-  "semantics":[
+  "semantics": [
     {
-      "label":"Johdanto",
-      "description":"Johdantoteksti (Max 100 merkkiä)"
+      "label": "Johdanto",
+      "description": "Johdantoteksti (Max 100 merkkiä)"
     },
     {
-      "label":"Laskutyyppi",
-      "options":[
+      "label": "Quiz type",
+      "options": [
         {
-          "label":"Summa"
+          "label": "Arithmetic Operations Quiz"
         },
         {
-          "label":"Vähennys"
-        },
-        {
-          "label":"Kerto"
-        },
-        {
-          "label":"Jako"
+          "label": "Linear Equations Quiz"
         }
       ]
     },
     {
-      "label":"Kysymyksien enimmäismäärä"
+      "label": "Laskutyyppi",
+      "options": [
+        {
+          "label": "Summa"
+        },
+        {
+          "label": "Vähennys"
+        },
+        {
+          "label": "Kerto"
+        },
+        {
+          "label": "Jako"
+        }
+      ]
     },
     {
-      "label":"Käyttöliittymän omat tekstit",
-      "fields":[
+      "label": "Equation type",
+      "options": [
         {
-          "label":"Tehtävänaikainen pistelasku",
-          "default":"Pisteet:"
+          "label": "Basic [ 3x = 12 ]"
         },
         {
-          "label":"Aika",
-          "default":"Aika: @time"
+          "label": "Intermediate [ 4x - 3 = 13 ]"
         },
         {
-          "label":"Tulossivun otsikko",
-          "default":"Tehty!"
+          "label": "Advanced [ 5x + 3 = 3x + 15 ]"
+        }
+      ]
+    },
+    {
+      "label": "Enable fractions",
+      "description": "Enable to allow fractions in equations."
+    },
+    {
+      "label": "Kysymyksien enimmäismäärä"
+    },
+    {
+      "label": "Käyttöliittymän omat tekstit",
+      "fields": [
+        {
+          "label": "Tehtävänaikainen pistelasku",
+          "default": "Pisteet:"
         },
         {
-          "label":"Käynnistä painikkeen teksti",
-          "default":"Käynnistä!"
+          "label": "Aika",
+          "default": "Aika: @time"
         },
         {
-          "label":"Aloita painikkeen teksti",
-          "default":"Aloita"
+          "label": "Tulossivun otsikko",
+          "default": "Tehty!"
         },
         {
-          "label":"Painikkeen Yritä uudelleen teksti",
-          "default":"Yritä uudelleen"
+          "label": "Käynnistä painikkeen teksti",
+          "default": "Käynnistä!"
         },
         {
-          "label":"Readspeaker teksti oikealle vastaukselle",
-          "default":"Oikein"
+          "label": "Aloita painikkeen teksti",
+          "default": "Aloita"
         },
         {
-          "label":"Readspeaker teksti väärälle vastaukselle",
-          "default":"Väärin. Oikea vastaus oli :num"
+          "label": "Painikkeen Yritä uudelleen teksti",
+          "default": "Yritä uudelleen"
         },
         {
-          "label":"Readspeaker selite ajastimelle",
-          "default":"Kesto tunneissa, minuuteissa ja sekunneissa."
+          "label": "Readspeaker teksti oikealle vastaukselle",
+          "default": "Oikein"
         },
         {
-          "label":"Readspeaker teksti kysymykselle",
-          "default":"Kuinka paljon on :arithmetic"
+          "label": "Readspeaker teksti väärälle vastaukselle",
+          "default": "Väärin. Oikea vastaus oli :num"
         },
         {
-          "label":"Summaoperaattorin teksti",
-          "default":"plus"
+          "label": "Readspeaker selite ajastimelle",
+          "default": "Kesto tunneissa, minuuteissa ja sekunneissa."
         },
         {
-          "label":"Vähennysoperaattorin teksti",
-          "default":"miinus"
+          "label": "Readspeaker teksti kysymykselle",
+          "default": "Kuinka paljon on :arithmetic"
         },
         {
-          "label":"Kerroinoperaattorin teksti",
-          "default":"kertaa"
+          "label": "Readspeaker text for equation question",
+          "default": "For the equation :equation, what does :item equal?"
         },
         {
-          "label":"Jako-operaattorin teksti",
-          "default":"jaettuna"
+          "label": "Readspeaker text for equation variable",
+          "default": "What does :item equal?"
         },
         {
-          "label":"Sivunumeron teksti",
-          "description":"Ilmoittaa nykyisen sivunumeron ja sivumäärän. Muuttujat :num ja :total",
-          "default":"Sivu :num \/ :total"
+          "label": "Summaoperaattorin teksti",
+          "default": "plus"
+        },
+        {
+          "label": "Vähennysoperaattorin teksti",
+          "default": "miinus"
+        },
+        {
+          "label": "Kerroinoperaattorin teksti",
+          "default": "kertaa"
+        },
+        {
+          "label": "Jako-operaattorin teksti",
+          "default": "jaettuna"
+        },
+        {
+          "label": "Equality sign text",
+          "default": "equal"
+        },
+        {
+          "label": "Sivunumeron teksti",
+          "description": "Ilmoittaa nykyisen sivunumeron ja sivumäärän. Muuttujat :num ja :total",
+          "default": "Sivu :num / :total"
         }
       ]
     }
