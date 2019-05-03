@@ -157,7 +157,7 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, QuizType) {
         .replaceAll('−', self.translations.minusOperator)
         .replaceAll('-', self.translations.minusOperator)
         .replaceAll('×', self.translations.multiplicationOperator)
-        .replaceAll('/', self.translations.divisionOperator)
+        .replaceAll('/', ' ' + self.translations.divisionOperator + ' ')
         .replaceAll('÷', self.translations.divisionOperator)
         .replaceAll('=', self.translations.equalitySign);
   };

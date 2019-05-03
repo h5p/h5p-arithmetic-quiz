@@ -122,7 +122,7 @@
         },
         {
           "label": "Equality sign text",
-          "default": "equal"
+          "default": "equals"
         },
         {
           "label":"\"Readspeaker\"-Text für die Nummer des Schaubilds",

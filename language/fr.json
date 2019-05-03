@@ -122,7 +122,7 @@
         },
         {
           "label": "Equality sign text",
-          "default": "equal"
+          "default": "equals"
         },
         {
           "label": "Texte du numéro de diapositive",

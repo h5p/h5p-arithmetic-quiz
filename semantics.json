@@ -237,14 +237,14 @@
         "type": "text",
         "label": "Division operator text",
         "importance": "low",
-        "default": "divided by"
+        "default": "delt på"
       },
       {
         "name": "equalitySign",
         "type": "text",
         "label": "Equality sign text",
         "importance": "low",
-        "default": "equal"
+        "default": "equals"
       },
       {
         "name": "slideOfTotal",
