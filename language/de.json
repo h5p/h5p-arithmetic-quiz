@@ -1,22 +1,22 @@
 {
   "semantics": [
     {
-      "label":"Intro",
-      "description":"Der Introtext (maximal 100 Zeichen)"
+      "label": "Einführungstext",
+      "description": "maximal 100 Zeichen"
     },
     {
-      "label": "Quiz type",
+      "label": "Art des Quiz",
       "options": [
         {
-          "label": "Arithmetic Operations Quiz"
+          "label": "Quiz mit Rechenaufgaben"
         },
         {
-          "label": "Linear Equations Quiz"
+          "label": "Quiz mit linearen Gleichungen"
         }
       ]
     },
     {
-      "label":"Arithmetischer Typ",
+      "label": "Rechenart",
       "options": [
         {
           "label": "Addition"
@@ -33,101 +33,101 @@
       ]
     },
     {
-      "label":"Equation type",
+      "label": "Art der Gleichung",
       "options": [
         {
-          "label":"Basic [ 3x = 12 ]"
+          "label": "Anfänger [ 3x = 12 ]"
         },
         {
-          "label":"Intermediate [ 4x - 3 = 13 ]"
+          "label": "Fortgeschrittene [ 4x - 3 = 13 ]"
         },
         {
-          "label":"Advanced [ 5x + 3 = 3x + 15 ]"
+          "label": "Profi [ 5x + 3 = 3x + 15 ]"
         }
       ]
     },
     {
-      "label": "Enable fractions",
-      "description": "Enable to allow fractions in equations."
+      "label": "Brüche erlauben",
+      "description": "Auswählen, um Brüche in Gleichungen zuzulassen"
     },
     {
-      "label":"Max. Anzahl an Fragen"
+      "label": "Maximale Aufgabenzahl"
     },
     {
-      "label":"Benutzeroberflächenübersetzungen",
-      "fields":[
+      "label": "Bezeichnungen und Beschriftungen",
+      "fields": [
         {
-          "label":"Erreichte Punkte während des Quizzes",
-          "default":"Punktzahl:"
+          "label": "Erreichte Punkte während des Quiz",
+          "default": "Punktzahl:"
         },
         {
-          "label":"Zeit",
-          "default":"Zeit: @time"
+          "label": "Zeit",
+          "default": "Zeit: @time"
         },
         {
-          "label":"Kopfzeile der Ergebnisseite",
-          "default":"Beendet!"
+          "label": "Überschrift der Ergebnisseite",
+          "default": "Fertig!"
         },
         {
-          "label":"Beschriftung für \"Los\"",
-          "default":"LOS!"
+          "label": "Beschriftung für \"Los\"",
+          "default": "Los!"
         },
         {
-          "label":"Beschriftung für den \"Start\"-Button",
-          "default":"Start"
+          "label": "Beschriftung des \"Start\"-Buttons",
+          "default": "Start"
         },
         {
-          "label":"Beschriftung für den \"Wiederholen\"-Button",
-          "default":"Wiederholen"
+          "label": "Beschriftung des \"Wiederholen\"-Buttons",
+          "default": "Wiederholen"
         },
         {
-          "label":"\"Readspeaker\"-Text für eine richtige Antwort",
-          "default":"Korrekt!"
+          "label": "Text, den ein Vorlesewerkzeug bei einer richtigen Antwort vorliest (Barrierefreiheit)",
+          "default": "Richtig!"
         },
         {
-          "label":"\"Readspeaker\"-Text für eine falsche Antwort",
-          "default":"Falsch. Die richtige Antwort war :num."
+          "label": "Text, den ein Vorlesewerkzeug bei einer falschen Antwort vorliest (Barrierefreiheit)",
+          "default": "Falsch! Die richtige Antwort wäre :num."
         },
         {
-          "label":"\"Readspeaker\"-Text für den Timer",
-          "default":"Dauer in Stunden, Minuten und Sekunden."
+          "label": "Text, den ein Vorlesewerkzeug für den Timer vorliest (Barrierefreiheit)",
+          "default": "Dauer in Stunden, Minuten und Sekunden."
         },
         {
-          "label":"\"Readspeaker\"-Text für die Frage",
-          "default":"Was ergibt :arithmetic?"
+          "label": "Text, den ein Vorlesewerkzeug bei Rechenaufgaben vorliest (Barrierefreiheit)",
+          "default": "Was ergibt :arithmetic?"
         },
         {
-          "label": "Readspeaker text for equation question",
-          "default": "For the equation :equation, what does :item equal?"
+          "label": "Text, den ein Vorlesewerkzeug bei Gleichungsaufgaben vorliest (Barrierefreiheit)",
+          "default": "Was ist in der Gleichung :equation die Lösung für :item?"
         },
         {
-          "label": "Readspeaker text for equation variable",
-          "default": "What does :item equal?"
+          "label": "Text, den ein Vorlesewerkzeug für die Unbekannte in Gleichungen vorliest (Barrierefreiheit)",
+          "default": "Was ist die Lösung für :item?"
         },
         {
-          "label":"\"Readspeaker\"-Text für das Pluszeichen",
-          "default":"plus"
+          "label": "Text, den ein Vorlesewerkzeug für das Pluszeichen vorliest (Barrierefreiheit)",
+          "default": "plus"
         },
         {
-          "label":"\"Readspeaker\"-Text für das Minuszeichen",
-          "default":"minus"
+          "label": "Text, den ein Vorlesewerkzeug für das Minuszeichen vorliest (Barrierefreiheit)",
+          "default": "minus"
         },
         {
-          "label":"\"Readspeaker\"-Text für das Malzeichen",
-          "default":"mal"
+          "label": "Text, den ein Vorlesewerkzeug für das Malzeichen vorliest (Barrierefreiheit)",
+          "default": "mal"
         },
         {
-          "label":"\"Readspeaker\"-Text für das Geteiltzeichen",
-          "default":"geteilt durch"
+          "label": "Text, den ein Vorlesewerkzeug für das Divisionszeichen vorliest (Barrierefreiheit)",
+          "default": "geteilt durch"
         },
         {
-          "label": "Equality sign text",
-          "default": "equals"
+          "label": "Text, den ein Vorlesewerkzeug für das Gleichheitszeichen vorliest (Barrierefreiheit)",
+          "default": "ist gleich"
         },
         {
-          "label":"\"Readspeaker\"-Text für die Nummer des Schaubilds",
-          "description":"Gibt das aktuelle Schaubild und die Gesamtzahl der Schaubilder an, Variablen sind :num und :total",
-          "default":"Schaubild :num von :total"
+          "label": "Text, den ein Vorlesewerkzeug für die Aufgabennummer vorliest (Barrierefreiheit)",
+          "description": "Gibt die derzeitige Aufgabennummer und die Gesamtzahl der Aufgaben an. Platzhalter sind :num und :total",
+          "default": "Aufgabe :num von :total"
         }
       ]
     }
