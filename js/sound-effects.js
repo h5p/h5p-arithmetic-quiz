@@ -1,5 +1,5 @@
-H5P.ArithmeticQuiz.SoundEffects = (function ($) {
-  SoundEffects = {
+H5P.ArithmeticQuiz.SoundEffects = (function () {
+  var SoundEffects = {
     types: [
       'positive-short',
       'negative-short'
@@ -54,4 +54,4 @@ H5P.ArithmeticQuiz.SoundEffects = (function ($) {
   };
 
   return SoundEffects;
-})(H5P.jQuery);
+})();

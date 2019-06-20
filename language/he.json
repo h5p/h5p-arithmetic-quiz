@@ -1,93 +1,133 @@
 {
-  "semantics":[
+  "semantics": [
     {
-      "label":"Intro",
-      "description":"The intro text (maximum 100 characters)"
+      "label": "הקדמה",
+      "description": "הקדמה (100 תווים)"
     },
     {
-      "label":"Arithmetic type",
-      "options":[
+      "label": "סוג שאלון",
+      "options": [
         {
-          "label":"Addition"
+          "label": "שאלון הכולל שאלות מתמטיות"
         },
         {
-          "label":"Subtraction"
-        },
-        {
-          "label":"Multiplication"
-        },
-        {
-          "label":"Division"
+          "label": "שאלון הכולל משוואה לינאריות"
         }
-      ],
-      "default":"addition"
+      ]
     },
     {
-      "label":"Max number of questions"
+      "label": "סוג חישוב",
+      "options": [
+        {
+          "label": "חיבור"
+        },
+        {
+          "label": "חיסור"
+        },
+        {
+          "label": "כפל"
+        },
+        {
+          "label": "חילוק"
+        }
+      ]
     },
     {
-      "label":"User interface translations",
-      "fields":[
+      "label": "סוג משוואה",
+      "options": [
         {
-          "label":"Scoring during quiz",
-          "default":"Score:"
+          "label": "בסיסי [ 3x = 12 ]"
         },
         {
-          "label":"Time",
-          "default":"Time: @time"
+          "label": "בינוני [ 4x - 3 = 13 ]"
         },
         {
-          "label":"Result page header",
-          "default":"Finished!"
+          "label": "מתקדם [ 5x + 3 = 3x + 15 ]"
+        }
+      ]
+    },
+    {
+      "label": "אפשרות שימוש בשברים",
+      "description": "אפשרות שימוש שברים במשוואות."
+    },
+    {
+      "label": "מספר שאלות מירבי"
+    },
+    {
+      "label": "תרגום ממשק משתמש",
+      "fields": [
+        {
+          "label": "ניקוד במהלך הבוחן",
+          "default": "ניקוד:"
         },
         {
-          "label":"Go label",
-          "default":"GO!"
+          "label": "זמן",
+          "default": "זמן: @time"
         },
         {
-          "label":"Start button label",
-          "default":"Start"
+          "label": "כותרת דף התוצאה",
+          "default": "הסתיים!"
         },
         {
-          "label":"Retry button label",
-          "default":"Retry"
+          "label": "תווית התחלה",
+          "default": "התחילו!"
         },
         {
-          "label":"Readspeaker text for correct answer",
-          "default":"Correct"
+          "label": "תווית כפתור התחלה",
+          "default": "התחלה"
         },
         {
-          "label":"Readspeaker text for incorrect answer",
-          "default":"Incorrect. Correct answer was :num"
+          "label": "תווית כפתור ניסיון חוזר",
+          "default": "נסו שוב"
         },
         {
-          "label":"Readspeaker label for the timer",
-          "default":"Duration in hours, minutes and seconds."
+          "label": "Readspeaker text for correct answer",
+          "default": "נכון"
         },
         {
-          "label":"Readspeaker text for question",
-          "default":"What does :arithmetic equal?"
+          "label": "Readspeaker text for incorrect answer",
+          "default": "לא נכון. התשובה הנכונה היא :num"
         },
         {
-          "label":"Plus operator text",
-          "default":"plus"
+          "label": "Readspeaker label for the timer",
+          "default": "משך בשעות, דקות ושניות."
         },
         {
-          "label":"Subtraction operator text",
-          "default":"minus"
+          "label": "Readspeaker text for question",
+          "default": "כמה זה :arithmetic שווה?"
         },
         {
-          "label":"Multiplication operator text",
-          "default":"times"
+          "label": "Readspeaker text for equation question",
+          "default": "עבור המשוואה :equation, מהו :item?"
         },
         {
-          "label":"Division operator text",
-          "default":"divided by"
+          "label": "Readspeaker text for equation variable",
+          "default": "מהו :item ?"
         },
         {
-          "label":"Slide number text",
-          "description":"Announces current slide and total number of slides, variables are :num and :total",
-          "default":"Slide :num of :total"
+          "label": "טקסט עבור פעולת חיבור",
+          "default": "ועוד"
+        },
+        {
+          "label": "טקסט עבור פעולת חיסור",
+          "default": "פחות"
+        },
+        {
+          "label": "טקסט עבור פעולת כפל",
+          "default": "כפול"
+        },
+        {
+          "label": "טקסט עבור פעולת חילוק",
+          "default": "לחלק ל"
+        },
+        {
+          "label": "טקסט עבור שיוויון",
+          "default": "שווה"
+        },
+        {
+          "label": "תאור מספר עמוד",
+          "description": "Announces current slide and total number of slides, variables are :num and :total",
+          "default": "עמוד :num מתוך :total"
         }
       ]
     }

@@ -1,8 +1,8 @@
 {
   "semantics": [
     {
-      "label": "Intro",
-      "description": "The intro text (maximum 100 characters)"
+      "label": "測驗說明",
+      "description": "關於測驗的說明文字（不可超過 100 字元）"
     },
     {
       "label": "Quiz type",
@@ -16,19 +16,19 @@
       ]
     },
     {
-      "label": "Arithmetic type",
+      "label": "算術類型",
       "options": [
         {
-          "label": "Addition"
+          "label": "加法"
         },
         {
-          "label": "Subtraction"
+          "label": "減法"
         },
         {
-          "label": "Multiplication"
+          "label": "乘法"
         },
         {
-          "label": "Division"
+          "label": "除法"
         }
       ]
     },
@@ -51,49 +51,49 @@
       "description": "Enable to allow fractions in equations."
     },
     {
-      "label": "Max number of questions"
+      "label": "題目數"
     },
     {
-      "label": "User interface translations",
+      "label": "用戶介面",
       "fields": [
         {
-          "label": "Scoring during quiz",
-          "default": "Score:"
+          "label": "測驗期間計分",
+          "default": "得分："
         },
         {
-          "label": "Time",
-          "default": "Time: @time"
+          "label": "測驗經過時間",
+          "default": "時間：@time"
         },
         {
-          "label": "Result page header",
-          "default": "Finished!"
+          "label": "測驗結果頁面標題",
+          "default": "測驗結束！"
         },
         {
-          "label": "Go label",
-          "default": "GO!"
+          "label": "測驗開始說明文字",
+          "default": "開始！"
         },
         {
-          "label": "Start button label",
-          "default": "Start"
+          "label": "進入測驗按鈕文字",
+          "default": "進入測驗"
         },
         {
-          "label": "Tekst til \"Prøv igjen\" knapp",
-          "default": "Prøv igjen"
+          "label": "重新測驗按鈕文字",
+          "default": "重新測驗"
         },
         {
-          "label": "Readspeaker tekst for korrekt svar",
-          "default": "Riktig"
+          "label": "報讀器正碇答案文本",
+          "default": "答案正確"
         },
         {
-          "label": "Readspeaker tekst for feil svar",
-          "default": "Incorrect. Correct answer was :num"
+          "label": "報讀器錯誤答案文本",
+          "default": "答案不正確，正解為 :num"
         },
         {
-          "label": "Readspeaker label for the timer",
+          "label": "報讀器經過時間文本",
           "default": "Duration in hours, minutes and seconds."
         },
         {
-          "label": "Readspeaker text for question",
+          "label": "報讀器題目文本",
           "default": "What does :arithmetic equal?"
         },
         {
@@ -105,19 +105,19 @@
           "default": "What does :item equal?"
         },
         {
-          "label": "Plus operator text",
+          "label": "報讀器算術符號文本-加",
           "default": "plus"
         },
         {
-          "label": "Subtraction operator text",
+          "label": "報讀器算術符號文本-減",
           "default": "minus"
         },
         {
-          "label": "Multiplication operator text",
+          "label": "報讀器算術符號文本-乘",
           "default": "times"
         },
         {
-          "label": "Division operator text",
+          "label": "報讀器算術符號文本-除",
           "default": "divided by"
         },
         {
@@ -125,9 +125,9 @@
           "default": "equals"
         },
         {
-          "label": "Side nummer tekst",
-          "description": "Angir nåværende side og totalt antall sider, variabler er :num og :total",
-          "default": "Side :num av :total"
+          "label": "題號顯示方式",
+          "description": "在頁面上顯示目前題號與總題數，分別用變數 :num 與 :total 表示。",
+          "default": "目前為第 :num 題，共 :total 題。"
         }
       ]
     }

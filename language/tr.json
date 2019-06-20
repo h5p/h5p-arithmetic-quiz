@@ -1,93 +1,133 @@
 {
-  "semantics":[
+  "semantics": [
     {
-      "label":"Intro",
-      "description":"The intro text (maximum 100 characters)"
+      "label": "Giriş",
+      "description": "Giriş metni (mmaksimum 100 karakter)"
     },
     {
-      "label":"Arithmetic type",
-      "options":[
+      "label": "Quiz type",
+      "options": [
         {
-          "label":"Addition"
+          "label": "Arithmetic Operations Quiz"
         },
         {
-          "label":"Subtraction"
-        },
-        {
-          "label":"Multiplication"
-        },
-        {
-          "label":"Division"
+          "label": "Linear Equations Quiz"
         }
-      ],
-      "default":"addition"
+      ]
     },
     {
-      "label":"Max number of questions"
+      "label": "Aritmetik işlem",
+      "options": [
+        {
+          "label": "Toplama"
+        },
+        {
+          "label": "Çıkarma"
+        },
+        {
+          "label": "Çarpma"
+        },
+        {
+          "label": "Bölme"
+        }
+      ]
     },
     {
-      "label":"User interface translations",
-      "fields":[
+      "label": "Equation type",
+      "options": [
         {
-          "label":"Scoring during quiz",
-          "default":"Score:"
+          "label": "Basic [ 3x = 12 ]"
         },
         {
-          "label":"Time",
-          "default":"Time: @time"
+          "label": "Intermediate [ 4x - 3 = 13 ]"
         },
         {
-          "label":"Result page header",
-          "default":"Finished!"
+          "label": "Advanced [ 5x + 3 = 3x + 15 ]"
+        }
+      ]
+    },
+    {
+      "label": "Enable fractions",
+      "description": "Enable to allow fractions in equations."
+    },
+    {
+      "label": "Maksimum soru sayısı"
+    },
+    {
+      "label": "Kullanıcı arayüzü çevirileri",
+      "fields": [
+        {
+          "label": "Quiz sırasında puanlama",
+          "default": "Puan:"
         },
         {
-          "label":"Go label",
-          "default":"GO!"
+          "label": "Süre",
+          "default": "Süre: @time"
         },
         {
-          "label":"Start button label",
-          "default":"Start"
+          "label": "Sonuç sayfası başlığı",
+          "default": "Tamamlandı!"
         },
         {
-          "label":"Yeniden dene buton etiketi",
-          "default":"Yeniden dene"
+          "label": "Başla etiketi",
+          "default": "BAŞLA!"
         },
         {
-          "label":"Readspeaker text for correct answer",
-          "default":"Doğru"
+          "label": "Başlatma butonu etiketi",
+          "default": "Başlat"
         },
         {
-          "label":"Readspeaker text for incorrect answer",
-          "default":"Incorrect. Correct answer was :num"
+          "label": "Yeniden dene buton etiketi",
+          "default": "Yeniden dene"
         },
         {
-          "label":"Readspeaker label for the timer",
-          "default":"Duration in hours, minutes and seconds."
+          "label": "Doğru cevap için sesli okuyucu (yardımcı teknolojiler) metni",
+          "default": "Doğru"
         },
         {
-          "label":"Readspeaker text for question",
-          "default":"What does :arithmetic equal?"
+          "label": "Yanlış cevap için sesli okuyucu (yardımcı teknolojiler) metni",
+          "default": "Yanlış. Doğru cevap :num"
         },
         {
-          "label":"Plus operator text",
-          "default":"plus"
+          "label": "Zamanlayıcı için sesli okuyucu (yardımcı teknolojiler) etiketi",
+          "default": "Saat, dakika ve saniye cinsinden süre."
         },
         {
-          "label":"Subtraction operator text",
-          "default":"minus"
+          "label": "Soru için sesli okuyucu (yardımcı teknolojiler) metni",
+          "default": ":arithmetic kaça eşittir?"
         },
         {
-          "label":"Multiplication operator text",
-          "default":"times"
+          "label": "Readspeaker text for equation question",
+          "default": "For the equation :equation, what does :item equal?"
         },
         {
-          "label":"Division operator text",
-          "default":"divided by"
+          "label": "Readspeaker text for equation variable",
+          "default": "What does :item equal?"
         },
         {
-          "label":"Slide number text",
-          "description":"Announces current slide and total number of slides, variables are :num and :total",
-          "default":"Slide :num of :total"
+          "label": "Toplama işlemi metni",
+          "default": "artı"
+        },
+        {
+          "label": "Çıkarma işlemi metni",
+          "default": "eksi"
+        },
+        {
+          "label": "Çarpma işlemi metni",
+          "default": "çarpı"
+        },
+        {
+          "label": "Bölme işlemi metni",
+          "default": "bölü"
+        },
+        {
+          "label": "Equality sign text",
+          "default": "equals"
+        },
+        {
+          "label": "Slayt numarası metni",
+          "description": "Şimdiki slaytı ve toplam slayt sayısını bildirir, değişkenler: :num ve :total",
+          "default": "Toplam :total slayttan :num no'lu slayt"
         }
       ]
     }

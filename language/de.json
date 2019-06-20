@@ -1,93 +1,133 @@
 {
-  "semantics":[
+  "semantics": [
     {
-      "label":"Intro",
-      "description":"The intro text (maximum 100 characters)"
+      "label": "Einführungstext",
+      "description": "maximal 100 Zeichen"
     },
     {
-      "label":"Arithmetic type",
-      "options":[
+      "label": "Art des Quiz",
+      "options": [
         {
-          "label":"Addition"
+          "label": "Quiz mit Rechenaufgaben"
         },
         {
-          "label":"Subtraction"
-        },
-        {
-          "label":"Multiplication"
-        },
-        {
-          "label":"Division"
+          "label": "Quiz mit linearen Gleichungen"
         }
-      ],
-      "default":"addition"
+      ]
     },
     {
-      "label":"Max number of questions"
+      "label": "Rechenart",
+      "options": [
+        {
+          "label": "Addition"
+        },
+        {
+          "label": "Subtraktion"
+        },
+        {
+          "label": "Multiplikation"
+        },
+        {
+          "label": "Division"
+        }
+      ]
     },
     {
-      "label":"User interface translations",
-      "fields":[
+      "label": "Art der Gleichung",
+      "options": [
         {
-          "label":"Scoring during quiz",
-          "default":"Score:"
+          "label": "Anfänger [ 3x = 12 ]"
         },
         {
-          "label":"Time",
-          "default":"Time: @time"
+          "label": "Fortgeschrittene [ 4x - 3 = 13 ]"
         },
         {
-          "label":"Result page header",
-          "default":"Finished!"
+          "label": "Profi [ 5x + 3 = 3x + 15 ]"
+        }
+      ]
+    },
+    {
+      "label": "Brüche erlauben",
+      "description": "Auswählen, um Brüche in Gleichungen zuzulassen"
+    },
+    {
+      "label": "Maximale Aufgabenzahl"
+    },
+    {
+      "label": "Bezeichnungen und Beschriftungen",
+      "fields": [
+        {
+          "label": "Erreichte Punkte während des Quiz",
+          "default": "Punktzahl:"
         },
         {
-          "label":"Go label",
-          "default":"GO!"
+          "label": "Zeit",
+          "default": "Zeit: @time"
         },
         {
-          "label":"Start button label",
-          "default":"Start"
+          "label": "Überschrift der Ergebnisseite",
+          "default": "Fertig!"
         },
         {
-          "label":"Beschriftung des \"Beenden\"-Buttons",
-          "default":"Wiederholen"
+          "label": "Beschriftung für \"Los\"",
+          "default": "Los!"
         },
         {
-          "label":"\"Readspeaker\"-Text für eine richtige Antwort",
-          "default":"Korrekt!"
+          "label": "Beschriftung des \"Start\"-Buttons",
+          "default": "Start"
         },
         {
-          "label":"\"Readspeaker\"-Text für eine falsche Antwort",
-          "default":"Incorrect. Correct answer was :num"
+          "label": "Beschriftung des \"Wiederholen\"-Buttons",
+          "default": "Wiederholen"
         },
         {
-          "label":"Readspeaker label for the timer",
-          "default":"Duration in hours, minutes and seconds."
+          "label": "Text, den ein Vorlesewerkzeug bei einer richtigen Antwort vorliest (Barrierefreiheit)",
+          "default": "Richtig!"
         },
         {
-          "label":"Readspeaker text for question",
-          "default":"What does :arithmetic equal?"
+          "label": "Text, den ein Vorlesewerkzeug bei einer falschen Antwort vorliest (Barrierefreiheit)",
+          "default": "Falsch! Die richtige Antwort wäre :num."
         },
         {
-          "label":"Plus operator text",
-          "default":"plus"
+          "label": "Text, den ein Vorlesewerkzeug für den Timer vorliest (Barrierefreiheit)",
+          "default": "Dauer in Stunden, Minuten und Sekunden."
         },
         {
-          "label":"Subtraction operator text",
-          "default":"minus"
+          "label": "Text, den ein Vorlesewerkzeug bei Rechenaufgaben vorliest (Barrierefreiheit)",
+          "default": "Was ergibt :arithmetic?"
         },
         {
-          "label":"Multiplication operator text",
-          "default":"times"
+          "label": "Text, den ein Vorlesewerkzeug bei Gleichungsaufgaben vorliest (Barrierefreiheit)",
+          "default": "Was ist in der Gleichung :equation die Lösung für :item?"
         },
         {
-          "label":"Division operator text",
-          "default":"divided by"
+          "label": "Text, den ein Vorlesewerkzeug für die Unbekannte in Gleichungen vorliest (Barrierefreiheit)",
+          "default": "Was ist die Lösung für :item?"
         },
         {
-          "label":"Text für die Nummer des Schaubilds",
-          "description":"Gibt das aktuelle Schaubild und die Gesamtzahl der Schaubilder an, Variablen sind :num und :total",
-          "default":"Schaubild :num von :total"
+          "label": "Text, den ein Vorlesewerkzeug für das Pluszeichen vorliest (Barrierefreiheit)",
+          "default": "plus"
+        },
+        {
+          "label": "Text, den ein Vorlesewerkzeug für das Minuszeichen vorliest (Barrierefreiheit)",
+          "default": "minus"
+        },
+        {
+          "label": "Text, den ein Vorlesewerkzeug für das Malzeichen vorliest (Barrierefreiheit)",
+          "default": "mal"
+        },
+        {
+          "label": "Text, den ein Vorlesewerkzeug für das Divisionszeichen vorliest (Barrierefreiheit)",
+          "default": "geteilt durch"
+        },
+        {
+          "label": "Text, den ein Vorlesewerkzeug für das Gleichheitszeichen vorliest (Barrierefreiheit)",
+          "default": "ist gleich"
+        },
+        {
+          "label": "Text, den ein Vorlesewerkzeug für die Aufgabennummer vorliest (Barrierefreiheit)",
+          "description": "Gibt die derzeitige Aufgabennummer und die Gesamtzahl der Aufgaben an. Platzhalter sind :num und :total",
+          "default": "Aufgabe :num von :total"
         }
       ]
     }

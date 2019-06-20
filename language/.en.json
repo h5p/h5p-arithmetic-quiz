@@ -5,6 +5,17 @@
       "description": "The intro text (maximum 100 characters)"
     },
     {
+      "label": "Quiz type",
+      "options": [
+        {
+          "label": "Arithmetic Operations Quiz"
+        },
+        {
+          "label": "Linear Equations Quiz"
+        }
+      ]
+    },
+    {
       "label": "Arithmetic type",
       "options": [
         {
@@ -19,8 +30,25 @@
         {
           "label": "Division"
         }
-      ],
-      "default": "addition"
+      ]
+    },
+    {
+      "label": "Equation type",
+      "options": [
+        {
+          "label": "Basic [ 3x = 12 ]"
+        },
+        {
+          "label": "Intermediate [ 4x - 3 = 13 ]"
+        },
+        {
+          "label": "Advanced [ 5x + 3 = 3x + 15 ]"
+        }
+      ]
+    },
+    {
+      "label": "Enable fractions",
+      "description": "Enable to allow fractions in equations."
     },
     {
       "label": "Max number of questions"
@@ -69,6 +97,14 @@
           "default": "What does :arithmetic equal?"
         },
         {
+          "label": "Readspeaker text for equation question",
+          "default": "For the equation :equation, what does :item equal?"
+        },
+        {
+          "label": "Readspeaker text for equation variable",
+          "default": "What does :item equal?"
+        },
+        {
           "label": "Plus operator text",
           "default": "plus"
         },
@@ -83,6 +119,10 @@
         {
           "label": "Division operator text",
           "default": "divided by"
+        },
+        {
+          "label": "Equality sign text",
+          "default": "equals"
         },
         {
           "label": "Slide number text",

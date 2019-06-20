@@ -1,93 +1,133 @@
 {
-  "semantics":[
+  "semantics": [
     {
-      "label":"Intro",
-      "description":"The intro text (maximum 100 characters)"
+      "label": "Sissejuhatus",
+      "description": "Sissejuhatav tekst (kuni 100 märki)"
     },
     {
-      "label":"Arithmetic type",
-      "options":[
+      "label": "Quiz type",
+      "options": [
         {
-          "label":"Addition"
+          "label": "Arithmetic Operations Quiz"
         },
         {
-          "label":"Subtraction"
-        },
-        {
-          "label":"Multiplication"
-        },
-        {
-          "label":"Division"
+          "label": "Linear Equations Quiz"
         }
-      ],
-      "default":"addition"
+      ]
     },
     {
-      "label":"Max number of questions"
+      "label": "Tehte tüüp",
+      "options": [
+        {
+          "label": "Liitmine"
+        },
+        {
+          "label": "Lahutamine"
+        },
+        {
+          "label": "Korrutamine"
+        },
+        {
+          "label": "Jagamine"
+        }
+      ]
     },
     {
-      "label":"User interface translations",
-      "fields":[
+      "label": "Equation type",
+      "options": [
         {
-          "label":"Scoring during quiz",
-          "default":"Score:"
+          "label": "Basic [ 3x = 12 ]"
         },
         {
-          "label":"Time",
-          "default":"Time: @time"
+          "label": "Intermediate [ 4x - 3 = 13 ]"
         },
         {
-          "label":"Result page header",
-          "default":"Finished!"
+          "label": "Advanced [ 5x + 3 = 3x + 15 ]"
+        }
+      ]
+    },
+    {
+      "label": "Enable fractions",
+      "description": "Enable to allow fractions in equations."
+    },
+    {
+      "label": "Küsimuste suurim hulk"
+    },
+    {
+      "label": "Kasutajaliidese tõlked",
+      "fields": [
+        {
+          "label": "Punktisumma viktoriini ajal",
+          "default": "Punktisumma:"
         },
         {
-          "label":"Go label",
-          "default":"GO!"
+          "label": "Aeg",
+          "default": "Aeg: @time"
         },
         {
-          "label":"Start button label",
-          "default":"Start"
+          "label": "Tulemuste lehe päis",
+          "default": "Valmis!"
         },
         {
-          "label":"Proovi uuesti nupu silt",
-          "default":"Proovi uuesti"
+          "label": "Käivita nupu tekst",
+          "default": "Käivita!"
         },
         {
-          "label":"Readspeaker text for correct answer",
-          "default":"Õige"
+          "label": "Alusta nupu tekst",
+          "default": "Alusta"
         },
         {
-          "label":"Readspeaker text for incorrect answer",
-          "default":"Incorrect. Correct answer was :num"
+          "label": "Proovi uuesti nupu tekst",
+          "default": "Proovi uuesti"
         },
         {
-          "label":"Readspeaker label for the timer",
-          "default":"Duration in hours, minutes and seconds."
+          "label": "Õige vastuse tekstilugeri tekst",
+          "default": "Õige"
         },
         {
-          "label":"Readspeaker text for question",
-          "default":"What does :arithmetic equal?"
+          "label": "Vale vastuse tekstilugeri tekst",
+          "default": "Vale. Õige vastus oli :num"
         },
         {
-          "label":"Plus operator text",
-          "default":"plus"
+          "label": "Tekstilugeri tekst taimerile",
+          "default": "Kestus tundides, minutites ja sekundites."
         },
         {
-          "label":"Subtraction operator text",
-          "default":"minus"
+          "label": "Tekstilugeri tekst küsimusele",
+          "default": "Kui palju on :arithmetic ?"
         },
         {
-          "label":"Multiplication operator text",
-          "default":"times"
+          "label": "Readspeaker text for equation question",
+          "default": "For the equation :equation, what does :item equal?"
         },
         {
-          "label":"Division operator text",
-          "default":"divided by"
+          "label": "Readspeaker text for equation variable",
+          "default": "What does :item equal?"
         },
         {
-          "label":"Slide number text",
-          "description":"Announces current slide and total number of slides, variables are :num and :total",
-          "default":"Slide :num of :total"
+          "label": "Liitmistehte tekst",
+          "default": "pluss"
+        },
+        {
+          "label": "Lahutamistehte tekst",
+          "default": "miinus"
+        },
+        {
+          "label": "Korrutamistehte tekst",
+          "default": "korda"
+        },
+        {
+          "label": "Lahutamistehte tekst",
+          "default": "jagatud"
+        },
+        {
+          "label": "Equality sign text",
+          "default": "equals"
+        },
+        {
+          "label": "Leheküljenumbri tekst",
+          "description": "Väljastab jooksva lehekülje ja lehtede koguhulga arvud. Muutujad on :num ja :total",
+          "default": "Lehekülg :num / :total"
         }
       ]
     }

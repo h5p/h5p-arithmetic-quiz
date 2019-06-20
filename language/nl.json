@@ -1,93 +1,133 @@
 {
-  "semantics":[
+  "semantics": [
     {
-      "label":"Intro",
-      "description":"The intro text (maximum 100 characters)"
+      "label": "Introductie",
+      "description": "De introductietekst (maximum 100 karakters)"
     },
     {
-      "label":"Arithmetic type",
-      "options":[
+      "label": "Quiz type",
+      "options": [
         {
-          "label":"Addition"
+          "label": "Arithmetic Operations Quiz"
         },
         {
-          "label":"Subtraction"
-        },
-        {
-          "label":"Multiplication"
-        },
-        {
-          "label":"Division"
+          "label": "Linear Equations Quiz"
         }
-      ],
-      "default":"addition"
+      ]
     },
     {
-      "label":"Max number of questions"
+      "label": "Rekenkundig type",
+      "options": [
+        {
+          "label": "Optellen"
+        },
+        {
+          "label": "Aftrekken"
+        },
+        {
+          "label": "Vermenigvuldigen"
+        },
+        {
+          "label": "Delen"
+        }
+      ]
     },
     {
-      "label":"User interface translations",
-      "fields":[
+      "label": "Equation type",
+      "options": [
         {
-          "label":"Scoring during quiz",
-          "default":"Score:"
+          "label": "Basic [ 3x = 12 ]"
         },
         {
-          "label":"Time",
-          "default":"Time: @time"
+          "label": "Intermediate [ 4x - 3 = 13 ]"
         },
         {
-          "label":"Result page header",
-          "default":"Finished!"
+          "label": "Advanced [ 5x + 3 = 3x + 15 ]"
+        }
+      ]
+    },
+    {
+      "label": "Enable fractions",
+      "description": "Enable to allow fractions in equations."
+    },
+    {
+      "label": "Max aantal vragen"
+    },
+    {
+      "label": "Gebruikers interface vertalingen",
+      "fields": [
+        {
+          "label": "Score tijdens de quiz",
+          "default": "Score:"
         },
         {
-          "label":"Go label",
-          "default":"GO!"
+          "label": "Tijd",
+          "default": "Tijd: @time"
         },
         {
-          "label":"Start button label",
-          "default":"Start"
+          "label": "Kop resultaten pagina",
+          "default": "Beëindigd!"
         },
         {
-          "label":"Tekst van de Opnieuw proberen knop",
-          "default":"Opnieuw proberen"
+          "label": "Start label",
+          "default": "Start!"
         },
         {
-          "label":"Readspeaker text for correct answer",
-          "default":"Juist"
+          "label": "Startknop label",
+          "default": "Start"
         },
         {
-          "label":"Readspeaker text for incorrect answer",
-          "default":"Incorrect. Correct answer was :num"
+          "label": "Tekst van de Opnieuw proberen knop",
+          "default": "Opnieuw proberen"
         },
         {
-          "label":"Readspeaker label for the timer",
-          "default":"Duration in hours, minutes and seconds."
+          "label": "Readspeaker tekst voor het juiste antwoord",
+          "default": "Juist"
         },
         {
-          "label":"Readspeaker text for question",
-          "default":"What does :arithmetic equal?"
+          "label": "Readspeaker tekst voor het foute antwoord",
+          "default": "Fout. Het juiste antwoord was :num"
         },
         {
-          "label":"Plus operator text",
-          "default":"plus"
+          "label": "Readspeaker label voor de timer",
+          "default": "voortgang in uren, minuten en seconden."
         },
         {
-          "label":"Subtraction operator text",
-          "default":"minus"
+          "label": "Readspeaker tekst voor de vraag",
+          "default": "Wat is :rekenkundige gelijkheid?"
         },
         {
-          "label":"Multiplication operator text",
-          "default":"times"
+          "label": "Readspeaker text for equation question",
+          "default": "For the equation :equation, what does :item equal?"
         },
         {
-          "label":"Division operator text",
-          "default":"divided by"
+          "label": "Readspeaker text for equation variable",
+          "default": "What does :item equal?"
         },
         {
-          "label":"Slide number text",
-          "description":"Announces current slide and total number of slides, variables are :num and :total",
-          "default":"Slide :num of :total"
+          "label": "Plusteken tekst",
+          "default": "plus"
+        },
+        {
+          "label": "Minteken tekst",
+          "default": "min"
+        },
+        {
+          "label": "Maalteken tekst",
+          "default": "maal"
+        },
+        {
+          "label": "Deelteken tekst",
+          "default": "gedeeld door"
+        },
+        {
+          "label": "Equality sign text",
+          "default": "equals"
+        },
+        {
+          "label": "Dia nummer tekst",
+          "description": "Geeft het nummer van de huidige slide en het totaal aantal slides aan, variabelen zijn :num en :total",
+          "default": "Dia :num van :total"
         }
       ]
     }

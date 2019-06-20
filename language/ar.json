@@ -1,93 +1,133 @@
 {
-  "semantics":[
+  "semantics": [
     {
-      "label":"Intro",
-      "description":"The intro text (maximum 100 characters)"
+      "label": "مقدمة",
+      "description": "نص المقدمة (بحد أقصى 100 محرف)"
     },
     {
-      "label":"Arithmetic type",
-      "options":[
+      "label": "Quiz type",
+      "options": [
         {
-          "label":"Addition"
+          "label": "Arithmetic Operations Quiz"
         },
         {
-          "label":"Subtraction"
-        },
-        {
-          "label":"Multiplication"
-        },
-        {
-          "label":"Division"
+          "label": "Linear Equations Quiz"
         }
-      ],
-      "default":"addition"
+      ]
     },
     {
-      "label":"Max number of questions"
+      "label": "نوع الحساب",
+      "options": [
+        {
+          "label": "إضافة"
+        },
+        {
+          "label": "طرح"
+        },
+        {
+          "label": "ضرب"
+        },
+        {
+          "label": "قسمة"
+        }
+      ]
     },
     {
-      "label":"User interface translations",
-      "fields":[
+      "label": "Equation type",
+      "options": [
         {
-          "label":"Scoring during quiz",
-          "default":"Score:"
+          "label": "Basic [ 3x = 12 ]"
         },
         {
-          "label":"Time",
-          "default":"Time: @time"
+          "label": "Intermediate [ 4x - 3 = 13 ]"
         },
         {
-          "label":"Result page header",
-          "default":"Finished!"
+          "label": "Advanced [ 5x + 3 = 3x + 15 ]"
+        }
+      ]
+    },
+    {
+      "label": "Enable fractions",
+      "description": "Enable to allow fractions in equations."
+    },
+    {
+      "label": "العدد الاعظمي للأسئلة"
+    },
+    {
+      "label": "ترجمة واجهة المستخدم",
+      "fields": [
+        {
+          "label": "التسجيل خلال الاختبار",
+          "default": "Score:"
         },
         {
-          "label":"Go label",
-          "default":"GO!"
+          "label": "الوقت",
+          "default": "Time: @time"
         },
         {
-          "label":"Start button label",
-          "default":"Start"
+          "label": "ترويسة صفحة النتيجة",
+          "default": "Finished!"
         },
         {
-          "label":"تسمية زر إعادة المحاولة",
-          "default":"إعادة المحاولة"
+          "label": "اذهب الى الللافتة",
+          "default": "GO!"
         },
         {
-          "label":"النص Readspeaker عن الإجابة الصحيحة",
-          "default":"صحيح"
+          "label": "لافتة زر البدء",
+          "default": "Start"
         },
         {
-          "label":"النص Readspeaker للإجابة غير صحيحة",
-          "default":"Incorrect. Correct answer was :num"
+          "label": "لافتة زر اعادة المحاولة",
+          "default": "Retry"
         },
         {
-          "label":"Readspeaker label for the timer",
-          "default":"Duration in hours, minutes and seconds."
+          "label": "تحويل النص الى  كلام من اجل الاجابة الصحيحة",
+          "default": "Correct"
         },
         {
-          "label":"Readspeaker text for question",
-          "default":"What does :arithmetic equal?"
+          "label": "تحويل النص الى كلام من اجل الاجابة الخاطئة",
+          "default": "Incorrect. Correct answer was :num"
         },
         {
-          "label":"Plus operator text",
-          "default":"plus"
+          "label": "لافتة النص المحول الى كلام من اجل المؤقت",
+          "default": "Duration in hours, minutes and seconds."
         },
         {
-          "label":"Subtraction operator text",
-          "default":"minus"
+          "label": "لافتة النص المحول الى كلام من اجل السؤال ",
+          "default": "What does :arithmetic equal?"
         },
         {
-          "label":"Multiplication operator text",
-          "default":"times"
+          "label": "Readspeaker text for equation question",
+          "default": "For the equation :equation, what does :item equal?"
         },
         {
-          "label":"Division operator text",
-          "default":"divided by"
+          "label": "Readspeaker text for equation variable",
+          "default": "What does :item equal?"
         },
         {
-          "label":"النص رقم الشريحة",
-          "description":"تعلن الشريحة الحالية وعدد من الشرائح، والمتغيرات :num و:total",
-          "default":"الشريحة :num أو :total"
+          "label": "نص المعامل +",
+          "default": "plus"
+        },
+        {
+          "label": "نص المعامل -",
+          "default": "minus"
+        },
+        {
+          "label": "نص معامل الضرب",
+          "default": "times"
+        },
+        {
+          "label": "نص نعامل القسمة",
+          "default": "divided by"
+        },
+        {
+          "label": "Equality sign text",
+          "default": "equals"
+        },
+        {
+          "label": "نص رقم الشريحة",
+          "description": "تعلن عن الشريحة الحالية والعدد الإجمالي للشرائح ، والمتغيرات هي: num و: total",
+          "default": "Slide :num of :total"
         }
       ]
     }
