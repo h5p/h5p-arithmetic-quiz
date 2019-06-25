@@ -5,13 +5,13 @@
       "description": "Johdantoteksti (Max 100 merkkiä)"
     },
     {
-      "label": "Quiz type",
+      "label": "Tentin tyyppi",
       "options": [
         {
-          "label": "Arithmetic Operations Quiz"
+          "label": "Aritmeettisten operaatioiden tentti"
         },
         {
-          "label": "Linear Equations Quiz"
+          "label": "Lineaaristen yhtälöiden tentti"
         }
       ]
     },
@@ -33,22 +33,22 @@
       ]
     },
     {
-      "label": "Equation type",
+      "label": "Yhtälötyyppi",
       "options": [
         {
-          "label": "Basic [ 3x = 12 ]"
+          "label": "Yksinkertainen [ 3x = 12 ]"
         },
         {
-          "label": "Intermediate [ 4x - 3 = 13 ]"
+          "label": "Keskitasoinen [ 4x - 3 = 13 ]"
         },
         {
-          "label": "Advanced [ 5x + 3 = 3x + 15 ]"
+          "label": "Edistynyt [ 5x + 3 = 3x + 15 ]"
         }
       ]
     },
     {
-      "label": "Enable fractions",
-      "description": "Enable to allow fractions in equations."
+      "label": "Salli murtoluvut",
+      "description": "Aseta päälle salliaksesi murtoluvut yhtälöissä."
     },
     {
       "label": "Kysymyksien enimmäismäärä"
@@ -121,8 +121,8 @@
           "default": "jaettuna"
         },
         {
-          "label": "Equality sign text",
-          "default": "equals"
+          "label": "Yhtäsuuri-merkin teksti ",
+          "default": "on yhtä suuri kuin"
         },
         {
           "label": "Sivunumeron teksti",
