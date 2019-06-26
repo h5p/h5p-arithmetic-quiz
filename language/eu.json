@@ -5,18 +5,18 @@
       "description": "Sarrerako testua (gehienez 100 karaktere)"
     },
     {
-      "label": "Quiz type",
+      "label": "Galdetegi mota",
       "options": [
         {
-          "label": "Arithmetic Operations Quiz"
+          "label": "Eragiketa aritmetikoen galdetegia"
         },
         {
-          "label": "Linear Equations Quiz"
+          "label": "Ekuazio linealen galdetegia"
         }
       ]
     },
     {
-      "label": "Eragiketa aritmetikoa",
+      "label": "Eragiketa aritmetiko mota",
       "options": [
         {
           "label": "Batuketa"
@@ -33,22 +33,22 @@
       ]
     },
     {
-      "label": "Equation type",
+      "label": "Ekuazio mota",
       "options": [
         {
-          "label": "Basic [ 3x = 12 ]"
+          "label": "Oinarrizkoa [ 3x = 12 ]"
         },
         {
-          "label": "Intermediate [ 4x - 3 = 13 ]"
+          "label": "Ertaina [ 4x - 3 = 13 ]"
         },
         {
-          "label": "Advanced [ 5x + 3 = 3x + 15 ]"
+          "label": "Aurreratua [ 5x + 3 = 3x + 15 ]"
         }
       ]
     },
     {
-      "label": "Enable fractions",
-      "description": "Enable to allow fractions in equations."
+      "label": "Gaitu zatikiak",
+      "description": "Gaitu ezazu ekuazioetan zatikiak baimentzeko."
     },
     {
       "label": "Gehienezko galdera kopurua"
@@ -97,12 +97,12 @@
           "default": "Zer egiten du :aritmetikoki berdina?"
         },
         {
-          "label": "Readspeaker text for equation question",
-          "default": "For the equation :equation, what does :item equal?"
+          "label": "Irakurgailuetarako testua ekuazio-galderetan",
+          "default": ":equation ekuaziorako, zein da :item aldagaiaren emaitza?"
         },
         {
-          "label": "Readspeaker text for equation variable",
-          "default": "What does :item equal?"
+          "label": "Irakurgailuetarako testua ekuazio-aldagaietarako",
+          "default": "Zein da :item aldagaiaren emaitza?"
         },
         {
           "label": "Batuketaren eragilearen testua",
@@ -121,8 +121,8 @@
           "default": "zati"
         },
         {
-          "label": "Equality sign text",
-          "default": "equals"
+          "label": "Berdinketaren testu-zeinua",
+          "default": "berdin"
         },
         {
           "label": "Diapositiba zenbakiaren testua",
