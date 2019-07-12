@@ -5,13 +5,13 @@
       "description": "Le texte d'introduction (maximum 100 caractères)"
     },
     {
-      "label": "Quiz type",
+      "label": "Type du quiz",
       "options": [
         {
-          "label": "Arithmetic Operations Quiz"
+          "label": "Quiz d'opérations arithmétiques"
         },
         {
-          "label": "Linear Equations Quiz"
+          "label": "Quiz d'équations linéaires"
         }
       ]
     },
@@ -33,22 +33,22 @@
       ]
     },
     {
-      "label": "Equation type",
+      "label": "Type d'équation",
       "options": [
         {
-          "label": "Basic [ 3x = 12 ]"
+          "label": "Basique [ 3x = 12 ]"
         },
         {
-          "label": "Intermediate [ 4x - 3 = 13 ]"
+          "label": "Intermédiaire [ 4x - 3 = 13 ]"
         },
         {
-          "label": "Advanced [ 5x + 3 = 3x + 15 ]"
+          "label": "Avancée [ 5x + 3 = 3x + 15 ]"
         }
       ]
     },
     {
-      "label": "Enable fractions",
-      "description": "Enable to allow fractions in equations."
+      "label": "Activer les fractions",
+      "description": "Aurotiser les fractions dans les équations."
     },
     {
       "label": "Nombre maximum de questions"
@@ -97,12 +97,12 @@
           "default": "Combien font :arithmetic ?"
         },
         {
-          "label": "Readspeaker text for equation question",
-          "default": "For the equation :equation, what does :item equal?"
+          "label": "Texte de l'orateur pour la question de l'équation",
+          "default": "Pour cette équation :equation, combien vaut :item?"
         },
         {
-          "label": "Readspeaker text for equation variable",
-          "default": "What does :item equal?"
+          "label": "Texte de l'orateur pour une variable de l'équation",
+          "default": "Combien vaut :item?"
         },
         {
           "label": "Texte pour le signe de l'addition",
@@ -121,8 +121,8 @@
           "default": "divisé par"
         },
         {
-          "label": "Equality sign text",
-          "default": "equals"
+          "label": "Texte pour le signe de l'égalité",
+          "default": "Egal"
         },
         {
           "label": "Texte du numéro de diapositive",
