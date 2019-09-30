@@ -357,9 +357,10 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, QuizType) {
       // both old and new score
       this.$scoreWidget.attr('aria-busy', true);
       this.scoreElement.innerHTML = score;
+      // timeout has to be long enough that odometer has time to transition
       setTimeout(function () {
         self.$scoreWidget.attr('aria-busy', false);
-      }, 1);
+      }, 500);
     };
   }
 
@@ -471,14 +472,19 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, QuizType) {
       }
     };
 
-    this.announce = function(text) {
+    this.announce = function (text) {
       self.$liveRegion = $('<div>', {
         'class': 'h5p-baq-live-feedback',
         'aria-live': 'assertive',
         'width': '1px',
         'height': '1px',
-        html: text
       }).appendTo(document.body.lastChild);
+
+      // Readspeaker needs a small delay after creating the aria live field
+      // in order to pick up the change
+      setTimeout(function () {
+        self.$liveRegion.text(text);
+      }.bind(this), 100);
     };
 
 
