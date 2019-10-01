@@ -484,7 +484,7 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, QuizType) {
       // in order to pick up the change
       setTimeout(function () {
         self.$liveRegion.text(text);
-      }.bind(this), 100);
+      }, 100);
     };
 
 

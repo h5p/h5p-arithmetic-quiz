@@ -42,7 +42,16 @@ H5P.ArithmeticQuiz.ResultPage = (function ($, UI) {
     });
 
     this.$time = $('<div>', {
-      'class': 'h5p-baq-result-page-time'
+      'class': 'h5p-baq-result-page-time',
+      'aria-hidden': true,
+    }).appendTo(this.$scoreStatus);
+
+    /**
+     * Note: Wee need a separate assistive technology field for time beecause
+     * some readers are not able to interpret the duration format of <time>
+     */
+    this.$ariaTime = $('<div>', {
+      'class': 'hidden-but-read',
     }).appendTo(this.$scoreStatus);
 
     UI.createButton({
@@ -50,7 +59,7 @@ H5P.ArithmeticQuiz.ResultPage = (function ($, UI) {
       'class': 'mq-control-button',
       click: function () {
         self.trigger('retry');
-        self.update(0, 0);
+        self.update(0, '00:00');
         self.scoreBar.reset();
       }
     }).appendTo(this.$feedbackContainer);
@@ -71,6 +80,7 @@ H5P.ArithmeticQuiz.ResultPage = (function ($, UI) {
 
     /**
      * Get score as a string
+     * @param {Number} score Current score
      * @return {String} Score string
      */
     this.getReadableScore = function (score) {
@@ -78,19 +88,29 @@ H5P.ArithmeticQuiz.ResultPage = (function ($, UI) {
     };
 
     /**
+     * Get readable time
+     * @param {String} time Current time in the format: "minutes:seconds"
+     * @returns {*|void|string|null}
+     */
+    this.getReadableTime = function (time) {
+      return t.time.replace('@time', time.replace(':', ', '));
+    };
+
+    /**
      * Announce result page info
+     * @param {Number} score Current score
+     * @param {String} time Current time in the format: "minutes:seconds"
      */
     this.announce = function (score, time) {
       let text = t.resultPageHeader + ' ';
       text +=  this.getReadableScore(score) + '. ';
-      time = time.replace(':', ', ');
-      text += t.time.replace('@time', time);
+      text += this.getReadableTime(time);
 
       // Readspeaker needs a small delay after creating the aria live field
       // in order to pick up the change
       setTimeout(function () {
         self.$resultAnnouncer.text(text);
-      }.bind(this), 100);
+      }, 100);
     };
 
     /**
@@ -105,6 +125,7 @@ H5P.ArithmeticQuiz.ResultPage = (function ($, UI) {
       const dateTime = 'PT' + minutes + 'M' + seconds + 'S';
       const timeHtml = '<time datetime="' + dateTime + '">' + time + '</time>';
       this.$time.html(H5P.ArithmeticQuiz.tReplace(t.time, {time: timeHtml}));
+      this.$ariaTime.html(this.getReadableTime(time));
       this.scoreBar.setScore(score);
       this.$ariaScoreBar.text(this.getReadableScore(score));
 
