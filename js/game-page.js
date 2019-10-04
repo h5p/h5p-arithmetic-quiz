@@ -144,6 +144,8 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, QuizType) {
     this.timer.reset();
     this.$gamepage.find('.reveal-wrong').removeClass('reveal-wrong');
     this.$gamepage.find('.reveal-correct').removeClass('reveal-correct');
+    this.$gamepage.find('.h5p-baq-alternatives .h5p-joubelui-button')
+      .attr('aria-checked', 'false');
     this.$gamepage.addClass('counting-down');
     this.countdownWidget.restart();
     this.$gamepage.find('.h5p-joubelui-button:first-child, .h5p-joubelui-button:last-child').attr('tabindex', 0);
@@ -388,6 +390,7 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, QuizType) {
       if (self.correct) {
         self.announce(t.correctText);
       }
+      self.$button.attr('aria-checked', 'true');
       self.trigger('answered');
       setTimeout(self.dropLive, 500);
       event.preventDefault();
@@ -399,6 +402,7 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, QuizType) {
       'role': 'radio',
       'tabindex': -1,
       'text': number,
+      'aria-checked': 'false',
       'on': {
         'keydown': function (event) {
           if (self.$button.is('.reveal-correct, .reveal-wrong')) {
