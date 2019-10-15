@@ -267,6 +267,7 @@
 }
 .h5p-baq-result-page-feedback {
   height: 100%;
+  width: 100%;
   display: table-cell;
   vertical-align: middle;
 }
@@ -285,3 +286,13 @@
   border: none;
   background: pink;
 }*/
+
+.h5p-baq-game .hidden-but-read,
+.h5p-baq-live-feedback {
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}

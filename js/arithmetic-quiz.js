@@ -131,9 +131,9 @@ H5P.ArithmeticQuiz = (function ($) {
    * Replaces placeholders in translatables texts
    *
    * @static
-   * @param  {type} text description
-   * @param  {type} vars description
-   * @return {type}      description
+   * @param  {String} text description
+   * @param  {Object} vars description
+   * @return {String}      description
    */
   ArithmeticQuiz.tReplace = function (text, vars) {
     for (var placeholder in vars) {
