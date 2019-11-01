@@ -144,6 +144,8 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, QuizType) {
     this.timer.reset();
     this.$gamepage.find('.reveal-wrong').removeClass('reveal-wrong');
     this.$gamepage.find('.reveal-correct').removeClass('reveal-correct');
+    this.$gamepage.find('.h5p-baq-alternatives .h5p-joubelui-button')
+      .attr('aria-checked', 'false');
     this.$gamepage.addClass('counting-down');
     this.countdownWidget.restart();
     this.$gamepage.find('.h5p-joubelui-button:first-child, .h5p-joubelui-button:last-child').attr('tabindex', 0);
@@ -357,9 +359,10 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, QuizType) {
       // both old and new score
       this.$scoreWidget.attr('aria-busy', true);
       this.scoreElement.innerHTML = score;
+      // timeout has to be long enough that odometer has time to transition
       setTimeout(function () {
         self.$scoreWidget.attr('aria-busy', false);
-      }, 1);
+      }, 500);
     };
   }
 
@@ -387,6 +390,7 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, QuizType) {
       if (self.correct) {
         self.announce(t.correctText);
       }
+      self.$button.attr('aria-checked', 'true');
       self.trigger('answered');
       setTimeout(self.dropLive, 500);
       event.preventDefault();
@@ -398,6 +402,7 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, QuizType) {
       'role': 'radio',
       'tabindex': -1,
       'text': number,
+      'aria-checked': 'false',
       'on': {
         'keydown': function (event) {
           if (self.$button.is('.reveal-correct, .reveal-wrong')) {
@@ -471,14 +476,19 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, QuizType) {
       }
     };
 
-    this.announce = function(text) {
+    this.announce = function (text) {
       self.$liveRegion = $('<div>', {
         'class': 'h5p-baq-live-feedback',
         'aria-live': 'assertive',
         'width': '1px',
         'height': '1px',
-        html: text
       }).appendTo(document.body.lastChild);
+
+      // Readspeaker needs a small delay after creating the aria live field
+      // in order to pick up the change
+      setTimeout(function () {
+        self.$liveRegion.text(text);
+      }, 100);
     };
 
 

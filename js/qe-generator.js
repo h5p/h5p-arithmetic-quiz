@@ -15,14 +15,17 @@ H5P.ArithmeticQuiz.EquationsGenerator = (function (EquationType) {
     return question.correct - param;
   }
 
-  function randomNum (min = 1, max = 7) {
+  function randomNum (min, max) {
+    min = min || 1;
+    max = max || 7;
+
     // Creates random number between min and max:
     var num = Math.floor(Math.random()*(max-min+1)+min);
     if (num === 0) {
       num = randomNum(min, max);
     }
     return num;
-  } 
+  }
   function multiply (question, param) {
     if (Math.random() > 0.5) {
       return (question.x+param) * question.y;
@@ -40,7 +43,7 @@ H5P.ArithmeticQuiz.EquationsGenerator = (function (EquationType) {
     }
   }
 
-  // 
+  //
   /**
    * Do a random operation on equation expression
    * @method randomOperation
@@ -90,7 +93,7 @@ H5P.ArithmeticQuiz.EquationsGenerator = (function (EquationType) {
     var solution = undefined;
     var number1 = undefined;
     var operations = undefined;
-    
+
     number1 = randomNum();
 
     if (useFractions === true) {
@@ -168,7 +171,7 @@ H5P.ArithmeticQuiz.EquationsGenerator = (function (EquationType) {
       while (question.alternatives.length !== 5) {
         equation = generateEquation(question.variable, question.type, equationType, useFractions);
         var solution = equation.solveFor(question.variable).toString();
-        
+
         // check if alternative is present already and is not the correct one
         if (solution !== question.correct && question.alternatives.indexOf(solution) === -1) {
           question.alternatives.push(solution);
@@ -217,7 +220,7 @@ H5P.ArithmeticQuiz.EquationsGenerator = (function (EquationType) {
     self.get = function () {
       return questions;
     };
-    
+
   }
 
   EquationsGenerator.prototype.readableQuestion = function (translations, readableSigns, question) {
@@ -227,7 +230,7 @@ H5P.ArithmeticQuiz.EquationsGenerator = (function (EquationType) {
   };
 
   EquationsGenerator.prototype.readableText = function (question) {
-    return question.textual;      
+    return question.textual;
   };
 
   return EquationsGenerator;
