@@ -1,133 +1,133 @@
 {
   "semantics": [
     {
-      "label": "Intro",
-      "description": "The intro text (maximum 100 characters)"
+      "label": "Вступление",
+      "description": "Текст вступления (макс. 100 символов)"
     },
     {
-      "label": "Quiz type",
+      "label": "Тип теста",
       "options": [
         {
-          "label": "Arithmetic Operations Quiz"
+          "label": "Арифметический тест"
         },
         {
-          "label": "Linear Equations Quiz"
+          "label": "Тест линейных уравнений"
         }
       ]
     },
     {
-      "label": "Arithmetic type",
+      "label": "тип уравнения",
       "options": [
         {
-          "label": "Addition"
+          "label": "Сложение"
         },
         {
-          "label": "Subtraction"
+          "label": "Вычитание"
         },
         {
-          "label": "Multiplication"
+          "label": "Умножение"
         },
         {
-          "label": "Division"
+          "label": "Деление"
         }
       ]
     },
     {
-      "label": "Equation type",
+      "label": "Тип уравнения",
       "options": [
         {
-          "label": "Basic [ 3x = 12 ]"
+          "label": "Начальный [ 3x = 12 ]"
         },
         {
-          "label": "Intermediate [ 4x - 3 = 13 ]"
+          "label": "Средний [ 4x - 3 = 13 ]"
         },
         {
-          "label": "Advanced [ 5x + 3 = 3x + 15 ]"
+          "label": "Продвинутый [ 5x + 3 = 3x + 15 ]"
         }
       ]
     },
     {
-      "label": "Enable fractions",
-      "description": "Enable to allow fractions in equations."
+      "label": "Разрешить дроби",
+      "description": "Разрешить использование дробей в уравнении."
     },
     {
-      "label": "Max number of questions"
+      "label": "Максимальное количество вопросов"
     },
     {
-      "label": "User interface translations",
+      "label": "Перевод интерфейса пользователя",
       "fields": [
         {
-          "label": "Scoring during quiz",
-          "default": "Score:"
+          "label": "Подсчёт баллов во время теста",
+          "default": "Баллы:"
         },
         {
-          "label": "Time",
-          "default": "Time: @time"
+          "label": "Время",
+          "default": "Время: @time"
         },
         {
-          "label": "Result page header",
-          "default": "Finished!"
+          "label": "Заголовок страницы результатов",
+          "default": "Готово!"
         },
         {
-          "label": "Go label",
-          "default": "GO!"
+          "label": "Ярлык старта",
+          "default": "Старт!"
         },
         {
-          "label": "Start button label",
-          "default": "Start"
+          "label": "Название кнопки начала",
+          "default": "Начать"
         },
         {
-          "label": "Retry button label",
-          "default": "Retry"
+          "label": "Название кнопки повторить",
+          "default": "Повторить"
         },
         {
-          "label": "Readspeaker text for correct answer",
-          "default": "Correct"
+          "label": "Текст правильного ответа для ассистирующих технологии",
+          "default": "Правильный ответ"
         },
         {
-          "label": "Readspeaker text for incorrect answer",
-          "default": "Incorrect. Correct answer was :num"
+          "label": "Текст неправильного ответа для ассистирующих технологии",
+          "default": "Неправильно. Правильный ответ :num"
         },
         {
-          "label": "Readspeaker label for the timer",
-          "default": "Duration in hours, minutes and seconds."
+          "label": "Название таймера для ассистирующих технологии",
+          "default": "Продолжительность в часах, минутах, секундах."
         },
         {
-          "label": "Readspeaker text for question",
-          "default": "What does :arithmetic equal?"
+          "label": "Текст вопроса для ассистирующих технологии",
+          "default": "Чему равняется :arithmetic ?"
         },
         {
-          "label": "Readspeaker text for equation question",
-          "default": "For the equation :equation, what does :item equal?"
+          "label": "Вопрос уравнения для ассистирующих технологии",
+          "default": "В уравнении :equation, чему :item равняется?"
         },
         {
-          "label": "Readspeaker text for equation variable",
-          "default": "What does :item equal?"
+          "label": "Текст переменной уравнения для ассистирующих технологии",
+          "default": "Чему равняется :item?"
         },
         {
-          "label": "Plus operator text",
-          "default": "plus"
+          "label": "Текст оператора сложения",
+          "default": "плюс"
         },
         {
-          "label": "Subtraction operator text",
-          "default": "minus"
+          "label": "Текст оператора вычитания",
+          "default": "минус"
         },
         {
-          "label": "Multiplication operator text",
-          "default": "times"
+          "label": "Текст оператора умножения",
+          "default": "умножить"
         },
         {
-          "label": "Division operator text",
-          "default": "divided by"
+          "label": "Текст оператора деления",
+          "default": "разделить на"
         },
         {
-          "label": "Equality sign text",
-          "default": "equals"
+          "label": "Текст знака уравнения",
+          "default": "равняется"
         },
         {
-          "label": "Slide number text",
-          "description": "Announces current slide and total number of slides, variables are :num and :total",
-          "default": "Slide :num of :total"
+          "label": "Текст номера слайда",
+          "description": "Объявляет текущий слайд и общее количество слайдов, переменные :num и :total",
+          "default": "Слайд :num из :total"
         }
       ]
     }
