@@ -1,133 +1,133 @@
 {
   "semantics": [
     {
-      "label": "Intro",
-      "description": "The intro text (maximum 100 characters)"
+      "label": "Úvod",
+      "description": "Úvodní text (maximum 100 znaků)"
     },
     {
-      "label": "Quiz type",
+      "label": "Typ testu",
       "options": [
         {
-          "label": "Arithmetic Operations Quiz"
+          "label": "Test aritmetických operací"
         },
         {
-          "label": "Linear Equations Quiz"
+          "label": "Test lineárních rovnic"
         }
       ]
     },
     {
-      "label": "Arithmetic type",
+      "label": "Aritmetický typ",
       "options": [
         {
-          "label": "Addition"
+          "label": "Sčítání"
         },
         {
-          "label": "Subtraction"
+          "label": "Odčítání"
         },
         {
-          "label": "Multiplication"
+          "label": "Násobení"
         },
         {
-          "label": "Division"
+          "label": "Dělení"
         }
       ]
     },
     {
-      "label": "Equation type",
+      "label": "Typ rovnice",
       "options": [
         {
-          "label": "Basic [ 3x = 12 ]"
+          "label": "Základní [ 3x = 12 ]"
         },
         {
-          "label": "Intermediate [ 4x - 3 = 13 ]"
+          "label": "Střední [ 4x - 3 = 13 ]"
         },
         {
-          "label": "Advanced [ 5x + 3 = 3x + 15 ]"
+          "label": "Pokročilá [ 5x + 3 = 3x + 15 ]"
         }
       ]
     },
     {
-      "label": "Enable fractions",
-      "description": "Enable to allow fractions in equations."
+      "label": "Povolit zlomek",
+      "description": "Povolit  zlomky v rovnici."
     },
     {
-      "label": "Max number of questions"
+      "label": "Maximální počet otázek"
     },
     {
-      "label": "User interface translations",
+      "label": "Překlady uživatelského rozhraní",
       "fields": [
         {
-          "label": "Scoring during quiz",
-          "default": "Score:"
+          "label": "Bodování během testu",
+          "default": "Skóre:"
         },
         {
-          "label": "Time",
-          "default": "Time: @time"
+          "label": "Čas",
+          "default": "Čas: @time"
         },
         {
-          "label": "Result page header",
-          "default": "Finished!"
+          "label": "Záhlaví stránky s výsledkem",
+          "default": "Hotovo!"
         },
         {
-          "label": "Go label",
-          "default": "GO!"
+          "label": "Popisek zahájení",
+          "default": "Začít!"
         },
         {
-          "label": "Start button label",
+          "label": "Popisek tlačítka Start",
           "default": "Start"
         },
         {
-          "label": "Retry button label",
-          "default": "Retry"
+          "label": "Popisek tlačítka opakovat",
+          "default": "Opakovat"
         },
         {
-          "label": "Readspeaker text for correct answer",
-          "default": "Correct"
+          "label": "Text čtečteciho zařízení pro správnou odpověď",
+          "default": "Správně"
         },
         {
-          "label": "Readspeaker text for incorrect answer",
-          "default": "Incorrect. Correct answer was :num"
+          "label": "Text čtečteciho zařízení pro nesprávnou odpověďr",
+          "default": "Nesprávně. Správná odpověď je :num"
         },
         {
-          "label": "Readspeaker label for the timer",
-          "default": "Duration in hours, minutes and seconds."
+          "label": "Popisek čtecího zařízení pro časovač",
+          "default": "Doba trvání v hodinách, minutách a sekundách."
         },
         {
-          "label": "Readspeaker text for question",
-          "default": "What does :arithmetic equal?"
+          "label": "Text čtečteciho zařízení pro otázku",
+          "default": "Čemu se :arithmetic rovná?"
         },
         {
-          "label": "Readspeaker text for equation question",
-          "default": "For the equation :equation, what does :item equal?"
+          "label": "Čtení textu pro otázku rovnice",
+          "default": "Co platí pro rovnici :equation, čemu :item  se rovná?"
         },
         {
-          "label": "Readspeaker text for equation variable",
-          "default": "What does :item equal?"
+          "label": "Text pro čtení pro proměnnou rovnice",
+          "default": "Čemu se :item  rovná?"
         },
         {
-          "label": "Plus operator text",
+          "label": "Text operátora pro sčítání",
           "default": "plus"
         },
         {
-          "label": "Subtraction operator text",
-          "default": "minus"
+          "label": "Text operátora pro odčítání",
+          "default": "mínus"
         },
         {
-          "label": "Multiplication operator text",
-          "default": "times"
+          "label": "Text operátora pro násobení",
+          "default": "krát"
         },
         {
-          "label": "Division operator text",
-          "default": "divided by"
+          "label": "Text operátora pro dělení",
+          "default": "děleno"
         },
         {
-          "label": "Equality sign text",
-          "default": "equals"
+          "label": "Text operátora pro rovnítko",
+          "default": "se rovná"
         },
         {
-          "label": "Slide number text",
-          "description": "Announces current slide and total number of slides, variables are :num and :total",
-          "default": "Slide :num of :total"
+          "label": "Text čísla snímku",
+          "description": "Oznamuje aktuální snímek a celkový počet snímků, proměnné jsou :num a :total",
+          "default": "List :num z celkem :total"
         }
       ]
     }
