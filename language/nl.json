@@ -8,10 +8,10 @@
       "label": "Quiz type",
       "options": [
         {
-          "label": "Arithmetic Operations Quiz"
+          "label": "Rekenkundige Bewerkingen Quiz"
         },
         {
-          "label": "Linear Equations Quiz"
+          "label": "Lineaire Vergelijkingen Quiz"
         }
       ]
     },
@@ -33,28 +33,28 @@
       ]
     },
     {
-      "label": "Equation type",
+      "label": "Vergelijkingstype",
       "options": [
         {
-          "label": "Basic [ 3x = 12 ]"
+          "label": "Eenvoudig [ 3x = 12 ]"
         },
         {
-          "label": "Intermediate [ 4x - 3 = 13 ]"
+          "label": "Gemiddeld [ 4x - 3 = 13 ]"
         },
         {
-          "label": "Advanced [ 5x + 3 = 3x + 15 ]"
+          "label": "Moeilijk [ 5x + 3 = 3x + 15 ]"
         }
       ]
     },
     {
-      "label": "Enable fractions",
-      "description": "Enable to allow fractions in equations."
+      "label": "Breuken inschakelen",
+      "description": "Inschakelen om breuken in vergelijkingen toe te staan."
     },
     {
       "label": "Max aantal vragen"
     },
     {
-      "label": "Gebruikers interface vertalingen",
+      "label": "Gebruikersinterface vertalingen",
       "fields": [
         {
           "label": "Score tijdens de quiz",
@@ -86,7 +86,7 @@
         },
         {
           "label": "Readspeaker tekst voor het foute antwoord",
-          "default": "Fout. Het juiste antwoord was :num"
+          "default": "Onjuist. Het juiste antwoord was :num"
         },
         {
           "label": "Readspeaker label voor de timer",
@@ -94,15 +94,15 @@
         },
         {
           "label": "Readspeaker tekst voor de vraag",
-          "default": "Wat is :rekenkundige gelijkheid?"
+          "default": "Waaraan is :rekenkundige gelijk?"
         },
         {
-          "label": "Readspeaker text for equation question",
-          "default": "For the equation :equation, what does :item equal?"
+          "label": "Readspeaker tekst voor vergelijkingsvraag",
+          "default": "Voor de vergelijking :equation, waaraan is :item gelijk?"
         },
         {
-          "label": "Readspeaker text for equation variable",
-          "default": "What does :item equal?"
+          "label": "Readspeaker tekst voor vergelijkingsvariabele",
+          "default": "Waaraan is :item gelijk?"
         },
         {
           "label": "Plusteken tekst",
@@ -121,12 +121,12 @@
           "default": "gedeeld door"
         },
         {
-          "label": "Equality sign text",
-          "default": "equals"
+          "label": "Is gelijk aan tekst",
+          "default": "is gelijk aan"
         },
         {
           "label": "Dia nummer tekst",
-          "description": "Geeft het nummer van de huidige slide en het totaal aantal slides aan, variabelen zijn :num en :total",
+          "description": "Geeft het nummer van de huidige dia en het totaal aantal dia's aan, variabelen zijn :num en :total",
           "default": "Dia :num van :total"
         }
       ]
