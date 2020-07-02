@@ -1,133 +1,133 @@
 {
   "semantics": [
     {
-      "label": "Intro",
-      "description": "The intro text (maximum 100 characters)"
+      "label": "Introdução",
+      "description": "Texto introdutório (máximo 100 caracteres)"
     },
     {
-      "label": "Quiz type",
+      "label": "Tipo de teste",9
       "options": [
         {
-          "label": "Arithmetic Operations Quiz"
+          "label": "Teste de Operações Aritméticas"
         },
         {
-          "label": "Linear Equations Quiz"
+          "label": "Teste de Equações Lineares"
         }
       ]
     },
     {
-      "label": "Arithmetic type",
+      "label": "Tipo de operação aritmética",
       "options": [
         {
-          "label": "Addition"
+          "label": "Adição"
         },
         {
-          "label": "Subtraction"
+          "label": "Subtração"
         },
         {
-          "label": "Multiplication"
+          "label": "Multiplicação"
         },
         {
-          "label": "Division"
+          "label": "Divisão"
         }
       ]
     },
     {
-      "label": "Equation type",
+      "label": "Tipo de equação",
       "options": [
         {
-          "label": "Basic [ 3x = 12 ]"
+          "label": "Básica [ 3x = 12 ]"
         },
         {
-          "label": "Intermediate [ 4x - 3 = 13 ]"
+          "label": "Intermédia [ 4x - 3 = 13 ]"
         },
         {
-          "label": "Advanced [ 5x + 3 = 3x + 15 ]"
+          "label": "Avançada [ 5x + 3 = 3x + 15 ]"
         }
       ]
     },
     {
-      "label": "Enable fractions",
-      "description": "Enable to allow fractions in equations."
+      "label": "Permitir frações",
+      "description": "Ative esta opção para permitir frações nas equações."
     },
     {
-      "label": "Max number of questions"
+      "label": "Número máximo de perguntas"
     },
     {
-      "label": "User interface translations",
+      "label": "Traduções da interface de utilizador",
       "fields": [
         {
-          "label": "Scoring during quiz",
-          "default": "Score:"
+          "label": "Pontuação no teste",
+          "default": "Pontuação:"
         },
         {
-          "label": "Time",
-          "default": "Time: @time"
+          "label": "Tempo",
+          "default": "Tempo: @time"
         },
         {
-          "label": "Result page header",
-          "default": "Finished!"
+          "label": "Cabeçalho da página do resultado",
+          "default": "Terminado!"
         },
         {
-          "label": "Go label",
-          "default": "GO!"
+          "label": "Rótulo do botão Começar",
+          "default": "Começar!"
         },
         {
-          "label": "Start button label",
-          "default": "Start"
+          "label": "Rótulo do botão Iniciar",
+          "default": "Iniciar"
         },
         {
-          "label": "Retry button label",
-          "default": "Retry"
+          "label": "Rótulo do botão Tentar novamente",
+          "default": "Tentar novamente"
         },
         {
-          "label": "Readspeaker text for correct answer",
-          "default": "Correct"
+          "label": "Texto do leitor de ecrã para resposta correta",
+          "default": "Correta"
         },
         {
-          "label": "Readspeaker text for incorrect answer",
-          "default": "Incorrect. Correct answer was :num"
+          "label": "Texto do leitor de ecrã para resposta incorreta",
+          "default": "Incorreta. A resposta correta é :num"
         },
         {
-          "label": "Readspeaker label for the timer",
-          "default": "Duration in hours, minutes and seconds."
+          "label": "Rótulo do leitor de ecrã para o temporizador",
+          "default": "Duração em horas, minutos e segundos."
         },
         {
-          "label": "Readspeaker text for question",
-          "default": "What does :arithmetic equal?"
+          "label": "Texto do leitor de ecrã para pergunta",
+          "default": "Qual é o resultado de :arithmetic?"
         },
         {
-          "label": "Readspeaker text for equation question",
-          "default": "For the equation :equation, what does :item equal?"
+          "label": "Texto leitor de ecrã para a pergunta da equação",
+          "default": "Para a equação :equation, qual é o valor de :item?"
         },
         {
-          "label": "Readspeaker text for equation variable",
-          "default": "What does :item equal?"
+          "label": "Texto do leitor de ecrã para variável da equação",
+          "default": "Qual o valor de :item?"
         },
         {
-          "label": "Plus operator text",
-          "default": "plus"
+          "label": "Texto do operador da adição",
+          "default": "mais"
         },
         {
-          "label": "Subtraction operator text",
-          "default": "minus"
+          "label": "Texto do operador da subtração",
+          "default": "menos"
         },
         {
-          "label": "Multiplication operator text",
-          "default": "times"
+          "label": "Texto do operador da multiplicação",
+          "default": "vezes"
         },
         {
-          "label": "Division operator text",
-          "default": "divided by"
+          "label": "Texto do operador da divisão",
+          "default": "a dividir por"
         },
         {
-          "label": "Equality sign text",
-          "default": "equals"
+          "label": "Texto do operador de igual",
+          "default": "é igual a"
         },
         {
-          "label": "Slide number text",
-          "description": "Announces current slide and total number of slides, variables are :num and :total",
-          "default": "Slide :num of :total"
+          "label": "Texto do número do slide",
+          "description": "Mostra o slide atual e o número total de slides. As variáveis são :num e :total",
+          "default": "Slide :num de :total"
         }
       ]
     }
