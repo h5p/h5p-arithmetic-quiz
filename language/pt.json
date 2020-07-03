@@ -5,7 +5,7 @@
       "description": "Texto introdutório (máximo 100 caracteres)"
     },
     {
-      "label": "Tipo de teste",9
+      "label": "Tipo de teste",
       "options": [
         {
           "label": "Teste de Operações Aritméticas"
