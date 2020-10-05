@@ -1,133 +1,133 @@
 {
   "semantics": [
     {
-      "label": "Intro",
-      "description": "The intro text (maximum 100 characters)"
+      "label": "소개",
+      "description": "소개 텍스트 (최대 100자)"
     },
     {
-      "label": "Quiz type",
+      "label": "퀴즈 타입",
       "options": [
         {
-          "label": "Arithmetic Operations Quiz"
+          "label": "계산 퀴즈"
         },
         {
-          "label": "Linear Equations Quiz"
+          "label": "방정식 퀴즈"
         }
       ]
     },
     {
-      "label": "Arithmetic type",
+      "label": "산수 유형",
       "options": [
         {
-          "label": "Addition"
+          "label": "덧셈"
         },
         {
-          "label": "Subtraction"
+          "label": "뺄셈"
         },
         {
-          "label": "Multiplication"
+          "label": "곱셈"
         },
         {
-          "label": "Division"
+          "label": "나눗셈"
         }
       ]
     },
     {
-      "label": "Equation type",
+      "label": "방정식 유형",
       "options": [
         {
-          "label": "Basic [ 3x = 12 ]"
+          "label": "기본 [ 3x = 12 ]"
         },
         {
-          "label": "Intermediate [ 4x - 3 = 13 ]"
+          "label": "중급 [ 4x - 3 = 13 ]"
         },
         {
-          "label": "Advanced [ 5x + 3 = 3x + 15 ]"
+          "label": "고급 [ 5x + 3 = 3x + 15 ]"
         }
       ]
     },
     {
-      "label": "Enable fractions",
-      "description": "Enable to allow fractions in equations."
+      "label": "분수 활성화",
+      "description": "방정식에서 분수 활성화."
     },
     {
-      "label": "Max number of questions"
+      "label": "최대 질문 수"
     },
     {
-      "label": "User interface translations",
+      "label": "사용자 인터페이스 변환",
       "fields": [
         {
-          "label": "Scoring during quiz",
-          "default": "Score:"
+          "label": "퀴즈 중에 점수 매기기",
+          "default": "점수:"
         },
         {
-          "label": "Time",
-          "default": "Time: @time"
+          "label": "시간",
+          "default": "시간: @time"
         },
         {
-          "label": "Result page header",
-          "default": "Finished!"
+          "label": "결과 페이지 헤더",
+          "default": "완료!"
         },
         {
-          "label": "Go label",
-          "default": "GO!"
+          "label": "출발 라벨",
+          "default": "출발!"
         },
         {
-          "label": "Start button label",
-          "default": "Start"
+          "label": "시작 버튼 라벨",
+          "default": "시작"
         },
         {
-          "label": "Retry button label",
-          "default": "Retry"
+          "label": "재시도 버튼 라벨",
+          "default": "재시도"
         },
         {
-          "label": "Readspeaker text for correct answer",
-          "default": "Correct"
+          "label": "정답에 대한 자동 읽어주기 텍스트",
+          "default": "정답"
         },
         {
-          "label": "Readspeaker text for incorrect answer",
-          "default": "Incorrect. Correct answer was :num"
+          "label": "오답에 대한 자동 읽어주기 텍스트",
+          "default": "오답. 정답은 :num 입니다."
         },
         {
-          "label": "Readspeaker label for the timer",
-          "default": "Duration in hours, minutes and seconds."
+          "label": "시간에 대한 자동읽어주기 텍스트",
+          "default": "시간, 분, 초로 걸린 기간."
         },
         {
-          "label": "Readspeaker text for question",
-          "default": "What does :arithmetic equal?"
+          "label": "문제에 대한 자동읽어주기 텍스트",
+          "default": ":arithmetic 계산의 답은?"
         },
         {
-          "label": "Readspeaker text for equation question",
-          "default": "For the equation :equation, what does :item equal?"
+          "label": "방정식에 대한 자동읽어주기 텍스트",
+          "default": "방정식 :equation 에 대해 :item 의 답은?"
         },
         {
-          "label": "Readspeaker text for equation variable",
-          "default": "What does :item equal?"
+          "label": "방정식 변수에 대한 자동읽어주기 텍스트",
+          "default": ":item 답은?"
         },
         {
-          "label": "Plus operator text",
-          "default": "plus"
+          "label": "더하기 텍스트",
+          "default": "플러스"
         },
         {
-          "label": "Subtraction operator text",
-          "default": "minus"
+          "label": "빼기 텍스트",
+          "default": "빼기"
         },
         {
-          "label": "Multiplication operator text",
-          "default": "times"
+          "label": "곱하기 텍스트",
+          "default": "곱하기"
         },
         {
-          "label": "Division operator text",
-          "default": "divided by"
+          "label": "나누기 텍스트",
+          "default": "나누기"
         },
         {
-          "label": "Equality sign text",
-          "default": "equals"
+          "label": "이퀄 사인",
+          "default": "이퀄"
         },
         {
-          "label": "Slide number text",
-          "description": "Announces current slide and total number of slides, variables are :num and :total",
-          "default": "Slide :num of :total"
+          "label": "슬라이드 번호 텍스트",
+          "description": "현재 슬라이드와 총 슬라이드 수 알림, 변수는 :num 및 :total",
+          "default": "총 :total 중 :num"
         }
       ]
     }
