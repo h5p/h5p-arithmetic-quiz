@@ -82,11 +82,11 @@
         },
         {
           "label": "Text, den ein Vorlesewerkzeug bei einer richtigen Antwort vorliest (Barrierefreiheit)",
-          "default": "Richtig!"
+          "default": "Richtig"
         },
         {
           "label": "Text, den ein Vorlesewerkzeug bei einer falschen Antwort vorliest (Barrierefreiheit)",
-          "default": "Falsch! Die richtige Antwort wäre :num."
+          "default": "Falsch. Die richtige Antwort wäre :num."
         },
         {
           "label": "Text, den ein Vorlesewerkzeug für den Timer vorliest (Barrierefreiheit)",
