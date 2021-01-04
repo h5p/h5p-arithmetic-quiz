@@ -5,13 +5,13 @@
       "description": "Уводен текст (максимално 100 символа)"
     },
     {
-      "label": "Quiz type",
+      "label": "Тип на теста",
       "options": [
         {
-          "label": "Arithmetic Operations Quiz"
+          "label": "Тест за аритметични операции"
         },
         {
-          "label": "Linear Equations Quiz"
+          "label": "Тест за линейни уравнения"
         }
       ]
     },
@@ -33,22 +33,22 @@
       ]
     },
     {
-      "label": "Equation type",
+      "label": "Тип на уравнението",
       "options": [
         {
-          "label": "Basic [ 3x = 12 ]"
+          "label": "Основно ниво на трудност [ 3x = 12 ]"
         },
         {
-          "label": "Intermediate [ 4x - 3 = 13 ]"
+          "label": "Средно ниво на трудност [ 4x - 3 = 13 ]"
         },
         {
-          "label": "Advanced [ 5x + 3 = 3x + 15 ]"
+          "label": "Ниво за напреднали [ 5x + 3 = 3x + 15 ]"
         }
       ]
     },
     {
-      "label": "Enable fractions",
-      "description": "Enable to allow fractions in equations."
+      "label": "Активиране на дроби",
+      "description": "Активирайте, за да разрешите дробите в уравнения."
     },
     {
       "label": "Максимален брой въпроси"
@@ -94,11 +94,11 @@
         },
         {
           "label": "Текст за преглед на въпроса",
-          "default": "What does :arithmetic equal?"
+          "default": "Какво е: равно в аритметиката?"
         },
         {
-          "label": "Readspeaker text for equation question",
-          "default": "For the equation :equation, what does :item equal?"
+          "label": "Прочетете текста на лектора на въпроса за уравнението",
+          "default": "За уравнението: уравнение, какво означава: един елемент да е равен на?"
         },
         {
           "label": "Readspeaker text for equation variable",
