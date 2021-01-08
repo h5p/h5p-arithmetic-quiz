@@ -81,27 +81,27 @@
           "default": "נסו שוב"
         },
         {
-          "label": "Readspeaker text for correct answer",
+          "label": "תוכן קורא מסך עבור תשובה נכונה",
           "default": "נכון"
         },
         {
-          "label": "Readspeaker text for incorrect answer",
+          "label": "תוכן קורא מסך עבור תשובה לא נכונה",
           "default": "לא נכון. התשובה הנכונה היא :num"
         },
         {
-          "label": "Readspeaker label for the timer",
+          "label": "תווית readspeaker עבור הטיימר",
           "default": "משך בשעות, דקות ושניות."
         },
         {
-          "label": "Readspeaker text for question",
+          "label": "תוכן readspeaker עבור שאלה",
           "default": "כמה זה :arithmetic שווה?"
         },
         {
-          "label": "Readspeaker text for equation question",
+          "label": "תוכן readspeaker עבור שאלת משוואה",
           "default": "עבור המשוואה :equation, מהו :item?"
         },
         {
-          "label": "Readspeaker text for equation variable",
+          "label": "תוכן readspeaker למשתנה במשוואה",
           "default": "מהו :item ?"
         },
         {
@@ -126,7 +126,7 @@
         },
         {
           "label": "תאור מספר עמוד",
-          "description": "Announces current slide and total number of slides, variables are :num and :total",
+          "description": "מודיע על השקופית הנוכחית ועל המספר הכולל של שקופיות, משתנים הם :num ו- :total",
           "default": "עמוד :num מתוך :total"
         }
       ]
