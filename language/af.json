@@ -1,133 +1,133 @@
 {
   "semantics": [
     {
-      "label": "Intro",
-      "description": "The intro text (maximum 100 characters)"
+      "label": "Inleiding",
+      "description": "Inleidingteks (maksimum 100 karakters)"
     },
     {
-      "label": "Quiz type",
+      "label": "Vasvraetipe",
       "options": [
         {
-          "label": "Arithmetic Operations Quiz"
+          "label": "Wiskundige bewerkings vasvrae"
         },
         {
-          "label": "Linear Equations Quiz"
+          "label": "Liniêre vergelykingsvasvrae"
         }
       ]
     },
     {
-      "label": "Arithmetic type",
+      "label": "Rekenkundige soort",
       "options": [
         {
-          "label": "Addition"
+          "label": "Optel"
         },
         {
-          "label": "Subtraction"
+          "label": "Aftrek"
         },
         {
-          "label": "Multiplication"
+          "label": "Vermenigvuldiging"
         },
         {
-          "label": "Division"
+          "label": "Deel"
         }
       ]
     },
     {
-      "label": "Equation type",
+      "label": "Vergelyking tipe",
       "options": [
         {
-          "label": "Basic [ 3x = 12 ]"
+          "label": "Basies [ 3x = 12 ]"
         },
         {
-          "label": "Intermediate [ 4x - 3 = 13 ]"
+          "label": "Intermediêr [ 4x - 3 = 13 ]"
         },
         {
-          "label": "Advanced [ 5x + 3 = 3x + 15 ]"
+          "label": "Gevorderd [ 5x + 3 = 3x + 15 ]"
         }
       ]
     },
     {
-      "label": "Enable fractions",
-      "description": "Enable to allow fractions in equations."
+      "label": "Aktiveer breuke",
+      "description": "Aktiveer om breuke in vergelykings toe te laat."
     },
     {
-      "label": "Max number of questions"
+      "label": "Maksimum aantal vrae"
     },
     {
-      "label": "User interface translations",
+      "label": "Gebruikers paneelbord vertalings",
       "fields": [
         {
-          "label": "Scoring during quiz",
-          "default": "Score:"
+          "label": "Telling tydens vasvrae",
+          "default": "Telling:"
         },
         {
-          "label": "Time",
-          "default": "Time: @time"
+          "label": "Tyd",
+          "default": "Tyd: @time"
         },
         {
-          "label": "Result page header",
-          "default": "Finished!"
+          "label": "Uitslae bladsyopskrif",
+          "default": "Klaar!"
         },
         {
-          "label": "Go label",
-          "default": "GO!"
+          "label": "Gaan etiket",
+          "default": "BEGIN!"
         },
         {
-          "label": "Start button label",
-          "default": "Start"
+          "label": "Beginknoppie etiket",
+          "default": "Begin"
         },
         {
-          "label": "Retry button label",
-          "default": "Retry"
+          "label": "Probeer weer knoppie etiket",
+          "default": "Probeer weer"
         },
         {
-          "label": "Readspeaker text for correct answer",
-          "default": "Correct"
+          "label": "Spreekleserteks vir regte antwoord",
+          "default": "Reg"
         },
         {
-          "label": "Readspeaker text for incorrect answer",
-          "default": "Incorrect. Correct answer was :num"
+          "label": "Spreekleserteks vir verkeerde antwoord",
+          "default": "Verkeerd. Die regte antwoord was :num"
         },
         {
-          "label": "Readspeaker label for the timer",
-          "default": "Duration in hours, minutes and seconds."
+          "label": "Spreekleseretiket vir die stophorlosie",
+          "default": "Tydsduur in ure, minute en sekondes."
         },
         {
-          "label": "Readspeaker text for question",
-          "default": "What does :arithmetic equal?"
+          "label": "Spreekleserteks vir vraag",
+          "default": "Waaraan is :arithmetic gelyk aan?"
         },
         {
-          "label": "Readspeaker text for equation question",
-          "default": "For the equation :equation, what does :item equal?"
+          "label": "Spreekleserteks vir vergelykingvraag",
+          "default": "Vir die vergelyking :equation, waaraan is :item gelyk aan?"
         },
         {
-          "label": "Readspeaker text for equation variable",
-          "default": "What does :item equal?"
+          "label": "Spreekleserteks vir vergelykingveranderlike",
+          "default": "Waaraan is :item gelyk aan?"
         },
         {
-          "label": "Plus operator text",
+          "label": "Optel operateurteks",
           "default": "plus"
         },
         {
-          "label": "Subtraction operator text",
+          "label": "Aftrek operateur teks",
           "default": "minus"
         },
         {
-          "label": "Multiplication operator text",
-          "default": "times"
+          "label": "Maal operateurteks",
+          "default": "maal"
         },
         {
-          "label": "Division operator text",
-          "default": "divided by"
+          "label": "Deel operateurteks",
+          "default": "gedeel deur"
         },
         {
-          "label": "Equality sign text",
-          "default": "equals"
+          "label": "Gelykaan tekenteks",
+          "default": "gelyk aan"
         },
         {
-          "label": "Slide number text",
-          "description": "Announces current slide and total number of slides, variables are :num and :total",
-          "default": "Slide :num of :total"
+          "label": "Skyfienommer teks",
+          "description": "Maak huidige skyfie en totale aantal skyfies bekend, veranderlikes is :num en :total",
+          "default": "Slide :num van :total"
         }
       ]
     }
