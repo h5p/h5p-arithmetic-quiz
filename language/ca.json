@@ -1,133 +1,133 @@
 {
   "semantics": [
     {
-      "label": "Intro",
-      "description": "The intro text (maximum 100 characters)"
+      "label": "Introducció",
+      "description": "El text d’introducció (màxim 100 caràcters)"
     },
     {
-      "label": "Quiz type",
+      "label": "Tipus de qüestionari",
       "options": [
         {
-          "label": "Arithmetic Operations Quiz"
+          "label": "Qüestionari d’operacions aritmètiques"
         },
         {
-          "label": "Linear Equations Quiz"
+          "label": "Qüestionari d’equacions lineals"
         }
       ]
     },
     {
-      "label": "Arithmetic type",
+      "label": "Tipus d’aritmètica",
       "options": [
         {
-          "label": "Addition"
+          "label": "Suma"
         },
         {
-          "label": "Subtraction"
+          "label": "Resta"
         },
         {
-          "label": "Multiplication"
+          "label": "Multiplicació"
         },
         {
-          "label": "Division"
+          "label": "Divisió"
         }
       ]
     },
     {
-      "label": "Equation type",
+      "label": "Tipus d’equació",
       "options": [
         {
           "label": "Basic [ 3x = 12 ]"
         },
         {
-          "label": "Intermediate [ 4x - 3 = 13 ]"
+          "label": "Intermedi [4x - 3 = 13]"
         },
         {
-          "label": "Advanced [ 5x + 3 = 3x + 15 ]"
+          "label": "Avançat [ 5x + 3 = 3x + 15 ]"
         }
       ]
     },
     {
-      "label": "Enable fractions",
-      "description": "Enable to allow fractions in equations."
+      "label": "Activa les fraccions",
+      "description": "Activa per permetre fraccions en equacions."
     },
     {
-      "label": "Max number of questions"
+      "label": "Nombre màxim de preguntes"
     },
     {
-      "label": "User interface translations",
+      "label": "Traduccions de la interfície d’usuari",
       "fields": [
         {
-          "label": "Scoring during quiz",
-          "default": "Score:"
+          "label": "Puntuació durant el qüestionari",
+          "default": "Puntuació:"
         },
         {
-          "label": "Time",
-          "default": "Time: @time"
+          "label": "Temps",
+          "default": "Temps: @time"
         },
         {
-          "label": "Result page header",
-          "default": "Finished!"
+          "label": "Encapçalament de la pàgina de resultats",
+          "default": "Heu acabat!"
         },
         {
-          "label": "Go label",
-          "default": "GO!"
+          "label": "Etiqueta Endavant!",
+          "default": "ENDAVANT!"
         },
         {
-          "label": "Start button label",
-          "default": "Start"
+          "label": "Inicia button label",
+          "default": "Inicia"
         },
         {
           "label": "Etiqueta del botó \"Tornar-ho a provar\"",
           "default": "Tornar-ho a provar"
         },
         {
-          "label": "Readspeaker text for correct answer",
-          "default": "Correcte"
+          "label": "Text de l’altaveu de lectura per a una resposta correcta",
+          "default": "Correctee"
         },
         {
-          "label": "Readspeaker text for incorrect answer",
-          "default": "Incorrect. Correct answer was :num"
+          "label": "Text de l’altaveu de lectura per a una resposta incorrecta",
+          "default": "Incorrect. Correcte answer was :num"
         },
         {
-          "label": "Readspeaker label for the timer",
-          "default": "Duration in hours, minutes and seconds."
+          "label": "Etiqueta de l’altaveu de lectura per al temporitzador",
+          "default": "Durada en hores, minuts i segons."
         },
         {
-          "label": "Readspeaker text for question",
-          "default": "What does :arithmetic equal?"
+          "label": "Text de l’altaveu de lectura per a una pregunta",
+          "default": "Quin és el resultat de :arithmetic?"
         },
         {
-          "label": "Readspeaker text for equation question",
-          "default": "For the equation :equation, what does :item equal?"
+          "label": "Text de l’altaveu de lectura per a una pregunta d’equació",
+          "default": "A l’equació :equation, què representa :item?"
         },
         {
-          "label": "Readspeaker text for equation variable",
-          "default": "What does :item equal?"
+          "label": "Text de l’altaveu de lectura per a una variable d’equació",
+          "default": "Quin és el resultat de :item?"
         },
         {
-          "label": "Plus operator text",
-          "default": "plus"
+          "label": "Text de l’operador més",
+          "default": "més"
         },
         {
-          "label": "Subtraction operator text",
-          "default": "minus"
+          "label": "Resta operator text",
+          "default": "menys"
         },
         {
-          "label": "Multiplication operator text",
-          "default": "times"
+          "label": "Text de l’operador de multiplicació",
+          "default": "vegades"
         },
         {
-          "label": "Division operator text",
-          "default": "divided by"
+          "label": "Text de l’operador de divisió",
+          "default": "dividit per"
         },
         {
-          "label": "Equality sign text",
-          "default": "equals"
+          "label": "Text del signe igual",
+          "default": "igual"
         },
         {
-          "label": "Slide number text",
-          "description": "Announces current slide and total number of slides, variables are :num and :total",
-          "default": "Slide :num of :total"
+          "label": "Text del número de diapositiva",
+          "description": "Anuncia la diapositiva actual i el nombre total de diapositives, les variables són :num i :total",
+          "default": "Diapositiva :num de :total"
         }
       ]
     }
