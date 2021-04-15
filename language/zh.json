@@ -1,28 +1,28 @@
 {
   "semantics": [
     {
-      "label": "測驗說明",
-      "description": "關於測驗的說明文字（不可超過 100 字元）"
+      "label": "测验说明",
+      "description": "关于测验的说明文字（不超过 100 个字符）"
     },
     {
-      "label": "Quiz type",
+      "label": "测验类型",
       "options": [
         {
-          "label": "Arithmetic Operations Quiz"
+          "label": "算术运算测验"
         },
         {
-          "label": "Linear Equations Quiz"
+          "label": "线性方程"
         }
       ]
     },
     {
-      "label": "算術類型",
+      "label": "算术类型",
       "options": [
         {
           "label": "加法"
         },
         {
-          "label": "減法"
+          "label": "减法"
         },
         {
           "label": "乘法"
@@ -33,101 +33,101 @@
       ]
     },
     {
-      "label": "Equation type",
+      "label": "方程式",
       "options": [
         {
-          "label": "Basic [ 3x = 12 ]"
+          "label": "初级 [ 3x = 12 ]"
         },
         {
-          "label": "Intermediate [ 4x - 3 = 13 ]"
+          "label": "中级 [ 4x - 3 = 13 ]"
         },
         {
-          "label": "Advanced [ 5x + 3 = 3x + 15 ]"
+          "label": "高级 [ 5x + 3 = 3x + 15 ]"
         }
       ]
     },
     {
-      "label": "Enable fractions",
-      "description": "Enable to allow fractions in equations."
+      "label": "启用分数",
+      "description": "允许在方程式中使用分数。"
     },
     {
-      "label": "題目數"
+      "label": "最大允许题目数"
     },
     {
-      "label": "用戶介面",
+      "label": "用户界面翻译",
       "fields": [
         {
-          "label": "測驗期間計分",
+          "label": "测验期间显示分数",
           "default": "得分："
         },
         {
-          "label": "測驗經過時間",
-          "default": "時間：@time"
+          "label": "测验耗时",
+          "default": "时间：@time"
         },
         {
-          "label": "測驗結果頁面標題",
-          "default": "測驗結束！"
+          "label": "测验结果页面标题",
+          "default": "测验结束！"
         },
         {
-          "label": "測驗開始說明文字",
-          "default": "開始！"
+          "label": "测验开始说明文字",
+          "default": "开始！"
         },
         {
-          "label": "進入測驗按鈕文字",
-          "default": "進入測驗"
+          "label": "测验开始按钮上的文字",
+          "default": "开始测验"
         },
         {
-          "label": "重新測驗按鈕文字",
-          "default": "重新測驗"
+          "label": "重新测验按钮文字",
+          "default": "重新测验"
         },
         {
-          "label": "報讀器正碇答案文本",
-          "default": "答案正確"
+          "label": "正确答案的读屏工具文本",
+          "default": "答案正确"
         },
         {
-          "label": "報讀器錯誤答案文本",
-          "default": "答案不正確，正解為 :num"
+          "label": "错误答案的读屏工具文本",
+          "default": "答案错误，正确答案是： :num"
         },
         {
-          "label": "報讀器經過時間文本",
-          "default": "Duration in hours, minutes and seconds."
+          "label": "测验耗时的读屏工具文本",
+          "default": "测验耗时以小时，分钟和秒为单位表示。"
         },
         {
-          "label": "報讀器題目文本",
-          "default": "What does :arithmetic equal?"
+          "label": "题目的读屏工具文本",
+          "default": ":arithmetic 等于什么？"
         },
         {
-          "label": "Readspeaker text for equation question",
-          "default": "For the equation :equation, what does :item equal?"
+          "label": "方程类问题的读屏工具文本",
+          "default": "对于这个方程 :equation, :item 等于什么？"
         },
         {
-          "label": "Readspeaker text for equation variable",
-          "default": "What does :item equal?"
+          "label": "方程变量的读屏工具文本",
+          "default": ":item 等于什么?"
         },
         {
-          "label": "報讀器算術符號文本-加",
-          "default": "plus"
+          "label": "加号的读屏工具文本",
+          "default": "加"
         },
         {
-          "label": "報讀器算術符號文本-減",
-          "default": "minus"
+          "label": "减号的读屏工具文本",
+          "default": "减"
         },
         {
-          "label": "報讀器算術符號文本-乘",
-          "default": "times"
+          "label": "乘号的读屏文具文本",
+          "default": "乘"
         },
         {
-          "label": "報讀器算術符號文本-除",
-          "default": "divided by"
+          "label": "除号的读屏工具文本",
+          "default": "除以"
         },
         {
-          "label": "Equality sign text",
-          "default": "equals"
+          "label": "等号的文字",
+          "default": "等于"
         },
         {
-          "label": "題號顯示方式",
-          "description": "在頁面上顯示目前題號與總題數，分別用變數 :num 與 :total 表示。",
-          "default": "目前為第 :num 題，共 :total 題。"
+          "label": "题号显示方式",
+          "description": "在页面上显示当前题号和总题数，分別用变量 :num 与 :total 表示",
+          "default": "目前为第 :num 题，共 :total 題"
         }
       ]
     }
