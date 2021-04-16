@@ -33,13 +33,13 @@
       ]
     },
     {
-      "label": "Equation type",
+      "label": "İşlem Türü",
       "options": [
         {
-          "label": "Basic [ 3x = 12 ]"
+          "label": "Kural [ 3x? = 12 ]"
         },
         {
-          "label": "Intermediate [ 4x - 3 = 13 ]"
+          "label": "Orta seviye [ 4x - 3 = 13 ]"
         },
         {
           "label": "Advanced [ 5x + 3 = 3x + 15 ]"

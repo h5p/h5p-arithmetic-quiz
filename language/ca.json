@@ -36,7 +36,7 @@
       "label": "Tipus d’equació",
       "options": [
         {
-          "label": "Basic [ 3x = 12 ]"
+          "label": "Bàsic [ 3x = 12 ]"
         },
         {
           "label": "Intermedi [4x - 3 = 13]"
@@ -73,7 +73,7 @@
           "default": "ENDAVANT!"
         },
         {
-          "label": "Inicia button label",
+          "label": "Etiqueta per al botó d'inici",
           "default": "Inicia"
         },
         {
@@ -86,7 +86,7 @@
         },
         {
           "label": "Text de l’altaveu de lectura per a una resposta incorrecta",
-          "default": "Incorrect. Correcte answer was :num"
+          "default": "Incorrecte. La resposta correcta era :num"
         },
         {
           "label": "Etiqueta de l’altaveu de lectura per al temporitzador",
@@ -105,11 +105,11 @@
           "default": "Quin és el resultat de :item?"
         },
         {
-          "label": "Text de l’operador més",
+          "label": "Text de l’operador de suma",
           "default": "més"
         },
         {
-          "label": "Resta operator text",
+          "label": "Test de l'operador de resta",
           "default": "menys"
         },
         {
