@@ -48,7 +48,7 @@
     },
     {
       "label": "Povolit zlomek",
-      "description": "Povolit  zlomky v rovnici."
+      "description": "Povolit zlomky v rovnici."
     },
     {
       "label": "Maximální počet otázek"
@@ -81,11 +81,11 @@
           "default": "Opakovat"
         },
         {
-          "label": "Text čtečteciho zařízení pro správnou odpověď",
+          "label": "Text čtecího zařízení pro správnou odpověď",
           "default": "Správně"
         },
         {
-          "label": "Text čtečteciho zařízení pro nesprávnou odpověďr",
+          "label": "Text čtecího zařízení pro nesprávnou odpověď",
           "default": "Nesprávně. Správná odpověď je :num"
         },
         {
@@ -93,16 +93,16 @@
           "default": "Doba trvání v hodinách, minutách a sekundách."
         },
         {
-          "label": "Text čtečteciho zařízení pro otázku",
+          "label": "Text čtecího zařízení pro otázku",
           "default": "Čemu se :arithmetic rovná?"
         },
         {
-          "label": "Čtení textu pro otázku rovnice",
-          "default": "Co platí pro rovnici :equation, čemu :item  se rovná?"
+          "label": "Text čtecího zařízení pro otázku rovnice",
+          "default": "Co platí pro rovnici :equation, čemu :item se rovná?"
         },
         {
-          "label": "Text pro čtení pro proměnnou rovnice",
-          "default": "Čemu se :item  rovná?"
+          "label": "Text čtecího zařízení pro proměnnou rovnice",
+          "default": "Čemu se :item rovná?"
         },
         {
           "label": "Text operátora pro sčítání",
