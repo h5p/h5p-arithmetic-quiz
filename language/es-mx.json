@@ -82,7 +82,7 @@
         },
         {
           "label": "Texto de Lector en voz alta para respuesta correcta",
-          "default": "Correcta"
+          "default": "Correcto"
         },
         {
           "label": "Texto de Lector en voz alta para respuesta incorrecta",
