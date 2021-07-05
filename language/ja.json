@@ -1,60 +1,60 @@
 {
   "semantics": [
     {
-      "label": "Intro",
-      "description": "The intro text (maximum 100 characters)"
+      "label": "紹介",
+      "description": "紹介文 (最大100語)"
     },
     {
-      "label": "Quiz type",
+      "label": "小問タイプ",
       "options": [
         {
-          "label": "Arithmetic Operations Quiz"
+          "label": "算術計算問題"
         },
         {
-          "label": "Linear Equations Quiz"
+          "label": "線形方程式問題"
         }
       ]
     },
     {
-      "label": "Arithmetic type",
+      "label": "算術演算子",
       "options": [
         {
-          "label": "Addition"
+          "label": "足し算"
         },
         {
-          "label": "Subtraction"
+          "label": "引き算"
         },
         {
-          "label": "Multiplication"
+          "label": "掛け算"
         },
         {
-          "label": "Division"
+          "label": "割り算"
         }
       ]
     },
     {
-      "label": "Equation type",
+      "label": "数式の型",
       "options": [
         {
-          "label": "Basic [ 3x = 12 ]"
+          "label": "基本 [ 3x = 12 ]"
         },
         {
-          "label": "Intermediate [ 4x - 3 = 13 ]"
+          "label": "中程度 [ 4x - 3 = 13 ]"
         },
         {
-          "label": "Advanced [ 5x + 3 = 3x + 15 ]"
+          "label": "高度 [ 5x + 3 = 3x + 15 ]"
         }
       ]
     },
     {
-      "label": "Enable fractions",
-      "description": "Enable to allow fractions in equations."
+      "label": "分数を含められる",
+      "description": "方程式に分数を含められる."
     },
     {
-      "label": "Max number of questions"
+      "label": "最大問題数"
     },
     {
-      "label": "User interface translations",
+      "label": "UIの翻訳言語",
       "fields": [
         {
           "label": "Scoring during quiz",
