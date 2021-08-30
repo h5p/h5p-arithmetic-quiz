@@ -47,7 +47,7 @@ H5P.ArithmeticQuiz.ResultPage = (function ($, UI) {
     }).appendTo(this.$scoreStatus);
 
     /**
-     * Note: Wee need a separate assistive technology field for time beecause
+     * Note: We need a separate assistive technology field for time because
      * some readers are not able to interpret the duration format of <time>
      */
     this.$ariaTime = $('<div>', {
