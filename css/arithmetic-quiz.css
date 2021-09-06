@@ -37,7 +37,7 @@
 .h5p-baq-game {
   display: table-cell;
 }
-/* Don not show progress when igniting or when showing results*/
+/* Do not show progress when igniting or when showing results*/
 .h5p-baq-game.counting-down .h5p-joubelui-progressbar,
 .h5p-baq-game.result-page .h5p-joubelui-progressbar {
   visibility: hidden;
