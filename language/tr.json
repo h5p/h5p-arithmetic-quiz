@@ -2,16 +2,16 @@
   "semantics": [
     {
       "label": "Giriş",
-      "description": "Giriş metni (mmaksimum 100 karakter)"
+      "description": "Giriş metni (maksimum 100 karakter)"
     },
     {
-      "label": "Quiz type",
+      "label": "Sınav tipi",
       "options": [
         {
-          "label": "Arithmetic Operations Quiz"
+          "label": "Aritmetik İşlemler Sınavı"
         },
         {
-          "label": "Linear Equations Quiz"
+          "label": "Doğrusal Denklemler Sınavı"
         }
       ]
     },
@@ -33,22 +33,22 @@
       ]
     },
     {
-      "label": "İşlem Türü",
+      "label": "Denklem Türü",
       "options": [
         {
-          "label": "Kural [ 3x? = 12 ]"
+          "label": "Basit [ 3x? = 12 ]"
         },
         {
-          "label": "Orta seviye [ 4x - 3 = 13 ]"
+          "label": "Orta Seviye [ 4x - 3 = 13]"
         },
         {
-          "label": "Advanced [ 5x + 3 = 3x + 15 ]"
+          "label": "Gelişmiş [ 5x + 3 = 3x + 15 ]"
         }
       ]
     },
     {
-      "label": "Enable fractions",
-      "description": "Enable to allow fractions in equations."
+      "label": "Kesirleri etkinleştir",
+      "description": "Denklemlerde kesirlere izin vermeyi etkinleştirin."
     },
     {
       "label": "Maksimum soru sayısı"
@@ -57,7 +57,7 @@
       "label": "Kullanıcı arayüzü çevirileri",
       "fields": [
         {
-          "label": "Quiz sırasında puanlama",
+          "label": "Sınav sırasıda puanlama",
           "default": "Puan:"
         },
         {
@@ -73,36 +73,36 @@
           "default": "BAŞLA!"
         },
         {
-          "label": "Başlatma butonu etiketi",
+          "label": "Başlatma düğmesi etiketi",
           "default": "Başlat"
         },
         {
-          "label": "Yeniden dene buton etiketi",
-          "default": "Yeniden dene"
+          "label": "Yeniden dene düğmesi etiketi",
+          "default": "Yeniden Dene"
         },
         {
-          "label": "Doğru cevap için sesli okuyucu (yardımcı teknolojiler) metni",
+          "label": "Doğru cevap için sesli okuyucu metni (yardımcı teknolojiler)",
           "default": "Doğru"
         },
         {
-          "label": "Yanlış cevap için sesli okuyucu (yardımcı teknolojiler) metni",
+          "label": "Yanlış cevap için sesli okuyucu metni (yardımcı teknolojiler)",
           "default": "Yanlış. Doğru cevap :num"
         },
         {
-          "label": "Zamanlayıcı için sesli okuyucu (yardımcı teknolojiler) etiketi",
+          "label": "Zamanlayıcı için sesli okuyucu etiketi (yardımcı teknolojiler)",
           "default": "Saat, dakika ve saniye cinsinden süre."
         },
         {
-          "label": "Soru için sesli okuyucu (yardımcı teknolojiler) metni",
+          "label": "Soru için sesli okuyucu metni (yardımcı teknolojiler)",
           "default": ":arithmetic kaça eşittir?"
         },
         {
-          "label": "Readspeaker text for equation question",
-          "default": "For the equation :equation, what does :item equal?"
+          "label": "Denklem sorusu için okuyucu metni",
+          "default": ":equation denklemi için :item neye eşittir?"
         },
         {
-          "label": "Readspeaker text for equation variable",
-          "default": "What does :item equal?"
+          "label": "Denklem değişkeni için okuyucu metni",
+          "default": ":item neye eşittir?"
         },
         {
           "label": "Toplama işlemi metni",
@@ -121,12 +121,12 @@
           "default": "bölü"
         },
         {
-          "label": "Equality sign text",
-          "default": "equals"
+          "label": "Eşitlik işareti metni",
+          "default": "eşittir"
         },
         {
           "label": "Slayt numarası metni",
-          "description": "Şimdiki slaytı ve toplam slayt sayısını bildirir, değişkenler: :num ve :total",
+          "description": "Şimdiki slaytı ve toplam slayt sayısını bildirir, :num şimdiki slayt numarası ve :total toplam slayt sayısı ile değiştirilecektir.",
           "default": "Toplam :total slayttan :num no'lu slayt"
         }
       ]
