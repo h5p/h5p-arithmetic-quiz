@@ -8,10 +8,10 @@
       "label": "Tipo de teste",
       "options": [
         {
-          "label": "Teste de Operações Aritméticas"
+          "label": "Teste de operações aritméticas"
         },
         {
-          "label": "Teste de Equações Lineares"
+          "label": "Teste de equações lineares"
         }
       ]
     },
@@ -54,7 +54,7 @@
       "label": "Número máximo de perguntas"
     },
     {
-      "label": "Traduções da interface de utilizador",
+      "label": "Traduções da interface do utilizador",
       "fields": [
         {
           "label": "Pontuação no teste",
@@ -77,8 +77,8 @@
           "default": "Iniciar"
         },
         {
-          "label": "Rótulo do botão Tentar novamente",
-          "default": "Tentar novamente"
+          "label": "Etiqueta do botão Tentar novamente",
+          "default": "Repetir"
         },
         {
           "label": "Texto do leitor de ecrã para resposta correta",
@@ -89,7 +89,7 @@
           "default": "Incorreta. A resposta correta é :num"
         },
         {
-          "label": "Rótulo do leitor de ecrã para o temporizador",
+          "label": "Rótulo do leitor de ecrã para temporizador",
           "default": "Duração em horas, minutos e segundos."
         },
         {
@@ -97,11 +97,11 @@
           "default": "Qual é o resultado de :arithmetic?"
         },
         {
-          "label": "Texto leitor de ecrã para a pergunta da equação",
+          "label": "Texto leitor de ecrã para pergunta da equação",
           "default": "Para a equação :equation, qual é o valor de :item?"
         },
         {
-          "label": "Texto do leitor de ecrã para variável da equação",
+          "label": "Texto do leitor de ecrã variável da equação",
           "default": "Qual o valor de :item?"
         },
         {
