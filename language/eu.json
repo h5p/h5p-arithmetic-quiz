@@ -77,8 +77,8 @@
           "default": "Hasi"
         },
         {
-          "label": "Berriro saiatzeko botoiaren etiketa",
-          "default": "Berriro"
+          "label": "Saiatu berriro botoiaren etiketa",
+          "default": "Saiatu berriro"
         },
         {
           "label": "Erantzun zuzenerako mezua",
