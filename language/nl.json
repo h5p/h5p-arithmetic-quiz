@@ -5,7 +5,7 @@
       "description": "De introductietekst (maximum 100 karakters)"
     },
     {
-      "label": "Quiz type",
+      "label": "Soort quiz",
       "options": [
         {
           "label": "Rekenkundige Bewerkingen Quiz"
