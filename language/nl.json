@@ -51,7 +51,7 @@
       "description": "Inschakelen om breuken in vergelijkingen toe te staan."
     },
     {
-      "label": "Max aantal vragen"
+      "label": "Max. aantal vragen"
     },
     {
       "label": "Gebruikersinterface vertalingen",
@@ -65,7 +65,7 @@
           "default": "Tijd: @time"
         },
         {
-          "label": "Kop resultaten pagina",
+          "label": "Kop resultatenpagina",
           "default": "Beëindigd!"
         },
         {
@@ -77,31 +77,31 @@
           "default": "Start"
         },
         {
-          "label": "Tekst van de Opnieuw proberen knop",
-          "default": "Opnieuw proberen"
+          "label": "Tekst van \"Opnieuw\"-knop",
+          "default": "Opnieuw"
         },
         {
-          "label": "Readspeaker tekst voor het juiste antwoord",
+          "label": "Schermlezer tekst voor het juiste antwoord",
           "default": "Juist"
         },
         {
-          "label": "Readspeaker tekst voor het foute antwoord",
+          "label": "Schermlezer tekst voor het onjuiste antwoord",
           "default": "Onjuist. Het juiste antwoord was :num"
         },
         {
-          "label": "Readspeaker label voor de timer",
-          "default": "voortgang in uren, minuten en seconden."
+          "label": "Schermlezer label voor de timer",
+          "default": "Voortgang in uren, minuten en seconden."
         },
         {
-          "label": "Readspeaker tekst voor de vraag",
-          "default": "Waaraan is :rekenkundige gelijk?"
+          "label": "Schermlezer tekst voor de vraag",
+          "default": "Waaraan is :arithmetic gelijk?"
         },
         {
-          "label": "Readspeaker tekst voor vergelijkingsvraag",
+          "label": "Schemrlezer tekst voor vergelijkingsvraag",
           "default": "Voor de vergelijking :equation, waaraan is :item gelijk?"
         },
         {
-          "label": "Readspeaker tekst voor vergelijkingsvariabele",
+          "label": "Schermlezer tekst voor vergelijkingsvariabele",
           "default": "Waaraan is :item gelijk?"
         },
         {
@@ -125,7 +125,7 @@
           "default": "is gelijk aan"
         },
         {
-          "label": "Dia nummer tekst",
+          "label": "Dianummer tekst",
           "description": "Geeft het nummer van de huidige dia en het totaal aantal dia's aan, variabelen zijn :num en :total",
           "default": "Dia :num van :total"
         }
