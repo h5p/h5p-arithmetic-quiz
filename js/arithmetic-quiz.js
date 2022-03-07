@@ -93,7 +93,6 @@ H5P.ArithmeticQuiz = (function ($) {
 
       if (this.$container === undefined) {
         this.$container = $container;
-        this.addFont();
         this.$container.addClass('h5p-baq');
         this.introPage.appendTo($container);
 
@@ -108,22 +107,6 @@ H5P.ArithmeticQuiz = (function ($) {
           H5P.ArithmeticQuiz.SoundEffects.setup(self.getLibraryFilePath(''));
         }, 1);
       }
-    };
-
-    /**
-     * Adds fonts from google
-     */
-    self.addFont = function () {
-      window.WebFontConfig = {
-        google: { families: [ 'Lato::latin' ] }
-      };
-
-      var wf = document.createElement('script');
-      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-      wf.type = 'text/javascript';
-      wf.async = 'true';
-      var s = document.getElementsByTagName('script')[0];
-      s.parentNode.insertBefore(wf, s);
     };
   }
 
