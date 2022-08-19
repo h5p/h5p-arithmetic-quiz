@@ -48,7 +48,7 @@
     },
     {
       "label": "Habilitar frações",
-      "description": "Marque para permitir frações nas equações."
+      "description": "Permitir frações nas equações."
     },
     {
       "label": "Número máximo de questões"
@@ -57,7 +57,7 @@
       "label": "Traduções da interface de usuário",
       "fields": [
         {
-          "label": "Pontuação no quiz",
+          "label": "Pontuação durante o quiz",
           "default": "Pontuação:"
         },
         {
@@ -65,7 +65,7 @@
           "default": "Tempo: @time"
         },
         {
-          "label": "Cabeçalho da página de resultado",
+          "label": "Cabeçalho da página de resultados",
           "default": "Finalizado!"
         },
         {
@@ -86,22 +86,22 @@
         },
         {
           "label": "Texto do leitor de tela para resposta incorreta",
-          "default": "Incorreta. A resposta correta era :num"
+          "default": "Incorreto. A resposta correta era :num"
         },
         {
           "label": "Rótulo do leitor de tela para o temporizador",
           "default": "Duração em horas, minutos e segundos."
         },
         {
-          "label": "Texto do leitor de tela para questão",
+          "label": "Texto do leitor de tela para a questão",
           "default": ":arithmetic é igual a?"
         },
         {
-          "label": "Texto de rela para questão de equação",
+          "label": "Texto de leitura de tela para a questão de equação",
           "default": "Para a equação :equation, qual o valor de :item?"
         },
         {
-          "label": "Texto do leitor de tela para variável da equação",
+          "label": "Texto do leitor de tela para a variável da equação",
           "default": "Qual o valor de :item?"
         },
         {
@@ -125,8 +125,8 @@
           "default": "igual a"
         },
         {
-          "label": "Texto do número de slides",
-          "description": "Anuncia o número do slide atual e do total de slides,as variáveis são :num e :total",
+          "label": "Texto do número do slide",
+          "description": "Anuncia o número do slide atual e do total de slides, as variáveis são :num e :total",
           "default": "Slide :num de :total"
         }
       ]
