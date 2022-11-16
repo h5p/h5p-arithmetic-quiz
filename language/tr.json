@@ -97,8 +97,8 @@
           "default": ":arithmetic kaça eşittir?"
         },
         {
-          "label": "Denklem sorusu için okuyucu metni",
-          "default": ":equation denklemi için :item neye eşittir?"
+          "label": "Denklem sorusu için seslendirme metni",
+          "default": "Equation denklemi için :eguation, öge neye eşittir?"
         },
         {
           "label": "Denklem değişkeni için okuyucu metni",
