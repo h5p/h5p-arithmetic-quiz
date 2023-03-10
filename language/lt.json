@@ -1,0 +1,135 @@
+{
+  "semantics": [
+    {
+      "description": "Įvadinis tekstas (daugiausia 100 simbolių)",
+      "label": "Įvadas"
+    },
+    {
+      "options": [
+        {
+          "label": "Aritmetinių veiksmų testas"
+        },
+        {
+          "label": "Tiesinių lygčių testas"
+        }
+      ],
+      "label": "Testo tipas"
+    },
+    {
+      "label": "Aritmetikos tipas",
+      "options": [
+        {
+          "label": "Sudėtis"
+        },
+        {
+          "label": "Atimtis"
+        },
+        {
+          "label": "Daugyba"
+        },
+        {
+          "label": "Dalyba"
+        }
+      ]
+    },
+    {
+      "options": [
+        {
+          "label": "Pagrindinis [ 3x = 12 ]"
+        },
+        {
+          "label": "Vidutinis [ 4x - 3 = 13 ]"
+        },
+        {
+          "label": "Pažengęs [ 5x + 3 = 3x + 15 ]"
+        }
+      ],
+      "label": "Lygties tipas"
+    },
+    {
+      "description": "Įjungti, kad lygtyse būtų galima naudoti trupmenas.",
+      "label": "Įjungti trupmenas"
+    },
+    {
+      "label": "Maksimalus klausimų skaičius"
+    },
+    {
+      "label": "Naudotojo sąsajos vertimai",
+      "fields": [
+        {
+          "default": "Rezultatas:",
+          "label": "Balų skaičiavimas testo metu"
+        },
+        {
+          "default": "Laikas: @time",
+          "label": "Laikas"
+        },
+        {
+          "default": "Baigta!",
+          "label": "Rezultatų puslapio antraštė"
+        },
+        {
+          "default": "GO!",
+          "label": "Go label"
+        },
+        {
+          "default": "Pradėti",
+          "label": "Start button label"
+        },
+        {
+          "default": "Bandyti dar kartą",
+          "label": "Retry button label"
+        },
+        {
+          "default": "Teisingai",
+          "label": "Readspeaker text for correct answer"
+        },
+        {
+          "default": "Neteisingai. Teisingas atsakymas buvo :num",
+          "label": "Readspeaker text for incorrect answer"
+        },
+        {
+          "default": "Trukmė valandomis, minutėmis ir sekundėmis.",
+          "label": "Readspeaker label for the timer"
+        },
+        {
+          "default": "What does :arithmetic equal?",
+          "label": "Readspeaker text for question"
+        },
+        {
+          "default": "For the equation :equation, what does :item equal?",
+          "label": "Readspeaker text for equation question"
+        },
+        {
+          "default": "What does :item equal?",
+          "label": "Readspeaker text for equation variable"
+        },
+        {
+          "default": "plius",
+          "label": "Sudėties operatoriaus tekstas"
+        },
+        {
+          "default": "minus",
+          "label": "Atimties operatoriaus tekstas"
+        },
+        {
+          "default": "kartus",
+          "label": "Daugybos operatoriaus tekstas"
+        },
+        {
+          "default": "padalytą",
+          "label": "Dalybos operatoriaus tekstas"
+        },
+        {
+          "default": "lygu",
+          "label": "Lygybės ženklo tekstas"
+        },
+        {
+          "description": "Announces current slide and total number of slides, variables are :num and :total",
+          "label": "Skaidrės numerio tekstas",
+          "default": "Skaidrė :num iš :total"
+        }
+      ]
+    }
+  ]
+}
