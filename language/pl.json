@@ -1,133 +1,133 @@
 {
   "semantics": [
     {
-      "label": "Intro",
-      "description": "The intro text (maximum 100 characters)"
+      "label": "Wprowadzenie",
+      "description": "Tekst wprowadzenia (maksymalnie 100 znaków)"
     },
     {
-      "label": "Quiz type",
+      "label": "Typ quizu",
       "options": [
         {
-          "label": "Arithmetic Operations Quiz"
+          "label": "Quiz z operacji arytmetycznych"
         },
         {
-          "label": "Linear Equations Quiz"
+          "label": "Quiz z równań liniowych"
         }
       ]
     },
     {
-      "label": "Arithmetic type",
+      "label": "Typ arytmetyczny",
       "options": [
         {
-          "label": "Addition"
+          "label": "Dodawanie"
         },
         {
-          "label": "Subtraction"
+          "label": "Odejmowanie"
         },
         {
-          "label": "Multiplication"
+          "label": "Mnożenie"
         },
         {
-          "label": "Division"
+          "label": "Dzielenie"
         }
       ]
     },
     {
-      "label": "Equation type",
+      "label": "Typ równania",
       "options": [
         {
-          "label": "Basic [ 3x = 12 ]"
+          "label": "Podstawowe [ 3x = 12 ]"
         },
         {
-          "label": "Intermediate [ 4x - 3 = 13 ]"
+          "label": "Średniozaawansowany [ 4x - 3 = 13 ]"
         },
         {
-          "label": "Advanced [ 5x + 3 = 3x + 15 ]"
+          "label": "Zaawansowany [ 5x + 3 = 3x + 15 ]"
         }
       ]
     },
     {
-      "label": "Enable fractions",
-      "description": "Enable to allow fractions in equations."
+      "label": "Włącz ułamki",
+      "description": "Włącz aby zezwolić na ułamki w równaniach."
     },
     {
-      "label": "Max number of questions"
+      "label": "Maksymalna liczba pytań"
     },
     {
-      "label": "User interface translations",
+      "label": "Tłumaczenia interfejsu użytkownika",
       "fields": [
         {
-          "label": "Scoring during quiz",
-          "default": "Score:"
+          "label": "Punktacja podczas quizu",
+          "default": "Wynik:"
         },
         {
-          "label": "Time",
-          "default": "Time: @time"
+          "label": "Czas",
+          "default": "Czas: @time"
         },
         {
-          "label": "Result page header",
-          "default": "Finished!"
+          "label": "Nagłówek strony wyników",
+          "default": "Zakończony!"
         },
         {
-          "label": "Go label",
-          "default": "GO!"
+          "label": "Etykieta Dalej",
+          "default": "Dalej!"
         },
         {
-          "label": "Start button label",
+          "label": "Etykieta przycisku Start",
           "default": "Start"
         },
         {
-          "label": "Retry button label",
-          "default": "Retry"
+          "label": "Etykieta przycisku Spróbuj ponownie",
+          "default": "Spróbuj ponownie"
         },
         {
-          "label": "Readspeaker text for correct answer",
-          "default": "Correct"
+          "label": "Tekst czytany przez syntezator mowy dla prawidłowej odpowiedzi",
+          "default": "Prawidłowa"
         },
         {
-          "label": "Readspeaker text for incorrect answer",
-          "default": "Incorrect. Correct answer was :num"
+          "label": "Tekst czytany przez syntezator mowy dla nieprawidłowej odpowiedzi",
+          "default": "Nieprawidłowa. Prawidłowa odpowiedź brzmiała :num"
         },
         {
-          "label": "Readspeaker label for the timer",
-          "default": "Duration in hours, minutes and seconds."
+          "label": "Etykieta syntezatora mowy dla timera",
+          "default": "Czas trwania w godzinach, minutach i sekundach."
         },
         {
-          "label": "Readspeaker text for question",
-          "default": "What does :arithmetic equal?"
+          "label": "Tekst czytany przez syntezator mowy dla pytania",
+          "default": "Ile się równa :arithmetic?"
         },
         {
-          "label": "Readspeaker text for equation question",
-          "default": "For the equation :equation, what does :item equal?"
+          "label": "Tekst czytany przez syntezator mowy dla pytania o równanie",
+          "default": "Dla równania :equation, ile równa się :item?"
         },
         {
-          "label": "Readspeaker text for equation variable",
-          "default": "What does :item equal?"
+          "label": "Tekst czytany przez syntezator mowy dla zmiennej równania",
+          "default": "Ile równa się :item?"
         },
         {
-          "label": "Plus operator text",
-          "default": "plus"
+          "label": "Tekst operatora dodawania",
+          "default": "dodać"
         },
         {
-          "label": "Subtraction operator text",
-          "default": "minus"
+          "label": "Tekst operatora odejmowania",
+          "default": "odjąć"
         },
         {
-          "label": "Multiplication operator text",
-          "default": "times"
+          "label": "Tekst operatora mnożenia",
+          "default": "razy"
         },
         {
-          "label": "Division operator text",
-          "default": "divided by"
+          "label": "Tekst operatora dzielenia",
+          "default": "podzielić przez"
         },
         {
-          "label": "Equality sign text",
-          "default": "equals"
+          "label": "Tekst znaku równości",
+          "default": "równa się"
         },
         {
-          "label": "Slide number text",
-          "description": "Announces current slide and total number of slides, variables are :num and :total",
-          "default": "Slide :num of :total"
+          "label": "Tekst numeru slajdu",
+          "description": "Wskazuje bieżący slajd i całkowitą liczbę slajdów, zmienne są :num i :total",
+          "default": "Slajd :num z :total"
         }
       ]
     }
