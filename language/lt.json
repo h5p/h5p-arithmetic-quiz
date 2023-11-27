@@ -69,40 +69,40 @@
           "label": "Rezultatų puslapio antraštė"
         },
         {
-          "default": "GO!",
-          "label": "Go label"
+          "default": "Pradėti!",
+          "label": "Pradėti pavadinimas"
         },
         {
           "default": "Pradėti",
-          "label": "Start button label"
+          "label": "Pradėti mygtuko pavadinimas"
         },
         {
           "default": "Bandyti dar kartą",
-          "label": "Retry button label"
+          "label": "Kartoti mygtuko pavadinimas"
         },
         {
           "default": "Teisingai",
-          "label": "Readspeaker text for correct answer"
+          "label": "Skaitytuvo teisingo atsakymo tekstas"
         },
         {
           "default": "Neteisingai. Teisingas atsakymas buvo :num",
-          "label": "Readspeaker text for incorrect answer"
+          "label": "Skaitytuvo neteisingo atsakymo tekstas"
         },
         {
           "default": "Trukmė valandomis, minutėmis ir sekundėmis.",
-          "label": "Readspeaker label for the timer"
+          "label": "Skaitytuvo laikmačio pavadinimas"
         },
         {
-          "default": "What does :arithmetic equal?",
-          "label": "Readspeaker text for question"
+          "default": "Kam lygu :arithmetic?",
+          "label": "Skaitytuvo klausimo tekstas"
         },
         {
-          "default": "For the equation :equation, what does :item equal?",
-          "label": "Readspeaker text for equation question"
+          "default": "Lygtyje :equation, kam lygu :item?",
+          "label": "Lygties klausimas skaitytuvui"
         },
         {
-          "default": "What does :item equal?",
-          "label": "Readspeaker text for equation variable"
+          "default": "Kam lygu :item ?",
+          "label": "Lygties kintamojo tekstas skaitytuvui"
         },
         {
           "default": "plius",
@@ -125,7 +125,7 @@
           "label": "Lygybės ženklo tekstas"
         },
         {
-          "description": "Announces current slide and total number of slides, variables are :num and :total",
+          "description": "Skelbia esamą skaidrę ir bendrą skaidrių skaičių, kintamieji yra :num ir :total",
           "label": "Skaidrės numerio tekstas",
           "default": "Skaidrė :num iš :total"
         }
