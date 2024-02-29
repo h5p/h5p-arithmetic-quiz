@@ -1,4 +1,6 @@
 H5P.ArithmeticQuiz.SoundEffects = (function () {
+  let isDefined = false;
+
   var SoundEffects = {
     types: [
       'positive-short',
@@ -8,21 +10,27 @@ H5P.ArithmeticQuiz.SoundEffects = (function () {
     muted: false
   };
 
+  const players = {};
+
   /**
    * Setup defined sounds
    *
    * @return {boolean} True if setup was successfull, otherwise false
    */
   SoundEffects.setup = function (libraryPath) {
-    if (!H5P.SoundJS.initializeDefaultPlugins()) {
+    if (isDefined) {
       return false;
     }
+    isDefined = true;
 
-    H5P.SoundJS.alternateExtensions = ['mp3'];
-    for (var i = 0; i < SoundEffects.types.length; i++) {
-      var type = SoundEffects.types[i];
-      H5P.SoundJS.registerSound(libraryPath + 'sounds/' + type + '.ogg', type);
-    }
+    SoundEffects.types.forEach(async (type) => {
+      const player = new Audio();
+      const extension = player.canPlayType('audio/ogg') ? 'ogg' : 'mp3';
+      const response = await fetch(libraryPath + 'sounds/' + type + '.' + extension);
+      const data = await response.blob();
+      player.src = URL.createObjectURL(data);
+      players[type] = player;
+    });
 
     return true;
   };
@@ -30,12 +38,17 @@ H5P.ArithmeticQuiz.SoundEffects = (function () {
   /**
    * Play a sound
    *
-   * @param  {string} type  Name of the sound as defined in [SoundEffects.types]{@link H5P.SoundEffects.SoundEffects#types}
+   * @param  {string} type  Name of the sound as defined in [SoundEffects.types]
    * @param  {number} delay Delay in milliseconds
    */
   SoundEffects.play = function (type, delay) {
     if (SoundEffects.muted === false) {
-      H5P.SoundJS.play(type, H5P.SoundJS.INTERRUPT_NONE, (delay || 0));
+      if (!players[type]) {
+        return;
+      }
+      setTimeout(function () {
+        players[type].play();
+      }, delay || 0);
     }
   };
 
