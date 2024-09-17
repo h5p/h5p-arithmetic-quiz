@@ -3,7 +3,7 @@
   "description": "Arithmetic quiz containing addition, division, multiplication, subtraction and linear equations",
   "majorVersion": 1,
   "minorVersion": 1,
-  "patchVersion": 23,
+  "patchVersion": 24,
   "runnable": 1,
   "author": "Joubel, fabforge",
   "license": "MIT",
