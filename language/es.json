@@ -54,11 +54,11 @@
       "label": "Número máximo de preguntas"
     },
     {
-      "label": "Traducciones de la Interfaz de usuario",
+      "label": "Traducciones de la Interfaz del usuario",
       "fields": [
         {
-          "label": "Puntuación durante la prueba",
-          "default": "Puntuación:"
+          "label": "Puntaje durante la prueba",
+          "default": "Puntaje:"
         },
         {
           "label": "Tiempo",
@@ -94,15 +94,15 @@
         },
         {
           "label": "Texto para lectores de pantalla para preguntas",
-          "default": "¿Cuanto es :arithmetic ?"
+          "default": "¿A qué es igual :arithmetic ?"
         },
         {
           "label": "Texto para lectores de pantalla para pregunta de ecuación",
-          "default": "Para la ecuación :equation, ¿cuanto es :item ?"
+          "default": "Para la ecuación :equation, ¿a qué es igual :item ?"
         },
         {
           "label": "Texto para lectores de pantalla para variable de ecuación",
-          "default": "¿Cuanto es :item ?"
+          "default": "¿A qué es igual :item ?"
         },
         {
           "label": "Texto operador Más",
@@ -118,16 +118,16 @@
         },
         {
           "label": "Texto operador división",
-          "default": "dividido por"
+          "default": "dividido entre"
         },
         {
-          "label": "Texto de signo Igual",
+          "label": "Texto de signo Igualdad",
           "default": "es igual a"
         },
         {
-          "label": "Texto del número de diapositiva",
+          "label": "Texto del número de pantalla",
           "description": "Anuncia la diapositiva actual y el número total de diapositivas, las variables son :num y :total",
-          "default": "Diapositiva :num de :total"
+          "default": "Pantalla :num de :total"
         }
       ]
     }
