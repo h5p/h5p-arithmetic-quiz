@@ -1,0 +1,10 @@
+node_modules
+dist
+.git
+.gitignore
+.h5pignore
+webpack.config.js
+README.md
+package.json
+package-lock.json
+crowdin.yml
