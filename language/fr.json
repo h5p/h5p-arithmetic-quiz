@@ -105,8 +105,7 @@
           "default": "Combien vaut :item?"
         },
         {
-          "label": "Texte pour le signe de l'addition",
-          "default": "plus"
+          "label": "Texte pour le signe de l'addition"
         },
         {
           "label": "Texte pour le signe de la soustraction",
