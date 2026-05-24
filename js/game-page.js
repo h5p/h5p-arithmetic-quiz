@@ -431,13 +431,13 @@ H5P.ArithmeticQuiz.GamePage = (function ($, UI, QuizType) {
           }
         },
         'focus': function () {
-          if (self.$button.is('.reveal-correct, reveal-wrong')) {
+          if (self.$button.is('.reveal-correct, .reveal-wrong')) {
             return;
           }
           self.trigger('focus');
         },
         'click': function (event) {
-          if (self.$button.is('.reveal-correct, reveal-wrong')) {
+          if (self.$button.is('.reveal-correct, .reveal-wrong')) {
             return;
           }
           // Answer question
